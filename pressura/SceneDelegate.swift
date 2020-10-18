@@ -22,9 +22,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private func setupView(windowScene: UIWindowScene) {
         let window = UIWindow(windowScene: windowScene)
+//        window.rootViewController = MainTabBarController() // Your initial view controller.
         window.rootViewController = AuthViewController() // Your initial view controller.
         window.makeKeyAndVisible()
         self.window = window
+    }
+    
+    func changeRootViewController(_ vc: UIViewController, animated: Bool = true) {
+        guard let window = self.window else { return }
+        // change the root view controller to your specific view controller
+        window.rootViewController = vc
+        UIView.transition(with: window,
+                          duration: 0.5,
+                          options: [.transitionFlipFromRight],
+                          animations: nil,
+                          completion: nil)
     }
 
 

@@ -11,10 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthViewController" customModule="pressura" customModuleProvider="target">
             <connections>
-                <outlet property="emailTf" destination="fq2-WK-kI5" id="ayk-u1-7SC"/>
-                <outlet property="loginBtn" destination="MtZ-TO-XS9" id="4Hd-at-hWZ"/>
-                <outlet property="passwordTf" destination="EVW-Kn-yw8" id="CfM-X3-0eP"/>
-                <outlet property="signupBtn" destination="B43-on-Qv6" id="oCF-oa-D3B"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ftu-mn-akT"/>
             </connections>
         </placeholder>
@@ -23,63 +19,61 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oyX-vW-xky">
-                    <rect key="frame" x="16" y="60" width="382" height="136"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="ekB-eG-yWa">
+                    <rect key="frame" x="147" y="244" width="120" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="MqH-Dx-RuN"/>
+                        <constraint firstAttribute="height" constant="120" id="TU0-19-e1F"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1g3-Fe-2b2">
+                    <rect key="frame" x="71.5" y="428" width="271" height="32"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="micorreo@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fq2-WK-kI5">
-                            <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" textContentType="email"/>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="contraseña" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EVW-Kn-yw8">
-                            <rect key="frame" x="0.0" y="48" width="382" height="40"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                        </textField>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="neu-ck-GaE">
-                            <rect key="frame" x="0.0" y="96" width="382" height="40"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B43-on-Qv6">
-                                    <rect key="frame" x="0.0" y="0.0" width="187" height="40"/>
-                                    <color key="backgroundColor" red="0.18605917690000001" green="0.61013644929999999" blue="0.89608716960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <state key="normal" title="Registrarse">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="signUpAction:" destination="-1" eventType="touchUpInside" id="kfQ-nt-PBV"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MtZ-TO-XS9">
-                                    <rect key="frame" x="195" y="0.0" width="187" height="40"/>
-                                    <color key="backgroundColor" red="0.17348763349999999" green="0.22077617050000001" blue="0.29096922279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <state key="normal" title="Login">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="N94-yM-moq"/>
-                                    </connections>
-                                </button>
-                            </subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="google" translatesAutoresizingMaskIntoConstraints="NO" id="Jf0-OF-qau">
+                            <rect key="frame" x="8" y="4" width="24" height="24"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="DzF-IN-ddS"/>
+                                <constraint firstAttribute="height" constant="24" id="0jM-pa-AhQ"/>
+                                <constraint firstAttribute="width" constant="24" id="vWx-fF-Z68"/>
                             </constraints>
-                        </stackView>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3H-cR-isw">
+                            <rect key="frame" x="40" y="4" width="223" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <state key="normal" title="Continue with Google">
+                                <color key="titleColor" systemColor="systemGrayColor"/>
+                            </state>
+                            <connections>
+                                <action selector="signIn:" destination="-1" eventType="touchUpInside" id="psL-dP-S3h"/>
+                            </connections>
+                        </button>
                     </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Jf0-OF-qau" firstAttribute="centerY" secondItem="1g3-Fe-2b2" secondAttribute="centerY" id="dYs-ST-7lW"/>
+                        <constraint firstItem="S3H-cR-isw" firstAttribute="centerY" secondItem="1g3-Fe-2b2" secondAttribute="centerY" id="s2n-gn-3cS"/>
+                    </constraints>
+                    <directionalEdgeInsets key="directionalLayoutMargins" top="4" leading="8" bottom="4" trailing="8"/>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="oyX-vW-xky" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="NI4-JO-cNp"/>
-                <constraint firstItem="oyX-vW-xky" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="U2H-NI-BES"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="oyX-vW-xky" secondAttribute="trailing" constant="16" id="mql-kb-lr7"/>
+                <constraint firstItem="ekB-eG-yWa" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="200" id="Rwu-Ub-34k"/>
+                <constraint firstItem="1g3-Fe-2b2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="T6u-3O-CWV"/>
+                <constraint firstItem="1g3-Fe-2b2" firstAttribute="top" secondItem="ekB-eG-yWa" secondAttribute="bottom" constant="64" id="aeP-Uw-ULi"/>
+                <constraint firstItem="ekB-eG-yWa" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="oVp-Mr-rJ9"/>
             </constraints>
-            <point key="canvasLocation" x="141" y="110"/>
+            <point key="canvasLocation" x="140.57971014492756" y="109.82142857142857"/>
         </view>
     </objects>
     <resources>
+        <image name="Logo" width="69" height="82"/>
+        <image name="google" width="400" height="400"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
