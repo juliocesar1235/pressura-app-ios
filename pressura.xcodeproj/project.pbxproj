@@ -142,12 +142,12 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		A51B58F7253C8D2A00B8608B /* Prodile */ = {
+		A51B58F7253C8D2A00B8608B /* Profile */ = {
 			isa = PBXGroup;
 			children = (
 				A51B58F0253C8D2700B8608B /* ProfileViewController.swift */,
 			);
-			path = Prodile;
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		A576FEED253BFBD200171C63 /* Views */ = {
@@ -166,7 +166,7 @@
 		A576FEEE253BFBD900171C63 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A51B58F7253C8D2A00B8608B /* Prodile */,
+				A51B58F7253C8D2A00B8608B /* Profile */,
 				A57BBD89253C254C008A0B00 /* NewReading */,
 				A57BBD6F253C1CF3008A0B00 /* Summary */,
 				A57BBD63253C1870008A0B00 /* MainTabBar */,
@@ -338,6 +338,7 @@
 				F276AB152537EA8200731CBE /* Frameworks */,
 				F276AB162537EA8200731CBE /* Resources */,
 				38C9D54004A2AFA4110FC186 /* [CP] Embed Pods Frameworks */,
+				9D9D8CA9FF4E03F2FA94EC56 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -376,6 +377,7 @@
 				F276AB362537EA8800731CBE /* Frameworks */,
 				F276AB372537EA8800731CBE /* Resources */,
 				4D066684E4066EB579629E50 /* [CP] Embed Pods Frameworks */,
+				C2F98B9AAE1AFA82EF6FE022 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -516,6 +518,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D9D8CA9FF4E03F2FA94EC56 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pressura/Pods-pressura-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pressura/Pods-pressura-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pressura/Pods-pressura-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2F98B9AAE1AFA82EF6FE022 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pressura-pressuraUITests/Pods-pressura-pressuraUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pressura-pressuraUITests/Pods-pressura-pressuraUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pressura-pressuraUITests/Pods-pressura-pressuraUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DBB6D2819F004DA23FB25C4A /* [CP] Check Pods Manifest.lock */ = {

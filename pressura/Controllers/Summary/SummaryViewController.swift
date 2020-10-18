@@ -6,14 +6,18 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class SummaryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationItem.title = "¡Hola, Jesús!"
         navigationController?.navigationBar.prefersLargeTitles = true
+        if let user = GIDSignIn.sharedInstance()?.currentUser {
+            navigationItem.title = "Hola \(user.profile.givenName!)"
+        } else {
+            navigationItem.title = "¡Hola!"
+        }
     }
 
 }
