@@ -19,20 +19,37 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <userGuides>
-                <userLayoutGuide location="134" affinity="minY"/>
+                <userLayoutGuide location="831" affinity="maxY"/>
             </userGuides>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New reading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkm-fg-4lt">
-                    <rect key="frame" x="20" y="132" width="96" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgm-vg-8m4">
+                    <rect key="frame" x="16" y="83" width="382" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Presión arterial"/>
+                    <connections>
+                        <action selector="newBloodPreassure:" destination="-1" eventType="touchUpInside" id="G5z-fL-UPv"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6y5-uc-esu">
+                    <rect key="frame" x="16" y="135" width="382" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Monitoreo de salud"/>
+                    <connections>
+                        <action selector="newHealdthM:" destination="-1" eventType="touchUpInside" id="deq-wF-FqM"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="141" y="102"/>
+            <constraints>
+                <constraint firstItem="6y5-uc-esu" firstAttribute="top" secondItem="Xgm-vg-8m4" secondAttribute="bottom" constant="16" id="1z2-6v-WHH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6y5-uc-esu" secondAttribute="trailing" constant="16" id="BGP-CM-hR0"/>
+                <constraint firstItem="Xgm-vg-8m4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="GDi-Tb-vWh"/>
+                <constraint firstItem="6y5-uc-esu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="RMk-pl-73g"/>
+                <constraint firstItem="Xgm-vg-8m4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="39" id="UJr-Op-EHi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Xgm-vg-8m4" secondAttribute="trailing" constant="16" id="rWp-fK-H5b"/>
+            </constraints>
+            <point key="canvasLocation" x="140.57971014492756" y="101.78571428571428"/>
         </view>
     </objects>
     <resources>
