@@ -28,6 +28,10 @@
 		F2CD2348253806C1009106FB /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CD2347253806C1009106FB /* AuthViewController.swift */; };
 		F2CD235025380AB6009106FB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CD234F25380AB6009106FB /* HomeViewController.swift */; };
 		F2CD236725381305009106FB /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2CD236625381304009106FB /* HomeViewController.xib */; };
+		F939B19F253CE745009692D7 /* NewBloodPreassureReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F939B19D253CE745009692D7 /* NewBloodPreassureReading.swift */; };
+		F939B1A0253CE745009692D7 /* NewBloodPreassureReading.xib in Resources */ = {isa = PBXBuildFile; fileRef = F939B19E253CE745009692D7 /* NewBloodPreassureReading.xib */; };
+		F9E68104253CEAEA00619F10 /* NewHealthTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E68102253CEAEA00619F10 /* NewHealthTrackingViewController.swift */; };
+		F9E68105253CEAEA00619F10 /* NewHealthTrackingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E68103253CEAEA00619F10 /* NewHealthTrackingViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +85,10 @@
 		F2CD2347253806C1009106FB /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		F2CD234F25380AB6009106FB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F2CD236625381304009106FB /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		F939B19D253CE745009692D7 /* NewBloodPreassureReading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBloodPreassureReading.swift; sourceTree = "<group>"; };
+		F939B19E253CE745009692D7 /* NewBloodPreassureReading.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewBloodPreassureReading.xib; sourceTree = "<group>"; };
+		F9E68102253CEAEA00619F10 /* NewHealthTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHealthTrackingViewController.swift; sourceTree = "<group>"; };
+		F9E68103253CEAEA00619F10 /* NewHealthTrackingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewHealthTrackingViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +268,8 @@
 			isa = PBXGroup;
 			children = (
 				A57BBD80253C2543008A0B00 /* NewReadingViewController.xib */,
+				F9E68103253CEAEA00619F10 /* NewHealthTrackingViewController.xib */,
+				F939B19E253CE745009692D7 /* NewBloodPreassureReading.xib */,
 			);
 			path = NewReading;
 			sourceTree = "<group>";
@@ -268,6 +278,8 @@
 			isa = PBXGroup;
 			children = (
 				A57BBD7F253C2543008A0B00 /* NewReadingViewController.swift */,
+				F939B19D253CE745009692D7 /* NewBloodPreassureReading.swift */,
+				F9E68102253CEAEA00619F10 /* NewHealthTrackingViewController.swift */,
 			);
 			path = NewReading;
 			sourceTree = "<group>";
@@ -440,9 +452,11 @@
 				F2CD236725381305009106FB /* HomeViewController.xib in Resources */,
 				A51B58F3253C8D2700B8608B /* ProfileViewController.xib in Resources */,
 				A57BBD82253C2543008A0B00 /* NewReadingViewController.xib in Resources */,
+				F9E68105253CEAEA00619F10 /* NewHealthTrackingViewController.xib in Resources */,
 				F276AB252537EA8700731CBE /* Assets.xcassets in Resources */,
 				A57BBD73253C1D0D008A0B00 /* SummaryViewController.xib in Resources */,
 				A576FEF1253BFC3800171C63 /* AuthViewController.xib in Resources */,
+				F939B1A0253CE745009692D7 /* NewBloodPreassureReading.xib in Resources */,
 				A576FEE3253BFB6800171C63 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,6 +627,8 @@
 				F2CD235025380AB6009106FB /* HomeViewController.swift in Sources */,
 				A51B58F2253C8D2700B8608B /* ProfileViewController.swift in Sources */,
 				A57BBD72253C1D0D008A0B00 /* SummaryViewController.swift in Sources */,
+				F9E68104253CEAEA00619F10 /* NewHealthTrackingViewController.swift in Sources */,
+				F939B19F253CE745009692D7 /* NewBloodPreassureReading.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
