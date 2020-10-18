@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private func setupView(windowScene: UIWindowScene) {
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = AuthViewController() // Your initial view controller.
+        window.rootViewController = MainTabBarController() // Your initial view controller.
         window.makeKeyAndVisible()
         self.window = window
     }
