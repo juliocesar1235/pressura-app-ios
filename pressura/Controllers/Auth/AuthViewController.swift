@@ -12,11 +12,8 @@ import FirebaseAuth
 class AuthViewController: UIViewController {
 
     @IBOutlet weak var emailTf: UITextField!
-    
     @IBOutlet weak var passwordTf: UITextField!
-    
     @IBOutlet weak var signupBtn: UIButton!
-    
     @IBOutlet weak var loginBtn: UIButton!
     
     override func viewDidLoad() {
@@ -59,15 +56,4 @@ class AuthViewController: UIViewController {
             }
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
