@@ -12,9 +12,11 @@ class SummaryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationController?.navigationBar.prefersLargeTitles = true
+        
         if let user = GIDSignIn.sharedInstance()?.currentUser {
-            navigationItem.title = "Hola \(user.profile.givenName!)"
+            navigationItem.title = "¡Hola \(user.profile.givenName!)!"
         } else {
             navigationItem.title = "¡Hola!"
         }
