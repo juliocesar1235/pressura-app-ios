@@ -25,6 +25,10 @@
 		F276AB282537EA8700731CBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F276AB262537EA8700731CBE /* LaunchScreen.storyboard */; };
 		F276AB332537EA8800731CBE /* pressuraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276AB322537EA8800731CBE /* pressuraTests.swift */; };
 		F276AB3E2537EA8800731CBE /* pressuraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276AB3D2537EA8800731CBE /* pressuraUITests.swift */; };
+		F279A01C2552925C00B2CF32 /* BloodPressureReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279A01B2552925C00B2CF32 /* BloodPressureReading.swift */; };
+		F279A0242552927200B2CF32 /* GeneralHealthReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279A0232552927200B2CF32 /* GeneralHealthReading.swift */; };
+		F279A0292552927E00B2CF32 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279A0282552927E00B2CF32 /* User.swift */; };
+		F279A04525529D3700B2CF32 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279A04425529D3700B2CF32 /* ApiManager.swift */; };
 		F2CD2348253806C1009106FB /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CD2347253806C1009106FB /* AuthViewController.swift */; };
 		F2CD235025380AB6009106FB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CD234F25380AB6009106FB /* HomeViewController.swift */; };
 		F2CD236725381305009106FB /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2CD236625381304009106FB /* HomeViewController.xib */; };
@@ -82,6 +86,10 @@
 		F276AB392537EA8800731CBE /* pressuraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pressuraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F276AB3D2537EA8800731CBE /* pressuraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pressuraUITests.swift; sourceTree = "<group>"; };
 		F276AB3F2537EA8800731CBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F279A01B2552925C00B2CF32 /* BloodPressureReading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureReading.swift; sourceTree = "<group>"; };
+		F279A0232552927200B2CF32 /* GeneralHealthReading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralHealthReading.swift; sourceTree = "<group>"; };
+		F279A0282552927E00B2CF32 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F279A04425529D3700B2CF32 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		F2CD2347253806C1009106FB /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		F2CD234F25380AB6009106FB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F2CD236625381304009106FB /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -182,13 +190,6 @@
 				A57BBD4B253C107B008A0B00 /* Home */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		A576FEEF253BFBDE00171C63 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		A57BBD3C253C0E59008A0B00 /* Supporting Files */ = {
@@ -309,9 +310,10 @@
 		F276AB1A2537EA8200731CBE /* pressura */ = {
 			isa = PBXGroup;
 			children = (
+				F279A04325529D1B00B2CF32 /* Helpers */,
+				F279A01A2552924800B2CF32 /* Models */,
 				F276AB1B2537EA8200731CBE /* AppDelegate.swift */,
 				F276AB1D2537EA8200731CBE /* SceneDelegate.swift */,
-				A576FEEF253BFBDE00171C63 /* Models */,
 				A576FEED253BFBD200171C63 /* Views */,
 				A576FEEE253BFBD900171C63 /* Controllers */,
 				A57BBD3C253C0E59008A0B00 /* Supporting Files */,
@@ -336,6 +338,24 @@
 				F276AB3F2537EA8800731CBE /* Info.plist */,
 			);
 			path = pressuraUITests;
+			sourceTree = "<group>";
+		};
+		F279A01A2552924800B2CF32 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F279A01B2552925C00B2CF32 /* BloodPressureReading.swift */,
+				F279A0232552927200B2CF32 /* GeneralHealthReading.swift */,
+				F279A0282552927E00B2CF32 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F279A04325529D1B00B2CF32 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F279A04425529D3700B2CF32 /* ApiManager.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -619,13 +639,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F279A0292552927E00B2CF32 /* User.swift in Sources */,
 				F276AB1C2537EA8200731CBE /* AppDelegate.swift in Sources */,
 				F2CD2348253806C1009106FB /* AuthViewController.swift in Sources */,
+				F279A01C2552925C00B2CF32 /* BloodPressureReading.swift in Sources */,
+				F279A0242552927200B2CF32 /* GeneralHealthReading.swift in Sources */,
 				A57BBD6B253C1C99008A0B00 /* MainTabBarController.swift in Sources */,
 				A57BBD81253C2543008A0B00 /* NewReadingViewController.swift in Sources */,
 				F276AB1E2537EA8200731CBE /* SceneDelegate.swift in Sources */,
 				F2CD235025380AB6009106FB /* HomeViewController.swift in Sources */,
 				A51B58F2253C8D2700B8608B /* ProfileViewController.swift in Sources */,
+				F279A04525529D3700B2CF32 /* ApiManager.swift in Sources */,
 				A57BBD72253C1D0D008A0B00 /* SummaryViewController.swift in Sources */,
 				F9E68104253CEAEA00619F10 /* NewHealthTrackingViewController.swift in Sources */,
 				F939B19F253CE745009692D7 /* NewBloodPreassureReading.swift in Sources */,
