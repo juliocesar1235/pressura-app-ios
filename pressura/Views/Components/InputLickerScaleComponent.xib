@@ -12,7 +12,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InputLickerScaleUIView" customModule="pressura" customModuleProvider="target">
             <connections>
                 <outlet property="InputLickerComponentView" destination="iN0-l3-epB" id="Bdw-dz-QVH"/>
-                <outlet property="infoButton" destination="R7p-dk-GI0" id="bBk-pf-qiu"/>
                 <outlet property="lblInstruction" destination="hn6-r3-3g8" id="b9E-g7-1pS"/>
                 <outlet property="radioContainer1" destination="Yja-mM-ugk" id="DDh-oq-CQG"/>
                 <outlet property="radioContainer2" destination="aTF-9g-nr8" id="Olf-BD-pMF"/>
@@ -22,17 +21,23 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="289" height="67"/>
+            <rect key="frame" x="0.0" y="0.0" width="289" height="79"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hn6-r3-3g8">
-                    <rect key="frame" x="0.0" y="0.0" width="260" height="21"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hn6-r3-3g8">
+                    <rect key="frame" x="0.0" y="0.0" width="34.5" height="16.5"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Label">
+                            <attributes>
+                                <font key="NSFont" size="14" name="SFProDisplay-Regular"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1.5" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <color key="highlightedColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                 </label>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rZd-cy-N5s">
-                    <rect key="frame" x="0.0" y="25" width="289" height="42"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="rZd-cy-N5s">
+                    <rect key="frame" x="0.0" y="30.5" width="289" height="48.5"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Haf-X2-Bae">
                             <rect key="frame" x="0.0" y="0.0" width="289" height="25"/>
@@ -71,19 +76,31 @@
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Gd5-GR-D1Y">
-                            <rect key="frame" x="0.0" y="25" width="289" height="17"/>
+                            <rect key="frame" x="0.0" y="31.5" width="289" height="17"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Malo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eO9-tj-JnP">
-                                    <rect key="frame" x="0.0" y="0.0" width="144.5" height="17"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eO9-tj-JnP">
+                                    <rect key="frame" x="0.0" y="0.5" width="144.5" height="16.5"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="Malo">
+                                            <attributes>
+                                                <font key="NSFont" size="14" name="SFProText-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1.5" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="highlightedColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bueno" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdC-0q-cMA">
-                                    <rect key="frame" x="144.5" y="0.0" width="144.5" height="17"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdC-0q-cMA">
+                                    <rect key="frame" x="144.5" y="0.5" width="144.5" height="16.5"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="Bueno">
+                                            <attributes>
+                                                <font key="NSFont" size="14" name="SFProText-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1.5" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="highlightedColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </label>
                             </subviews>
                             <constraints>
@@ -92,23 +109,12 @@
                         </stackView>
                     </subviews>
                 </stackView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7p-dk-GI0">
-                    <rect key="frame" x="270" y="0.0" width="19" height="19"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="19" id="00S-1n-D5h"/>
-                        <constraint firstAttribute="width" constant="19" id="cO5-PW-THj"/>
-                    </constraints>
-                    <state key="normal" image="info.circle" catalog="system"/>
-                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="rZd-cy-N5s" firstAttribute="top" secondItem="hn6-r3-3g8" secondAttribute="bottom" constant="4" id="0mO-Zu-aUN"/>
+                <constraint firstItem="rZd-cy-N5s" firstAttribute="top" secondItem="hn6-r3-3g8" secondAttribute="bottom" constant="14" id="0mO-Zu-aUN"/>
                 <constraint firstAttribute="trailing" secondItem="rZd-cy-N5s" secondAttribute="trailing" id="88K-td-NX4"/>
-                <constraint firstAttribute="trailing" secondItem="R7p-dk-GI0" secondAttribute="trailing" id="G7Y-q9-3TS"/>
-                <constraint firstItem="R7p-dk-GI0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="OdC-R2-PRI"/>
-                <constraint firstItem="R7p-dk-GI0" firstAttribute="leading" secondItem="hn6-r3-3g8" secondAttribute="trailing" constant="10" id="SeY-Ot-5Y0"/>
                 <constraint firstItem="rZd-cy-N5s" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fni-hD-hmE"/>
                 <constraint firstItem="rZd-cy-N5s" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="hD1-wO-W6g"/>
                 <constraint firstItem="hn6-r3-3g8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lbt-H2-6w6"/>
@@ -119,7 +125,6 @@
         </view>
     </objects>
     <resources>
-        <image name="info.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

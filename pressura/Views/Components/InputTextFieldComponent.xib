@@ -11,7 +11,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InputTextFieldUIView" customModule="pressura" customModuleProvider="target">
             <connections>
                 <outlet property="InputComponentView" destination="iN0-l3-epB" id="8wF-nw-ExF"/>
-                <outlet property="infoBtn" destination="FPv-E8-Tm0" id="5zU-aH-Xxg"/>
                 <outlet property="lblInstruction" destination="KHD-UP-qJy" id="B3c-6K-x8A"/>
                 <outlet property="textFieldInput" destination="rk3-6i-eYP" id="e50-l5-4nM"/>
             </connections>
@@ -21,11 +20,17 @@
             <rect key="frame" x="0.0" y="0.0" width="289" height="67"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHD-UP-qJy">
-                    <rect key="frame" x="0.0" y="0.0" width="260" height="17"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHD-UP-qJy">
+                    <rect key="frame" x="0.0" y="0.0" width="34.5" height="17"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Label">
+                            <attributes>
+                                <font key="NSFont" size="14" name="SFProDisplay-Regular"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1.5" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <color key="highlightedColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="70" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rk3-6i-eYP">
                     <rect key="frame" x="16" y="35" width="257" height="22"/>
@@ -39,35 +44,23 @@
                         <constraint firstAttribute="height" constant="1" id="qv2-VH-4hB"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPv-E8-Tm0">
-                    <rect key="frame" x="270" y="0.0" width="19" height="19"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="19" id="CWR-51-5fI"/>
-                        <constraint firstAttribute="height" constant="19" id="ZEL-Z4-QCd"/>
-                    </constraints>
-                    <state key="normal" image="info.circle" catalog="system"/>
-                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="rk3-6i-eYP" secondAttribute="trailing" constant="16" id="3wW-RT-mxj"/>
                 <constraint firstItem="rk3-6i-eYP" firstAttribute="top" secondItem="KHD-UP-qJy" secondAttribute="bottom" constant="18" id="8Xj-Qx-Y2S"/>
                 <constraint firstAttribute="trailing" secondItem="USh-nk-mbh" secondAttribute="trailing" id="9Ms-sT-mQu"/>
-                <constraint firstItem="FPv-E8-Tm0" firstAttribute="leading" secondItem="KHD-UP-qJy" secondAttribute="trailing" constant="10" id="E2M-Zf-osd"/>
                 <constraint firstItem="KHD-UP-qJy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="FMf-Yf-KOL"/>
                 <constraint firstItem="KHD-UP-qJy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="G7r-H5-aOg"/>
                 <constraint firstItem="USh-nk-mbh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ImE-FA-N64"/>
                 <constraint firstItem="rk3-6i-eYP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="Plj-X8-dNs"/>
                 <constraint firstItem="USh-nk-mbh" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" constant="1" id="Uc1-vH-SdU"/>
-                <constraint firstItem="FPv-E8-Tm0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Zny-ZM-I1j"/>
-                <constraint firstAttribute="trailing" secondItem="FPv-E8-Tm0" secondAttribute="trailing" id="nxU-eO-00l"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="136.95652173913044" y="67.96875"/>
         </view>
     </objects>
     <resources>
-        <image name="info.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

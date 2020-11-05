@@ -29,7 +29,7 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgm-vg-8m4">
                             <rect key="frame" x="20" y="0.0" width="342" height="369"/>
-                            <color key="backgroundColor" red="0.96078431372549022" green="0.52941176470588236" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.33333333333333331" green="0.59999999999999998" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                             <state key="normal" title="Presión arterial">
                                 <color key="titleColor" systemColor="labelColor"/>
@@ -40,7 +40,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6y5-uc-esu">
                             <rect key="frame" x="20" y="389" width="342" height="369"/>
-                            <color key="backgroundColor" red="1" green="0.72941176470588232" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.33333333333333331" green="0.59999999999999998" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                             <state key="normal" title="Monitoreo de salud">
                                 <color key="titleColor" systemColor="labelColor"/>

@@ -15,7 +15,6 @@ final class InputLickerScaleUIView: UIView  {
     @IBOutlet private weak var radioContainer2: UIView!
     @IBOutlet private weak var radioContainer3: UIView!
     @IBOutlet private weak var radioContainer4: UIView!
-    @IBOutlet weak var infoButton: UIButton!
     
     private var radiosArray: [LTHRadioButton] = []
     private var viewsRadiosArray: [UIView] = []
@@ -81,10 +80,9 @@ final class InputLickerScaleUIView: UIView  {
         selectedButton = selected
     }
     
-    func setInitValues(instruction: String, width: CGFloat, hasInfoBtn: Bool = true){
+    func setInitValues(instruction: String, width: CGFloat){
         lblInstruction.text = instruction
         InputLickerComponentView.frame.size.width = width
-        infoButton.isHidden = !hasInfoBtn
     }
     func getScaleValue() -> Int{
         return selectedButton

@@ -31,8 +31,8 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sxl-i1-boy">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Elx-YB-VjI">
-                                    <rect key="frame" x="16" y="22" width="382" height="535"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Elx-YB-VjI">
+                                    <rect key="frame" x="16" y="22" width="382" height="591"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Hp-7R-s8r" customClass="InputTextFieldUIView" customModule="pressura" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="382" height="67"/>
@@ -42,35 +42,35 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yli-7M-BDu" customClass="InputTextFieldUIView" customModule="pressura" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="87" width="382" height="67"/>
+                                            <rect key="frame" x="0.0" y="91" width="382" height="67"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="67" id="mSw-Pf-Pmz"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZQW-kQ-g5L" customClass="InputLickerScaleUIView" customModule="pressura" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="174" width="382" height="67"/>
+                                            <rect key="frame" x="0.0" y="182" width="382" height="79"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="67" id="Xp4-bA-82f"/>
+                                                <constraint firstAttribute="height" constant="79" id="Xp4-bA-82f"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Udu-3V-sYI" customClass="InputLickerScaleUIView" customModule="pressura" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="261" width="382" height="67"/>
+                                            <rect key="frame" x="0.0" y="285" width="382" height="79"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="67" id="BHg-Cy-ASo"/>
+                                                <constraint firstAttribute="height" constant="79" id="BHg-Cy-ASo"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBK-Wz-wka" customClass="InputLickerScaleUIView" customModule="pressura" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="348" width="382" height="67"/>
+                                            <rect key="frame" x="0.0" y="388" width="382" height="79"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="67" id="iXB-RG-lpB"/>
+                                                <constraint firstAttribute="height" constant="79" id="iXB-RG-lpB"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H2u-F1-f9h" customClass="InputTextFieldUIView" customModule="pressura" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="435" width="382" height="100"/>
+                                            <rect key="frame" x="0.0" y="491" width="382" height="100"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="100" id="gA3-TV-ArQ"/>
@@ -93,7 +93,7 @@
                                     </constraints>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVg-Kd-QeS">
-                                    <rect key="frame" x="260" y="581" width="138" height="34"/>
+                                    <rect key="frame" x="260" y="637" width="138" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <state key="normal" title="Añadir monitoreo"/>
                                 </button>

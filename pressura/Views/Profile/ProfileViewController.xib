@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,8 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="pressura" customModuleProvider="target">
             <connections>
-                <outlet property="tfEmail" destination="axm-18-kDs" id="XBy-Jq-oCx"/>
-                <outlet property="tfName" destination="xyg-Q0-7nN" id="sfQ-mE-ffp"/>
+                <outlet property="inputMailComponent" destination="3IC-R8-GNY" id="uSD-Ta-ncG"/>
+                <outlet property="inputMyDoctor" destination="W7N-dw-Q2K" id="ivE-ZT-CaY"/>
+                <outlet property="inputNameComponent" destination="kaL-hf-ibZ" id="hIh-mZ-b5O"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,62 +22,11 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <userGuides>
-                <userLayoutGuide location="134" affinity="minY"/>
-                <userLayoutGuide location="762" affinity="minY"/>
+                <userLayoutGuide location="32" affinity="minY"/>
             </userGuides>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVC-7y-w4V">
-                    <rect key="frame" x="20" y="150" width="56" height="17"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mi nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xyg-Q0-7nN">
-                    <rect key="frame" x="20" y="175" width="365" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" systemColor="systemGray5Color"/>
-                    <color key="textColor" systemColor="systemGrayColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Correo electrónico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Os-eX-twp">
-                    <rect key="frame" x="20" y="228" width="129" height="17"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="micorreo@pressura.mx" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="axm-18-kDs">
-                    <rect key="frame" x="20" y="253" width="365" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" systemColor="systemGray5Color"/>
-                    <color key="textColor" systemColor="systemGrayColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                    <textInputTraits key="textInputTraits" textContentType="email"/>
-                </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mi médico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfA-DK-Ron">
-                    <rect key="frame" x="25" y="358" width="71" height="17"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="891-555-66-44" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ko0-iU-p18">
-                    <rect key="frame" x="25" y="383" width="365" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                    <textInputTraits key="textInputTraits" smartDashesType="yes" textContentType="tel"/>
-                </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lq-dQ-QwV">
-                    <rect key="frame" x="310" y="431" width="80" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                    <state key="normal" title="Actualizar"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1H4-Jb-Wlb">
-                    <rect key="frame" x="20" y="693" width="108" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1H4-Jb-Wlb">
+                    <rect key="frame" x="16" y="798" width="108" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <state key="normal" title="Cerrar sesión">
                         <color key="titleColor" systemColor="systemRedColor"/>
@@ -85,9 +35,58 @@
                         <action selector="signOut:" destination="-1" eventType="touchUpInside" id="moB-Rd-FGa"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W7N-dw-Q2K" customClass="InputTextFieldUIView" customModule="pressura" customModuleProvider="target">
+                    <rect key="frame" x="16" y="270" width="382" height="67"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="67" id="F18-o4-8EO"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wNQ-cT-7cF">
+                    <rect key="frame" x="16" y="66" width="382" height="154"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kaL-hf-ibZ" customClass="InputTextFieldUIView" customModule="pressura" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="67"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="67" id="ONo-xW-NS8"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3IC-R8-GNY" customClass="InputTextFieldUIView" customModule="pressura" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="87" width="382" height="67"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="67" id="KMl-Iv-RXT"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="kaL-hf-ibZ" secondAttribute="trailing" id="b1v-XV-guj"/>
+                        <constraint firstItem="3IC-R8-GNY" firstAttribute="leading" secondItem="wNQ-cT-7cF" secondAttribute="leading" id="i86-R5-ewK"/>
+                        <constraint firstAttribute="trailing" secondItem="3IC-R8-GNY" secondAttribute="trailing" id="j6Q-py-bGT"/>
+                        <constraint firstItem="kaL-hf-ibZ" firstAttribute="leading" secondItem="wNQ-cT-7cF" secondAttribute="leading" id="wo7-8t-NWr"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRJ-L2-6a4">
+                    <rect key="frame" x="318" y="361" width="80" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="Actualizar"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oRJ-L2-6a4" secondAttribute="trailing" constant="16" id="0Dl-Ew-eEq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="W7N-dw-Q2K" secondAttribute="trailing" constant="16" id="Agf-Vg-CIi"/>
+                <constraint firstItem="1H4-Jb-Wlb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="OO9-qQ-5yc"/>
+                <constraint firstItem="wNQ-cT-7cF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="22" id="dWc-ly-xZm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wNQ-cT-7cF" secondAttribute="trailing" constant="16" id="h3F-8G-qX3"/>
+                <constraint firstItem="W7N-dw-Q2K" firstAttribute="top" secondItem="wNQ-cT-7cF" secondAttribute="bottom" constant="50" id="ssr-5f-TMg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="1H4-Jb-Wlb" secondAttribute="bottom" constant="30" id="vLM-80-WfF"/>
+                <constraint firstItem="oRJ-L2-6a4" firstAttribute="top" secondItem="W7N-dw-Q2K" secondAttribute="bottom" constant="24" id="zaU-Pi-T6V"/>
+                <constraint firstItem="wNQ-cT-7cF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="zl7-2O-DNZ"/>
+                <constraint firstItem="W7N-dw-Q2K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="znB-YJ-J3a"/>
+            </constraints>
             <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
             <point key="canvasLocation" x="140.57971014492756" y="123.88392857142857"/>
         </view>
@@ -95,12 +94,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

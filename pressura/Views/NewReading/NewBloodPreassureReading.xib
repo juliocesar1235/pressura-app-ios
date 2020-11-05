@@ -22,8 +22,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gVs-aA-kow">
-                    <rect key="frame" x="16" y="66" width="382" height="241"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="gVs-aA-kow">
+                    <rect key="frame" x="16" y="66" width="382" height="249"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5X-Ry-UDO" customClass="InputTextFieldUIView" customModule="pressura" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="382" height="67"/>
@@ -33,14 +33,14 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4B-Tk-Qhc" customClass="InputTextFieldUIView" customModule="pressura" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="87" width="382" height="67"/>
+                            <rect key="frame" x="0.0" y="91" width="382" height="67"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="67" id="qw0-pX-s9n"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Jp-rf-Eib" customClass="InputTextFieldUIView" customModule="pressura" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="174" width="382" height="67"/>
+                            <rect key="frame" x="0.0" y="182" width="382" height="67"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="67" id="oDY-Am-x8j"/>
@@ -57,7 +57,7 @@
                     </constraints>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qbd-vZ-gxW">
-                    <rect key="frame" x="268" y="331" width="130" height="34"/>
+                    <rect key="frame" x="268" y="339" width="130" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <state key="normal" title="Añadir medición"/>
                 </button>

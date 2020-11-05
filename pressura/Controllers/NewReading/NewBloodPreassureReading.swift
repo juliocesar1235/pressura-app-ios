@@ -21,9 +21,9 @@ class NewBloodPreassureReading: UIViewController {
     }
     
     func configureComponents(){
-        inputSystolePressure.setInitValues(instruction: "Presión sistólica", placehoder: "100", width: inputSystolePressure.frame.width, hasInfoBtn: false)
-        inputDiastolePressure.setInitValues(instruction: "Presión diastólica", placehoder: "90", width: inputDiastolePressure.frame.width, hasInfoBtn: false)
-        inputPulse.setInitValues(instruction: "Pulso", placehoder: "70", width: inputPulse.frame.width, hasInfoBtn: false)
+        inputSystolePressure.setInitValues(instruction: "Presión sistólica", placehoder: "100", width: inputSystolePressure.frame.width)
+        inputDiastolePressure.setInitValues(instruction: "Presión diastólica", placehoder: "90", width: inputDiastolePressure.frame.width)
+        inputPulse.setInitValues(instruction: "Pulso", placehoder: "70", width: inputPulse.frame.width)
     }
 
 

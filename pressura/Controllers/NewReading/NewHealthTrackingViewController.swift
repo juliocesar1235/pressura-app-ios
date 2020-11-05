@@ -26,12 +26,12 @@ class NewHealthTrackingViewController: UIViewController {
     }
     
     func configureComponents(){
-        inputWeight.setInitValues(instruction: "Peso (kg)", placehoder: "70", width: inputWeight.frame.width, hasInfoBtn: false)
+        inputWeight.setInitValues(instruction: "Peso (kg)", placehoder: "70", width: inputWeight.frame.width)
         inputAbdominalGirth.setInitValues(instruction: "Circumferencia abdominal (cm)", placehoder: "100", width: inputAbdominalGirth.frame.width)
         inputDrugsAttachment.setInitValues(instruction: "Apego al medicamento", width: inputDrugsAttachment.frame.width)
         inputDietAttachment.setInitValues(instruction: "Apego a la dieta", width: inputDietAttachment.frame.width)
         inputExerciseAttachment.setInitValues(instruction: "Apego a rutina de ejercicio", width: inputExerciseAttachment.frame.width)
-        inputAdditionalComment.setInitValues(instruction: "¿Cómo me he sentido?",placehoder: "Comentario Breve", width: inputAdditionalComment.frame.width, hasInfoBtn: false)
+        inputAdditionalComment.setInitValues(instruction: "¿Cómo me he sentido?",placehoder: "Comentario Breve", width: inputAdditionalComment.frame.width)
     }
     
 

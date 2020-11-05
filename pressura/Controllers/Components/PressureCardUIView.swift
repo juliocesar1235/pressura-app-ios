@@ -10,8 +10,9 @@ import UIKit
 //  que se haga build.
 //@IBDesignable
 // Final bc of increase build performance and desing (supuestamente)
-final class PressureCardUIView: UIView {
-    
+//final class PressureCardUIView: UIView {
+final class PressureCardUIView: UICollectionViewCell {
+    static let identifier = "PressureCardUIView"
     @IBOutlet private weak var pressionSistolica: UILabel!
     @IBOutlet private weak var presionDiastolica: UILabel!
     @IBOutlet private weak var pulso: UILabel!
@@ -33,10 +34,10 @@ final class PressureCardUIView: UIView {
         view.layer.cornerRadius = 16
         view.frame = self.bounds
         view.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
-        view.layer.shadowOpacity = 1
-        view.layer.shadowRadius = 8
-        view.layer.shadowOffset = CGSize(width: 2, height: 2)
-        view.layer.shadowPath = UIBezierPath(rect: view.bounds).cgPath
+        view.layer.shadowOpacity = 0.5
+        view.layer.shadowRadius = 6
+        view.layer.shadowOffset = CGSize(width: 6, height: 6)
+       // view.layer.shadowPath = UIBezierPath(ovalIn: contactRect).cgPath
         self.addSubview(view)
     }
     

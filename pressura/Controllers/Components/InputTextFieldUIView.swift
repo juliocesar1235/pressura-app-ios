@@ -12,7 +12,7 @@ final class InputTextFieldUIView: UIView {
     @IBOutlet var InputComponentView: UIView!
     @IBOutlet weak var lblInstruction: UILabel!
     @IBOutlet weak var textFieldInput: UITextField!
-    @IBOutlet weak var infoBtn: UIButton!
+    
     
     
     override init(frame: CGRect) {
@@ -32,11 +32,10 @@ final class InputTextFieldUIView: UIView {
         self.addSubview(view)
     }
     
-    func setInitValues(instruction: String, placehoder: String, width: CGFloat, hasInfoBtn: Bool = true){
+    func setInitValues(instruction: String, placehoder: String, width: CGFloat){
         lblInstruction.text = instruction
         textFieldInput.placeholder = placehoder
         InputComponentView.frame.size.width = width
-        infoBtn.isHidden = !hasInfoBtn
     }
     
     // Tal vez en este caso seria más conveniente que lblInstruction
