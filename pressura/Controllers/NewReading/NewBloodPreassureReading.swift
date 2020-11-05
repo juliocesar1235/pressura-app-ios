@@ -9,13 +9,21 @@ import UIKit
 
 class NewBloodPreassureReading: UIViewController {
 
+    @IBOutlet weak var inputSystolePressure: InputTextFieldUIView!
+    @IBOutlet weak var inputDiastolePressure: InputTextFieldUIView!
+    @IBOutlet weak var inputPulse: InputTextFieldUIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configureComponents()
         navigationItem.title = "Presión Arterial"
         navigationController?.navigationBar.prefersLargeTitles = true
-        
-        // Do any additional setup after loading the view.
+    }
+    
+    func configureComponents(){
+        inputSystolePressure.setInitValues(instruction: "Presión sistólica", placehoder: "100", width: inputSystolePressure.frame.width, hasInfoBtn: false)
+        inputDiastolePressure.setInitValues(instruction: "Presión diastólica", placehoder: "90", width: inputDiastolePressure.frame.width, hasInfoBtn: false)
+        inputPulse.setInitValues(instruction: "Pulso", placehoder: "70", width: inputPulse.frame.width, hasInfoBtn: false)
     }
 
 
