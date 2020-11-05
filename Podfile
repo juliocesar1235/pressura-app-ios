@@ -9,6 +9,8 @@ target 'pressura' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
+  
+  pod 'LTHRadioButton'
 
   target 'pressuraTests' do
     inherit! :search_paths

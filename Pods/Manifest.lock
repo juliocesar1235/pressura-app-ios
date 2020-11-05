@@ -81,6 +81,7 @@ PODS:
   - GTMSessionFetcher/Core (1.4.0)
   - GTMSessionFetcher/Full (1.4.0):
     - GTMSessionFetcher/Core (= 1.4.0)
+  - LTHRadioButton (1.2.3)
   - nanopb (1.30906.0):
     - nanopb/decode (= 1.30906.0)
     - nanopb/encode (= 1.30906.0)
@@ -92,6 +93,7 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Auth
   - GoogleSignIn
+  - LTHRadioButton
 
 SPEC REPOS:
   trunk:
@@ -108,6 +110,7 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMAppAuth
     - GTMSessionFetcher
+    - LTHRadioButton
     - nanopb
     - PromisesObjC
 
@@ -125,9 +128,10 @@ SPEC CHECKSUMS:
   GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
   GTMAppAuth: 197a8dabfea5d665224aa00d17f164fc2248dab9
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
+  LTHRadioButton: b20980614572f7911272a6b8aa79ec0fdc9a74d4
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
 
-PODFILE CHECKSUM: 0745539762024d2a609fec81c64b26e375595517
+PODFILE CHECKSUM: d1db428a47ff812d85c6e9fd62aa61ebd5d2937d
 
-COCOAPODS: 1.10.0.rc.1
+COCOAPODS: 1.10.0

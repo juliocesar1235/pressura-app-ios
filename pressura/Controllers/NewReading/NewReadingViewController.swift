@@ -9,6 +9,8 @@ import UIKit
 
 class NewReadingViewController: UIViewController {
     
+    @IBOutlet weak var btnBloodPressure: UIButton!
+    @IBOutlet weak var btnHealthM: UIButton!
     
 
     override func viewDidLoad() {
@@ -16,6 +18,8 @@ class NewReadingViewController: UIViewController {
         
         navigationItem.title = "Medición Nueva"
         navigationController?.navigationBar.prefersLargeTitles = true
+        btnBloodPressure.layer.cornerRadius = 15
+        btnHealthM.layer.cornerRadius = 15
     }
 
     @IBAction func newBloodPreassure(_ sender: UIButton) {
