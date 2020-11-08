@@ -6,10 +6,7 @@ target 'pressura' do
   use_frameworks!
 
   # Pods for pressura
-  pod 'Firebase/Analytics'
-  pod 'Firebase/Auth'
-  pod 'GoogleSignIn'
-  
+  pod 'Alamofire'
   pod 'LTHRadioButton'
 
   target 'pressuraTests' do

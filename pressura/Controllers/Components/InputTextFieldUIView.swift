@@ -38,6 +38,10 @@ final class InputTextFieldUIView: UIView {
         InputComponentView.frame.size.width = width
     }
     
+    func getInputText() -> String?{
+        return textFieldInput.text
+    }
+    
     // Tal vez en este caso seria más conveniente que lblInstruction
     // y textFieldInput no fueran privados
 

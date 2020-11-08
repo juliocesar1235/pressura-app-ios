@@ -12,7 +12,6 @@
 		8150D337A8C38F04DF2ABDC6 /* Pods_pressura_pressuraUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD39F10EE74EA35B9D8C5BEB /* Pods_pressura_pressuraUITests.framework */; };
 		A51B58F2253C8D2700B8608B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51B58F0253C8D2700B8608B /* ProfileViewController.swift */; };
 		A51B58F3253C8D2700B8608B /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A51B58F1253C8D2700B8608B /* ProfileViewController.xib */; };
-		A576FEE3253BFB6800171C63 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A576FEE2253BFB6800171C63 /* GoogleService-Info.plist */; };
 		A576FEF1253BFC3800171C63 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A576FEF0253BFC3800171C63 /* AuthViewController.xib */; };
 		A57BBD6B253C1C99008A0B00 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57BBD6A253C1C99008A0B00 /* MainTabBarController.swift */; };
 		A57BBD72253C1D0D008A0B00 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57BBD70253C1D0D008A0B00 /* SummaryViewController.swift */; };
@@ -26,8 +25,6 @@
 		F276AB332537EA8800731CBE /* pressuraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276AB322537EA8800731CBE /* pressuraTests.swift */; };
 		F276AB3E2537EA8800731CBE /* pressuraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276AB3D2537EA8800731CBE /* pressuraUITests.swift */; };
 		F2CD2348253806C1009106FB /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CD2347253806C1009106FB /* AuthViewController.swift */; };
-		F2CD235025380AB6009106FB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CD234F25380AB6009106FB /* HomeViewController.swift */; };
-		F2CD236725381305009106FB /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2CD236625381304009106FB /* HomeViewController.xib */; };
 		F939B19F253CE745009692D7 /* NewBloodPreassureReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F939B19D253CE745009692D7 /* NewBloodPreassureReading.swift */; };
 		F939B1A0253CE745009692D7 /* NewBloodPreassureReading.xib in Resources */ = {isa = PBXBuildFile; fileRef = F939B19E253CE745009692D7 /* NewBloodPreassureReading.xib */; };
 		F94833EA2547B39B0016BFB4 /* InputTextFieldUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94833E92547B39B0016BFB4 /* InputTextFieldUIView.swift */; };
@@ -35,6 +32,11 @@
 		F99691D5254F7F2F00CB587D /* InputLickerScaleComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = F99691D4254F7F2F00CB587D /* InputLickerScaleComponent.xib */; };
 		F99691DA254F7F7300CB587D /* InputLickerScaleUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99691D9254F7F7300CB587D /* InputLickerScaleUIView.swift */; };
 		F99691DF254F827D00CB587D /* LTHRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99691DE254F827D00CB587D /* LTHRadioButton.swift */; };
+		F9AD778A2557764100113D36 /* BloodPressureReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AD77892557764100113D36 /* BloodPressureReading.swift */; };
+		F9AD778F2557765000113D36 /* GeneralHealthReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AD778E2557765000113D36 /* GeneralHealthReading.swift */; };
+		F9AD77942557765D00113D36 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AD77932557765D00113D36 /* User.swift */; };
+		F9AD779A2557768200113D36 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AD77992557768200113D36 /* APIManager.swift */; };
+		F9AD77A22557813E00113D36 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AD77A12557813E00113D36 /* Token.swift */; };
 		F9E68104253CEAEA00619F10 /* NewHealthTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E68102253CEAEA00619F10 /* NewHealthTrackingViewController.swift */; };
 		F9E68105253CEAEA00619F10 /* NewHealthTrackingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E68103253CEAEA00619F10 /* NewHealthTrackingViewController.xib */; };
 		F9E99654254651BA009A06A5 /* PressureCardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E99653254651BA009A06A5 /* PressureCardUIView.swift */; };
@@ -65,7 +67,6 @@
 		A26830D66A2B8682577DAEF0 /* Pods-pressura.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pressura.release.xcconfig"; path = "Target Support Files/Pods-pressura/Pods-pressura.release.xcconfig"; sourceTree = "<group>"; };
 		A51B58F0253C8D2700B8608B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A51B58F1253C8D2700B8608B /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
-		A576FEE2253BFB6800171C63 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "pressura/Supporting Files/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		A576FEF0253BFC3800171C63 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		A57BBD6A253C1C99008A0B00 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		A57BBD70253C1D0D008A0B00 /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
@@ -91,8 +92,6 @@
 		F276AB3D2537EA8800731CBE /* pressuraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pressuraUITests.swift; sourceTree = "<group>"; };
 		F276AB3F2537EA8800731CBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2CD2347253806C1009106FB /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
-		F2CD234F25380AB6009106FB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		F2CD236625381304009106FB /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		F939B19D253CE745009692D7 /* NewBloodPreassureReading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBloodPreassureReading.swift; sourceTree = "<group>"; };
 		F939B19E253CE745009692D7 /* NewBloodPreassureReading.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewBloodPreassureReading.xib; sourceTree = "<group>"; };
 		F94833E92547B39B0016BFB4 /* InputTextFieldUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextFieldUIView.swift; sourceTree = "<group>"; };
@@ -100,6 +99,11 @@
 		F99691D4254F7F2F00CB587D /* InputLickerScaleComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputLickerScaleComponent.xib; sourceTree = "<group>"; };
 		F99691D9254F7F7300CB587D /* InputLickerScaleUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputLickerScaleUIView.swift; sourceTree = "<group>"; };
 		F99691DE254F827D00CB587D /* LTHRadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTHRadioButton.swift; sourceTree = "<group>"; };
+		F9AD77892557764100113D36 /* BloodPressureReading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BloodPressureReading.swift; path = pressura/Controllers/Components/BloodPressureReading.swift; sourceTree = SOURCE_ROOT; };
+		F9AD778E2557765000113D36 /* GeneralHealthReading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GeneralHealthReading.swift; path = pressura/Controllers/Components/GeneralHealthReading.swift; sourceTree = SOURCE_ROOT; };
+		F9AD77932557765D00113D36 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = pressura/Controllers/Components/User.swift; sourceTree = SOURCE_ROOT; };
+		F9AD77992557768200113D36 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		F9AD77A12557813E00113D36 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Token.swift; path = pressura/Helpers/Token.swift; sourceTree = SOURCE_ROOT; };
 		F9E68102253CEAEA00619F10 /* NewHealthTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHealthTrackingViewController.swift; sourceTree = "<group>"; };
 		F9E68103253CEAEA00619F10 /* NewHealthTrackingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewHealthTrackingViewController.xib; sourceTree = "<group>"; };
 		F9E99653254651BA009A06A5 /* PressureCardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressureCardUIView.swift; sourceTree = "<group>"; };
@@ -183,7 +187,6 @@
 				A57BBD7A253C1D13008A0B00 /* Summary */,
 				A57BBD50253C10F8008A0B00 /* Launch */,
 				A57BBD4A253C1072008A0B00 /* Auth */,
-				A57BBD43253C104E008A0B00 /* Home */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -197,7 +200,6 @@
 				A57BBD6F253C1CF3008A0B00 /* Summary */,
 				A57BBD63253C1870008A0B00 /* MainTabBar */,
 				A57BBD4C253C1082008A0B00 /* Auth */,
-				A57BBD4B253C107B008A0B00 /* Home */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -205,6 +207,10 @@
 		A576FEEF253BFBDE00171C63 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F9AD77892557764100113D36 /* BloodPressureReading.swift */,
+				F9AD778E2557765000113D36 /* GeneralHealthReading.swift */,
+				F9AD77932557765D00113D36 /* User.swift */,
+				F9AD77A12557813E00113D36 /* Token.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -212,18 +218,9 @@
 		A57BBD3C253C0E59008A0B00 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A576FEE2253BFB6800171C63 /* GoogleService-Info.plist */,
 				F276AB292537EA8700731CBE /* Info.plist */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A57BBD43253C104E008A0B00 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				F2CD236625381304009106FB /* HomeViewController.xib */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		A57BBD4A253C1072008A0B00 /* Auth */ = {
@@ -232,14 +229,6 @@
 				A576FEF0253BFC3800171C63 /* AuthViewController.xib */,
 			);
 			path = Auth;
-			sourceTree = "<group>";
-		};
-		A57BBD4B253C107B008A0B00 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				F2CD234F25380AB6009106FB /* HomeViewController.swift */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		A57BBD4C253C1082008A0B00 /* Auth */ = {
@@ -327,6 +316,7 @@
 		F276AB1A2537EA8200731CBE /* pressura */ = {
 			isa = PBXGroup;
 			children = (
+				F9AD77982557766800113D36 /* Helpers */,
 				F276AB1B2537EA8200731CBE /* AppDelegate.swift */,
 				F276AB1D2537EA8200731CBE /* SceneDelegate.swift */,
 				A576FEEF253BFBDE00171C63 /* Models */,
@@ -354,6 +344,14 @@
 				F276AB3F2537EA8800731CBE /* Info.plist */,
 			);
 			path = pressuraUITests;
+			sourceTree = "<group>";
+		};
+		F9AD77982557766800113D36 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F9AD77992557768200113D36 /* APIManager.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		F9E99651254650FF009A06A5 /* Components */ = {
@@ -390,7 +388,6 @@
 				F276AB152537EA8200731CBE /* Frameworks */,
 				F276AB162537EA8200731CBE /* Resources */,
 				38C9D54004A2AFA4110FC186 /* [CP] Embed Pods Frameworks */,
-				9D9D8CA9FF4E03F2FA94EC56 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -429,7 +426,6 @@
 				F276AB362537EA8800731CBE /* Frameworks */,
 				F276AB372537EA8800731CBE /* Resources */,
 				4D066684E4066EB579629E50 /* [CP] Embed Pods Frameworks */,
-				C2F98B9AAE1AFA82EF6FE022 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -489,7 +485,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F276AB282537EA8700731CBE /* LaunchScreen.storyboard in Resources */,
-				F2CD236725381305009106FB /* HomeViewController.xib in Resources */,
 				A51B58F3253C8D2700B8608B /* ProfileViewController.xib in Resources */,
 				F99691D5254F7F2F00CB587D /* InputLickerScaleComponent.xib in Resources */,
 				A57BBD82253C2543008A0B00 /* NewReadingViewController.xib in Resources */,
@@ -500,7 +495,6 @@
 				A57BBD73253C1D0D008A0B00 /* SummaryViewController.xib in Resources */,
 				A576FEF1253BFC3800171C63 /* AuthViewController.xib in Resources */,
 				F939B1A0253CE745009692D7 /* NewBloodPreassureReading.xib in Resources */,
-				A576FEE3253BFB6800171C63 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,40 +571,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9D9D8CA9FF4E03F2FA94EC56 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-pressura/Pods-pressura-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-pressura/Pods-pressura-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pressura/Pods-pressura-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C2F98B9AAE1AFA82EF6FE022 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-pressura-pressuraUITests/Pods-pressura-pressuraUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-pressura-pressuraUITests/Pods-pressura-pressuraUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pressura-pressuraUITests/Pods-pressura-pressuraUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DBB6D2819F004DA23FB25C4A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -663,6 +623,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9E9965E25465E81009A06A5 /* UIViewExtension.swift in Sources */,
+				F9AD779A2557768200113D36 /* APIManager.swift in Sources */,
 				F276AB1C2537EA8200731CBE /* AppDelegate.swift in Sources */,
 				F94833EA2547B39B0016BFB4 /* InputTextFieldUIView.swift in Sources */,
 				F2CD2348253806C1009106FB /* AuthViewController.swift in Sources */,
@@ -670,10 +631,13 @@
 				A57BBD6B253C1C99008A0B00 /* MainTabBarController.swift in Sources */,
 				A57BBD81253C2543008A0B00 /* NewReadingViewController.swift in Sources */,
 				F276AB1E2537EA8200731CBE /* SceneDelegate.swift in Sources */,
+				F9AD778A2557764100113D36 /* BloodPressureReading.swift in Sources */,
+				F9AD778F2557765000113D36 /* GeneralHealthReading.swift in Sources */,
+				F9AD77A22557813E00113D36 /* Token.swift in Sources */,
 				F99691DA254F7F7300CB587D /* InputLickerScaleUIView.swift in Sources */,
-				F2CD235025380AB6009106FB /* HomeViewController.swift in Sources */,
 				A51B58F2253C8D2700B8608B /* ProfileViewController.swift in Sources */,
 				A57BBD72253C1D0D008A0B00 /* SummaryViewController.swift in Sources */,
+				F9AD77942557765D00113D36 /* User.swift in Sources */,
 				F9E68104253CEAEA00619F10 /* NewHealthTrackingViewController.swift in Sources */,
 				F939B19F253CE745009692D7 /* NewBloodPreassureReading.swift in Sources */,
 				F99691DF254F827D00CB587D /* LTHRadioButton.swift in Sources */,
