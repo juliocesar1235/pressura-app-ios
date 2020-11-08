@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import GoogleSignIn
 
 class ProfileViewController: UIViewController {
 
@@ -17,6 +16,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var inputMailComponent: InputTextFieldUIView!
     @IBOutlet weak var inputMyDoctor: InputTextFieldUIView!
     
+    let userDefaults : UserDefaults = UserDefaults.standard
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Mi información"
@@ -33,15 +33,16 @@ class ProfileViewController: UIViewController {
         inputMailComponent.textFieldInput.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         inputNameComponent.textFieldInput.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         
-        if let user = GIDSignIn.sharedInstance()?.currentUser {
-            inputNameComponent.textFieldInput.text = "\(user.profile.givenName!) \(user.profile.familyName!)"
-            inputMailComponent.textFieldInput.text = "\(user.profile.email!)"
-        }
+//        if let user = GIDSignIn.sharedInstance()?.currentUser {
+//            inputNameComponent.textFieldInput.text = "\(user.profile.givenName!) \(user.profile.familyName!)"
+//            inputMailComponent.textFieldInput.text = "\(user.profile.email!)"
+//        }
         
     }
     
     @IBAction func signOut(_ sender: UIButton) {
-        GIDSignIn.sharedInstance()?.signOut()
+        userDefaults.removeObject(forKey: "token")
+        print(userDefaults.string(forKey: "token"))
         goToLogin()
     }
     

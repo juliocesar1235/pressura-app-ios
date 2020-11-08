@@ -6,33 +6,31 @@
 //
 
 import UIKit
-import FirebaseAnalytics
-import FirebaseAuth
-import GoogleSignIn
 
 class AuthViewController: UIViewController {
     
+    @IBOutlet weak var inputEmail: InputTextFieldUIView!
+    @IBOutlet weak var inputPasword: InputTextFieldUIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //Analytics events
-        Analytics.logEvent("Initial screen", parameters: ["message":"Firebase integration complete"])
-        
-        // Signin with Google
-        GIDSignIn.sharedInstance()?.presentingViewController = self
+        configComponents()
     }
     
-    @IBAction func signIn(_ sender: UIButton) {
-        GIDSignIn.sharedInstance()?.signIn()
-        
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(goToHome),
-                                               name: .signInGoogleCompleted,
-                                               object: nil)
-                
+    func configComponents(){
+        inputEmail.setInitValues(instruction: "Correo", placehoder: "email@pressura.com", width: inputEmail.frame.width)
+        inputPasword.setInitValues(instruction: "Contraseña", placehoder: "123", width: inputPasword.frame.width)
     }
     
-    
+    @IBAction func btnLogin(_ sender: UIButton) {
+        let email = inputEmail.getInputText()!
+        let pws = inputPasword.getInputText()!
+        APIManager.shared.login(email: email, password: pws) { (txt) in
+            print(txt!)
+        }
+        
+    }
+
     @objc func goToHome() {
         (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(MainTabBarController())
     }
