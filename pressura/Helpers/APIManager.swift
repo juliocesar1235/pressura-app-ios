@@ -40,9 +40,7 @@ class APIManager {
     }
 
     func login(email: String, password: String, completion: @escaping(String?) -> Void){
-
         let headers : HTTPHeaders = [
-            
             .accept("application/json")
         ]
         let parameters : Parameters = [ "username": email, "password": password]
@@ -83,6 +81,35 @@ class APIManager {
                 do{
                     let bloodPressureReadings = try JSONDecoder().decode([BloodPressureReading].self, from: data)
                     completion(bloodPressureReadings,nil)
+                }catch{
+                    completion(nil, "Decoding error")
+                }
+            }else{
+                completion(nil, "Connection error")
+            }
+        }
+    }
+    
+    // This function sets blood pressure readings
+    func postBloodReadings(newPressure: BloodPressureReading, completion: @escaping(BloodPressureReading?, String?) -> Void){
+        let defaults = UserDefaults.standard
+        let token = defaults.string(forKey: "token")
+        let headers : HTTPHeaders = [
+            .authorization(token!),
+            .accept("application/json")
+        ]
+        let parameters : Parameters = [ "pulse": newPressure.getPulse(),
+                                        "systolic": newPressure.getSystolicReading(),
+                                        "diastolic": newPressure.getDiastolicReading()]
+
+        
+        AF.request(self.baseURL.appendingPathComponent("/blood-pressure-readings/"), method: .post, parameters: parameters, encoding: URLEncoding.httpBody, headers: headers).responseJSON {
+            (response) in
+            if let data = response.data {
+                do{
+                    print(data)
+                    let bloodPressureReading = try JSONDecoder().decode(BloodPressureReading.self, from: data)
+                    completion(bloodPressureReading,nil)
                 }catch{
                     completion(nil, "Decoding error")
                 }

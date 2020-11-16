@@ -60,6 +60,9 @@
                     <rect key="frame" x="268" y="339" width="130" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <state key="normal" title="Añadir medición"/>
+                    <connections>
+                        <action selector="addNewBloodPressure:" destination="-1" eventType="touchUpInside" id="K2z-ev-R76"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
