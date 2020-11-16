@@ -1,20 +1,26 @@
 PODS:
   - Alamofire (5.4.0)
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
   - LTHRadioButton (1.2.3)
 
 DEPENDENCIES:
   - Alamofire
+  - Charts
   - LTHRadioButton
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Charts
     - LTHRadioButton
 
 SPEC CHECKSUMS:
   Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   LTHRadioButton: b20980614572f7911272a6b8aa79ec0fdc9a74d4
 
-PODFILE CHECKSUM: ab09b6c6d25b46dcb69af6bc57a965065536780c
+PODFILE CHECKSUM: d9f36bdf8baf561eef82fa8b72a5e269e0b515ea
 
 COCOAPODS: 1.10.0
