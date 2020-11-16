@@ -12,19 +12,23 @@ class BloodPressureReading : Codable {
 //    @objc private var pacient : Int
     @objc private var id: Int
 
-    init() {
+    init(pulse: Int, systolic: Int, diastolic: Int, id: Int? = -1) {
         
-        self.systolic = 0
-        self.diastolic = 0
-        self.pulse = 0
+        self.systolic = systolic
+        self.diastolic = diastolic
+        self.pulse = pulse
 //        self.pacient = 0
-        self.id = 0
+        if let identifier = id {
+            self.id = identifier
+        }else {
+            self.id = -1
+        }
     }
 
     func getSystolicReading()->Int {return self.systolic}
     func getDiastolicReading()->Int {return self.diastolic}
     func getPulse()->Int {return self.pulse}
 //    func getPatientId()->Int {return self.pacient}
-    func getId()-> Int {return self.id}
+//    func getId()-> Int {return self.id}
 
 }
