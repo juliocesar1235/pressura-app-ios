@@ -8,6 +8,7 @@ target 'pressura' do
   # Pods for pressura
   pod 'Alamofire'
   pod 'LTHRadioButton'
+  pod 'Charts'
 
   target 'pressuraTests' do
     inherit! :search_paths
