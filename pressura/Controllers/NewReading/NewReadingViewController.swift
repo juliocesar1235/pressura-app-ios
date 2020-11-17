@@ -23,7 +23,7 @@ class NewReadingViewController: UIViewController {
     }
 
     @IBAction func newBloodPreassure(_ sender: UIButton) {
-        let vc = NewBloodPreassureReading()
+        let vc = NewBloodPressureReading()
         vc.modalPresentationStyle = .fullScreen
         vc.navigationItem.hidesBackButton = false
         self.navigationController?.pushViewController(vc, animated: true)

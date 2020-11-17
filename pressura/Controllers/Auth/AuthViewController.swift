@@ -18,8 +18,9 @@ class AuthViewController: UIViewController {
     }
     
     func configComponents(){
-        inputEmail.setInitValues(instruction: "Correo", placehoder: "email@pressura.com", width: inputEmail.frame.width)
-        inputPasword.setInitValues(instruction: "Contraseña", placehoder: "123", width: inputPasword.frame.width)
+        inputEmail.setInitValues(instruction: "Usuario", placehoder: "Nombre", width: inputEmail.frame.width)
+        inputPasword.setInitValues(instruction: "Contraseña", placehoder: "Contraseña", width: inputPasword.frame.width)
+        inputPasword.textFieldInput.isSecureTextEntry = true
     }
     
     @IBAction func btnLogin(_ sender: UIButton) {
@@ -31,8 +32,6 @@ class AuthViewController: UIViewController {
         
     }
 
-    @objc func goToHome() {
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(MainTabBarController())
-    }
+ 
     
 }

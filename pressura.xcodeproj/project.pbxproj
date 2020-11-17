@@ -26,9 +26,11 @@
 		F276AB3E2537EA8800731CBE /* pressuraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276AB3D2537EA8800731CBE /* pressuraUITests.swift */; };
 		F2CD2348253806C1009106FB /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CD2347253806C1009106FB /* AuthViewController.swift */; };
 		F939B19F253CE745009692D7 /* NewBloodPreassureReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F939B19D253CE745009692D7 /* NewBloodPreassureReading.swift */; };
-		F939B1A0253CE745009692D7 /* NewBloodPreassureReading.xib in Resources */ = {isa = PBXBuildFile; fileRef = F939B19E253CE745009692D7 /* NewBloodPreassureReading.xib */; };
+		F939B1A0253CE745009692D7 /* NewBloodPressureReading.xib in Resources */ = {isa = PBXBuildFile; fileRef = F939B19E253CE745009692D7 /* NewBloodPressureReading.xib */; };
 		F94833EA2547B39B0016BFB4 /* InputTextFieldUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94833E92547B39B0016BFB4 /* InputTextFieldUIView.swift */; };
 		F94833EF2547B3BC0016BFB4 /* InputTextFieldComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = F94833EE2547B3BC0016BFB4 /* InputTextFieldComponent.xib */; };
+		F94BA1FD25621FE500420806 /* PieChartUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94BA1FC25621FE500420806 /* PieChartUIView.swift */; };
+		F94BA202256220FC00420806 /* PieChartComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = F94BA201256220FC00420806 /* PieChartComponent.xib */; };
 		F99691D5254F7F2F00CB587D /* InputLickerScaleComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = F99691D4254F7F2F00CB587D /* InputLickerScaleComponent.xib */; };
 		F99691DA254F7F7300CB587D /* InputLickerScaleUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99691D9254F7F7300CB587D /* InputLickerScaleUIView.swift */; };
 		F99691DF254F827D00CB587D /* LTHRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99691DE254F827D00CB587D /* LTHRadioButton.swift */; };
@@ -37,6 +39,8 @@
 		F9AD77942557765D00113D36 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AD77932557765D00113D36 /* User.swift */; };
 		F9AD779A2557768200113D36 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AD77992557768200113D36 /* APIManager.swift */; };
 		F9AD77A22557813E00113D36 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AD77A12557813E00113D36 /* Token.swift */; };
+		F9D2B95925609D8500326541 /* lineChartComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9D2B95825609D8500326541 /* lineChartComponent.xib */; };
+		F9D2B95E25609DA800326541 /* LineChartUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D2B95D25609DA800326541 /* LineChartUIView.swift */; };
 		F9E68104253CEAEA00619F10 /* NewHealthTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E68102253CEAEA00619F10 /* NewHealthTrackingViewController.swift */; };
 		F9E68105253CEAEA00619F10 /* NewHealthTrackingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E68103253CEAEA00619F10 /* NewHealthTrackingViewController.xib */; };
 		F9E99654254651BA009A06A5 /* PressureCardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E99653254651BA009A06A5 /* PressureCardUIView.swift */; };
@@ -93,9 +97,11 @@
 		F276AB3F2537EA8800731CBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2CD2347253806C1009106FB /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		F939B19D253CE745009692D7 /* NewBloodPreassureReading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBloodPreassureReading.swift; sourceTree = "<group>"; };
-		F939B19E253CE745009692D7 /* NewBloodPreassureReading.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewBloodPreassureReading.xib; sourceTree = "<group>"; };
+		F939B19E253CE745009692D7 /* NewBloodPressureReading.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewBloodPressureReading.xib; sourceTree = "<group>"; };
 		F94833E92547B39B0016BFB4 /* InputTextFieldUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextFieldUIView.swift; sourceTree = "<group>"; };
 		F94833EE2547B3BC0016BFB4 /* InputTextFieldComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputTextFieldComponent.xib; sourceTree = "<group>"; };
+		F94BA1FC25621FE500420806 /* PieChartUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartUIView.swift; sourceTree = "<group>"; };
+		F94BA201256220FC00420806 /* PieChartComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PieChartComponent.xib; sourceTree = "<group>"; };
 		F99691D4254F7F2F00CB587D /* InputLickerScaleComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputLickerScaleComponent.xib; sourceTree = "<group>"; };
 		F99691D9254F7F7300CB587D /* InputLickerScaleUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputLickerScaleUIView.swift; sourceTree = "<group>"; };
 		F99691DE254F827D00CB587D /* LTHRadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTHRadioButton.swift; sourceTree = "<group>"; };
@@ -104,6 +110,8 @@
 		F9AD77932557765D00113D36 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = pressura/Controllers/Components/User.swift; sourceTree = SOURCE_ROOT; };
 		F9AD77992557768200113D36 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		F9AD77A12557813E00113D36 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Token.swift; path = pressura/Helpers/Token.swift; sourceTree = SOURCE_ROOT; };
+		F9D2B95825609D8500326541 /* lineChartComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = lineChartComponent.xib; sourceTree = "<group>"; };
+		F9D2B95D25609DA800326541 /* LineChartUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartUIView.swift; sourceTree = "<group>"; };
 		F9E68102253CEAEA00619F10 /* NewHealthTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHealthTrackingViewController.swift; sourceTree = "<group>"; };
 		F9E68103253CEAEA00619F10 /* NewHealthTrackingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewHealthTrackingViewController.xib; sourceTree = "<group>"; };
 		F9E99653254651BA009A06A5 /* PressureCardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressureCardUIView.swift; sourceTree = "<group>"; };
@@ -276,7 +284,7 @@
 			children = (
 				A57BBD80253C2543008A0B00 /* NewReadingViewController.xib */,
 				F9E68103253CEAEA00619F10 /* NewHealthTrackingViewController.xib */,
-				F939B19E253CE745009692D7 /* NewBloodPreassureReading.xib */,
+				F939B19E253CE745009692D7 /* NewBloodPressureReading.xib */,
 			);
 			path = NewReading;
 			sourceTree = "<group>";
@@ -360,6 +368,8 @@
 				F9E99658254652BF009A06A5 /* PressureCardComponent.xib */,
 				F94833EE2547B3BC0016BFB4 /* InputTextFieldComponent.xib */,
 				F99691D4254F7F2F00CB587D /* InputLickerScaleComponent.xib */,
+				F9D2B95825609D8500326541 /* lineChartComponent.xib */,
+				F94BA201256220FC00420806 /* PieChartComponent.xib */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -372,6 +382,8 @@
 				F9E9965D25465E81009A06A5 /* UIViewExtension.swift */,
 				F94833E92547B39B0016BFB4 /* InputTextFieldUIView.swift */,
 				F99691D9254F7F7300CB587D /* InputLickerScaleUIView.swift */,
+				F9D2B95D25609DA800326541 /* LineChartUIView.swift */,
+				F94BA1FC25621FE500420806 /* PieChartUIView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -488,13 +500,15 @@
 				A51B58F3253C8D2700B8608B /* ProfileViewController.xib in Resources */,
 				F99691D5254F7F2F00CB587D /* InputLickerScaleComponent.xib in Resources */,
 				A57BBD82253C2543008A0B00 /* NewReadingViewController.xib in Resources */,
+				F9D2B95925609D8500326541 /* lineChartComponent.xib in Resources */,
 				F94833EF2547B3BC0016BFB4 /* InputTextFieldComponent.xib in Resources */,
 				F9E68105253CEAEA00619F10 /* NewHealthTrackingViewController.xib in Resources */,
+				F94BA202256220FC00420806 /* PieChartComponent.xib in Resources */,
 				F276AB252537EA8700731CBE /* Assets.xcassets in Resources */,
 				F9E99659254652BF009A06A5 /* PressureCardComponent.xib in Resources */,
 				A57BBD73253C1D0D008A0B00 /* SummaryViewController.xib in Resources */,
 				A576FEF1253BFC3800171C63 /* AuthViewController.xib in Resources */,
-				F939B1A0253CE745009692D7 /* NewBloodPreassureReading.xib in Resources */,
+				F939B1A0253CE745009692D7 /* NewBloodPressureReading.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,11 +642,13 @@
 				F94833EA2547B39B0016BFB4 /* InputTextFieldUIView.swift in Sources */,
 				F2CD2348253806C1009106FB /* AuthViewController.swift in Sources */,
 				F9E99654254651BA009A06A5 /* PressureCardUIView.swift in Sources */,
+				F94BA1FD25621FE500420806 /* PieChartUIView.swift in Sources */,
 				A57BBD6B253C1C99008A0B00 /* MainTabBarController.swift in Sources */,
 				A57BBD81253C2543008A0B00 /* NewReadingViewController.swift in Sources */,
 				F276AB1E2537EA8200731CBE /* SceneDelegate.swift in Sources */,
 				F9AD778A2557764100113D36 /* BloodPressureReading.swift in Sources */,
 				F9AD778F2557765000113D36 /* GeneralHealthReading.swift in Sources */,
+				F9D2B95E25609DA800326541 /* LineChartUIView.swift in Sources */,
 				F9AD77A22557813E00113D36 /* Token.swift in Sources */,
 				F99691DA254F7F7300CB587D /* InputLickerScaleUIView.swift in Sources */,
 				A51B58F2253C8D2700B8608B /* ProfileViewController.swift in Sources */,

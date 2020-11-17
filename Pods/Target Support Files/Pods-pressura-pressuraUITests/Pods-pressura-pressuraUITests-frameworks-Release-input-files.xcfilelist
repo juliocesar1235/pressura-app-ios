@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-pressura-pressuraUITests/Pods-pressura-pressuraUITests-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/Charts/Charts.framework

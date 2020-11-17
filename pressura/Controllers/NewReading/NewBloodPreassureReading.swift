@@ -1,5 +1,5 @@
 //
-//  NewBloodPreassureReading.swift
+//  NewBloodPressureReading.swift
 //  pressura
 //
 //  Created by Raúl Castellanos on 18/10/20.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewBloodPreassureReading: UIViewController {
+class NewBloodPressureReading: UIViewController {
 
     @IBOutlet weak var inputSystolePressure: InputTextFieldUIView!
     @IBOutlet weak var inputDiastolePressure: InputTextFieldUIView!
@@ -26,6 +26,26 @@ class NewBloodPreassureReading: UIViewController {
         inputPulse.setInitValues(instruction: "Pulso", placehoder: "70", width: inputPulse.frame.width)
     }
 
-
-
+    @IBAction func addNewBloodPressure(_ sender: UIButton) {
+        let newPressure = BloodPressureReading(
+            pulse: Int(inputPulse.getInputText()!)!,
+            systolic: Int(inputSystolePressure.getInputText()!)!,
+            diastolic: Int(inputDiastolePressure.getInputText()!)!
+        )
+        
+        APIManager.shared.postBloodReadings(newPressure: newPressure) { (reading, message) in
+            if let msg = message {
+                // TODO: hacer un alert
+                print("Alert")
+            }else {
+                if let tabBarController = self.view.window!.rootViewController as? MainTabBarController {
+                    let tabBar = self.tabBarController
+                    let vc = tabBar!.viewControllers![0] as? SummaryViewController
+                    vc?.bloodReadings.append(reading!)
+                    
+                    tabBarController.selectedIndex = 0
+                }
+            }
+        }
+    }
 }
