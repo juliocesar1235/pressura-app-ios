@@ -33,6 +33,7 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         print("frame width: ", self.view.frame.width)
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "¡Hola!"

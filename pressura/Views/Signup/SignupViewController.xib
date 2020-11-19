@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignupViewController" customModule="pressura" customModuleProvider="target">
+            <connections>
+                <outlet property="inputEmail" destination="rIC-FN-Dib" id="wg2-tl-H95"/>
+                <outlet property="inputFirstName" destination="hrq-53-3pO" id="rVO-HE-7DJ"/>
+                <outlet property="inputLastName" destination="uDB-gE-eXw" id="TXm-aX-sIX"/>
+                <outlet property="inputPasword" destination="Tje-am-9QR" id="GUf-bW-dWi"/>
+                <outlet property="inputUsername" destination="TEU-ME-Y3d" id="L9K-K4-AoL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crear nueva cuenta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Zm-Xa-IBx">
+                    <rect key="frame" x="16" y="64" width="382" height="29"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H02-6z-jaM">
+                    <rect key="frame" x="264" y="548" width="134" height="30"/>
+                    <state key="normal" title="Crear nueva cuenta"/>
+                    <connections>
+                        <action selector="signUp:" destination="-1" eventType="touchUpInside" id="EZJ-Kh-L4A"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Dod-EK-qB2">
+                    <rect key="frame" x="16" y="113" width="382" height="415"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rIC-FN-Dib" customClass="InputTextFieldUIView" customModule="pressura" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="67"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="67" id="zx3-db-mea"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TEU-ME-Y3d" customClass="InputTextFieldUIView" customModule="pressura" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="87" width="382" height="67"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="67" id="gOS-gg-QJz"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hrq-53-3pO" customClass="InputTextFieldUIView" customModule="pressura" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="174" width="382" height="67"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="67" id="GqF-gq-HZQ"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uDB-gE-eXw" customClass="InputTextFieldUIView" customModule="pressura" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="261" width="382" height="67"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="67" id="LLQ-zC-bhP"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tje-am-9QR" customClass="InputTextFieldUIView" customModule="pressura" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="348" width="382" height="67"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="67" id="BEr-Nd-nYs"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="rIC-FN-Dib" secondAttribute="trailing" id="0Gj-J2-lyL"/>
+                        <constraint firstItem="hrq-53-3pO" firstAttribute="leading" secondItem="Dod-EK-qB2" secondAttribute="leading" id="2VI-qC-sOA"/>
+                        <constraint firstItem="hrq-53-3pO" firstAttribute="centerX" secondItem="Dod-EK-qB2" secondAttribute="centerX" id="4bG-xb-IJ7"/>
+                        <constraint firstAttribute="trailing" secondItem="Tje-am-9QR" secondAttribute="trailing" id="5mf-DW-wzy"/>
+                        <constraint firstItem="rIC-FN-Dib" firstAttribute="centerX" secondItem="Dod-EK-qB2" secondAttribute="centerX" id="9Fy-4k-EPB"/>
+                        <constraint firstItem="Tje-am-9QR" firstAttribute="centerX" secondItem="Dod-EK-qB2" secondAttribute="centerX" id="EFU-Y7-tnM"/>
+                        <constraint firstItem="TEU-ME-Y3d" firstAttribute="leading" secondItem="Dod-EK-qB2" secondAttribute="leading" id="LdN-EV-yiY"/>
+                        <constraint firstAttribute="trailing" secondItem="TEU-ME-Y3d" secondAttribute="trailing" id="Uvj-GH-pUQ"/>
+                        <constraint firstAttribute="trailing" secondItem="uDB-gE-eXw" secondAttribute="trailing" id="e9r-y3-447"/>
+                        <constraint firstItem="uDB-gE-eXw" firstAttribute="leading" secondItem="Dod-EK-qB2" secondAttribute="leading" id="h92-nE-eQT"/>
+                        <constraint firstAttribute="trailing" secondItem="hrq-53-3pO" secondAttribute="trailing" id="rQ5-e6-Sgb"/>
+                        <constraint firstItem="rIC-FN-Dib" firstAttribute="leading" secondItem="Dod-EK-qB2" secondAttribute="leading" id="su1-02-TLd"/>
+                        <constraint firstItem="uDB-gE-eXw" firstAttribute="centerX" secondItem="Dod-EK-qB2" secondAttribute="centerX" id="tqZ-qt-UMn"/>
+                        <constraint firstItem="Tje-am-9QR" firstAttribute="leading" secondItem="Dod-EK-qB2" secondAttribute="leading" id="v7q-pH-7lq"/>
+                        <constraint firstItem="TEU-ME-Y3d" firstAttribute="centerX" secondItem="Dod-EK-qB2" secondAttribute="centerX" id="wbx-7T-rMD"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Dod-EK-qB2" firstAttribute="top" secondItem="1Zm-Xa-IBx" secondAttribute="bottom" constant="20" id="5tY-Ll-gd4"/>
+                <constraint firstItem="H02-6z-jaM" firstAttribute="top" secondItem="Dod-EK-qB2" secondAttribute="bottom" constant="20" id="I1l-4m-MfM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1Zm-Xa-IBx" secondAttribute="trailing" constant="16" id="WYs-Bv-7Jy"/>
+                <constraint firstItem="Dod-EK-qB2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="bEU-8r-26M"/>
+                <constraint firstItem="1Zm-Xa-IBx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="dpJ-ie-QPp"/>
+                <constraint firstItem="1Zm-Xa-IBx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="mZL-YZ-H6A"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Dod-EK-qB2" secondAttribute="trailing" constant="16" id="o6u-jV-yih"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="H02-6z-jaM" secondAttribute="trailing" constant="16" id="u3D-sB-GQT"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="109.82142857142857"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

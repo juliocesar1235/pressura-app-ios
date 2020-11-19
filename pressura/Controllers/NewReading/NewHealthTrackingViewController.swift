@@ -19,6 +19,7 @@ class NewHealthTrackingViewController: UIViewController {
     override func viewDidLoad() {
         // Esto es para ajustar el tamaño dependiendo del dispositivo
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         configureComponents()
         navigationItem.title = "Monitoreo"
         navigationController?.navigationBar.prefersLargeTitles = true
