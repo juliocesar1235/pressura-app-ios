@@ -9,14 +9,11 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-    @IBOutlet weak var tfName: UITextField!
-    @IBOutlet weak var tfEmail: UITextField!
-    
     @IBOutlet weak var inputNameComponent: InputTextFieldUIView!
     @IBOutlet weak var inputMailComponent: InputTextFieldUIView!
-    @IBOutlet weak var inputMyDoctor: InputTextFieldUIView!
     
     let userDefaults : UserDefaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
@@ -26,6 +23,14 @@ class ProfileViewController: UIViewController {
     }
     
     func configureComponents(){
+        do {
+            let user = try userDefaults.getObject(forKey: "user", castTo: User.self)
+            inputNameComponent.textFieldInput.text = "\(user.first_name!) \(user.last_name!)"
+            inputMailComponent.textFieldInput.text = user.email
+        } catch {
+            
+        }
+        
         inputNameComponent.setInitValues(
             instruction: "Nombre",
             placehoder: "Mi nombre",
@@ -36,11 +41,7 @@ class ProfileViewController: UIViewController {
             placehoder: "user@pressura.com",
             width: inputMailComponent.frame.width
         )
-        inputMyDoctor.setInitValues(
-            instruction: "Mi médico",
-            placehoder: "891-555-66-44",
-            width: inputMyDoctor.frame.width
-        )
+
         inputNameComponent.textFieldInput.isEnabled = false
         inputMailComponent.textFieldInput.isEnabled = false
         inputMailComponent.textFieldInput.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
@@ -49,6 +50,7 @@ class ProfileViewController: UIViewController {
     
     @IBAction func signOut(_ sender: UIButton) {
         userDefaults.removeObject(forKey: "token")
+        userDefaults.removeObject(forKey: "user")
         goToLogin()
     }
     

@@ -7,18 +7,16 @@
 import Foundation
 
 class User : Codable {
-    @objc private var is_doctor : Bool
-    @objc private var doctor_id : Int
-    @objc private var export_id : Int
+    
+    @objc var username: String?
+    @objc var first_name: String?
+    @objc var last_name: String?
+    @objc var email: String?
 
     init() {
-        self.is_doctor = false
-        self.doctor_id = 0
-        self.export_id = 0
+        self.username = ""
+        self.first_name = ""
+        self.last_name = ""
+        self.email = ""
     }
-
-    func isDoctor()->Bool {return self.is_doctor}
-    func getDoctorId()->Int {return self.doctor_id}
-    func getExportId()->Int {return self.export_id}
-
 }
