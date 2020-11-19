@@ -9,6 +9,7 @@ target 'pressura' do
   pod 'Alamofire'
   pod 'LTHRadioButton'
   pod 'Charts'
+  pod 'IQKeyboardManagerSwift'
 
   target 'pressuraTests' do
     inherit! :search_paths

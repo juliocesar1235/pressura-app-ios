@@ -15,6 +15,7 @@ class NewBloodPressureReading: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         configureComponents()
         navigationItem.title = "Presión Arterial"
         navigationController?.navigationBar.prefersLargeTitles = true

@@ -3,24 +3,28 @@ PODS:
   - Charts (3.6.0):
     - Charts/Core (= 3.6.0)
   - Charts/Core (3.6.0)
+  - IQKeyboardManagerSwift (6.5.6)
   - LTHRadioButton (1.2.3)
 
 DEPENDENCIES:
   - Alamofire
   - Charts
+  - IQKeyboardManagerSwift
   - LTHRadioButton
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Charts
+    - IQKeyboardManagerSwift
     - LTHRadioButton
 
 SPEC CHECKSUMS:
   Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   LTHRadioButton: b20980614572f7911272a6b8aa79ec0fdc9a74d4
 
-PODFILE CHECKSUM: d9f36bdf8baf561eef82fa8b72a5e269e0b515ea
+PODFILE CHECKSUM: 8a21e8b2b172f51ac9f8ce3e2bfbb89f25475325
 
 COCOAPODS: 1.10.0

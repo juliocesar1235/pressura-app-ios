@@ -79,7 +79,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UU-gR-dJh">
-                    <rect key="frame" x="16" y="848" width="382" height="30"/>
+                    <rect key="frame" x="16" y="816" width="382" height="30"/>
                     <state key="normal" title="Crear cuenta nueva"/>
                     <connections>
                         <action selector="btnSingup:" destination="-1" eventType="touchUpInside" id="UuP-nn-FKS"/>
@@ -94,7 +94,7 @@
                 <constraint firstItem="7UU-gR-dJh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="YIa-Rl-P9K"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7UU-gR-dJh" secondAttribute="trailing" constant="16" id="bTy-Tm-hLW"/>
                 <constraint firstItem="1r9-8n-rsY" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="140" id="exH-Z1-vlM"/>
-                <constraint firstItem="7UU-gR-dJh" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="16" id="qzP-Kx-deK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="7UU-gR-dJh" secondAttribute="bottom" constant="16" id="hwV-5i-BcL"/>
                 <constraint firstItem="1r9-8n-rsY" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="uDi-dQ-zee"/>
                 <constraint firstAttribute="trailing" secondItem="1r9-8n-rsY" secondAttribute="trailing" id="yAa-pg-lSL"/>
             </constraints>

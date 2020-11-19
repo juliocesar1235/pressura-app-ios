@@ -14,6 +14,7 @@ class AuthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         configComponents()
     }
     
@@ -30,7 +31,6 @@ class AuthViewController: UIViewController {
             print(txt!)
         }
     }
-    
     
     @IBAction func btnSingup(_ sender: UIButton) {
         let vc = SignupViewController()

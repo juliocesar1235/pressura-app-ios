@@ -19,6 +19,7 @@ class ProfileViewController: UIViewController {
     let userDefaults : UserDefaults = UserDefaults.standard
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         navigationItem.title = "Mi información"
         navigationController?.navigationBar.prefersLargeTitles = true
         configureComponents()
