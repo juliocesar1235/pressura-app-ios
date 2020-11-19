@@ -40,8 +40,9 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
             APIManager.shared.getBloodReadings{ (bloodReadings,message) in
                 if let bReadings = bloodReadings {
                     self.bloodReadings = bReadings
-                    self.addBloodReadingsToGraphs()
                     self.collectionView.reloadData()
+                    self.addBloodReadingsToGraphs()
+                    self.configureBloodReadingsChart()
                 }
             }
         }
@@ -49,14 +50,12 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
         if generalHealthReadings.count == 0 {
             APIManager.shared.getGeneralHealthReadings{ (generalHealthReadings, message) in
                 if let hReadings = generalHealthReadings {
-                    
                     self.generalHealthReadings = hReadings
-                    print("HELATH: ", self.generalHealthReadings.count)
                     self.addGeneralHealthReadingsToGraphs()
+                    self.configureHealthReadingsChart()
                 }
             }
         }
-        self.configureCharts()
         self.collectionView.reloadData()
     }
     
@@ -64,15 +63,18 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "¡Hola!"
-//        addBloodReadingsToGraphs()
+        navigationItem.title = "¡Bienvenido!"
         // Views From Components
         self.configureCollectionView()
         self.view.layoutIfNeeded()
     }
-    func configureCharts(){
+    
+    func configureBloodReadingsChart() {
         // Line Charts
         pressureChart.setDataSetsPressures(systolicDataSet: sistolicP, diastolicDataSet: distolicP, pulseDataSet: pulses)
+    }
+    func configureHealthReadingsChart(){
+       
         weightAbdominalChart.setDataSetsMessures(weightDataSet: weight, abdominalLengthDataSet: abdominalLength)
         
         // Pie Charts
