@@ -128,9 +128,11 @@ class APIManager {
             .authorization(token!),
             .accept("application/json")
         ]
-        let parameters : Parameters = [ "pulse": newPressure.getPulse(),
-                                        "systolic": newPressure.getSystolicReading(),
-                                        "diastolic": newPressure.getDiastolicReading()]
+        let parameters = [
+            "pulse": newPressure.getPulse(),
+            "systolic": newPressure.getSystolicReading(),
+            "diastolic": newPressure.getDiastolicReading()
+        ] as Parameters
 
         
         AF.request(self.baseURL.appendingPathComponent("/blood-pressure-readings/"), method: .post, parameters: parameters, encoding: URLEncoding.httpBody, headers: headers).responseJSON {
@@ -150,7 +152,7 @@ class APIManager {
     }
 
 
-
+    // Get readings for general health
     func getGeneralHealthReadings(completion: @escaping([GeneralHealthReading]?, String?) -> Void){
         let defaults = UserDefaults.standard
         let token = defaults.string(forKey: "authToken")
@@ -172,5 +174,39 @@ class APIManager {
             }
         }
 
+    }
+    
+    // This function sets general health readings
+    func postGeneralHealthReadings(newHealthReading: GeneralHealthReading, completion: @escaping(GeneralHealthReading?, String?) -> Void){
+        let defaults = UserDefaults.standard
+        let token = defaults.string(forKey: "token")
+        let headers : HTTPHeaders = [
+            .authorization(token!),
+            .accept("application/json")
+        ]
+        let parameters = [
+            "weight" : newHealthReading.getWeight(),
+            "abdominal_circumference": newHealthReading.getAbdominalCircumference(),
+            "treatment_compliance": newHealthReading.getTreatmentComplience(),
+            "exercise_compliance": newHealthReading.getExerciseCompliance(),
+            "diet_compliance": newHealthReading.getDietComplience(),
+            "comment": newHealthReading.getComment()
+        ] as Parameters
+
+        
+        AF.request(self.baseURL.appendingPathComponent("/general-health-readings"), method: .post, parameters: parameters, encoding: URLEncoding.httpBody, headers: headers).responseJSON {
+            (response) in
+            if let data = response.data {
+                do{
+                    print(data)
+                    let healthReding = try JSONDecoder().decode(GeneralHealthReading.self, from: data)
+                    completion(healthReding,nil)
+                }catch{
+                    completion(nil, "Decoding error")
+                }
+            }else{
+                completion(nil, "Connection error")
+            }
+        }
     }
 }

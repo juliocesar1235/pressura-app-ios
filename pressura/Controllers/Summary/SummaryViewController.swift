@@ -17,6 +17,14 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
     @IBOutlet weak var dietAttachmentChart: PieChartUIView!
     @IBOutlet weak var exerciseChart: PieChartUIView!
     
+    var pulses: [ChartDataEntry] = []
+    var sistolicP: [ChartDataEntry] = []
+    var distolicP: [ChartDataEntry] = []
+    
+    var weight: [ChartDataEntry] = []
+    var abdominalLength: [ChartDataEntry] = []
+    
+//    var drugsAttachemnt: [PieChartDataEntry] = []
     
     var collectionPressureCards: UICollectionView?
     var bloodReadings: [BloodPressureReading] = []
@@ -26,11 +34,14 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
             APIManager.shared.getBloodReadings{ (bloodReadings,message) in
                 if let bReadings = bloodReadings {
                     self.bloodReadings = bReadings
+                    self.addBloodReadingsToGraphs()
+                    self.configureCharts()
                     self.collectionView.reloadData()
                 }
             }
         }
         print()
+        
         self.collectionView.reloadData()
     }
     
@@ -40,8 +51,7 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
         print("frame width: ", self.view.frame.width)
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "¡Hola!"
-        pressureChart.backgroundColor = .red
-        
+//        addBloodReadingsToGraphs()
         // Views From Components
         self.configureCollectionView()
         self.configureCharts()
@@ -55,11 +65,11 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
         
         // Pie Charts
         drugsAttachmentChart.setInitValues(title: "Apego al medicamento")
-        drugsAttachmentChart.setChartData(pieChartValues: exerciseValues)
+        drugsAttachmentChart.setChartData(deficient: 10, bad: 20, acceptable: 40, excelent: 30)
         exerciseChart.setInitValues(title: "Apego a rutina de ejercicio")
-        exerciseChart.setChartData(pieChartValues: exerciseValues)
+        exerciseChart.setChartData(deficient: 1, bad: 22, acceptable: 30, excelent: 30)
         dietAttachmentChart.setInitValues(title: "Apego a la dieta")
-        dietAttachmentChart.setChartData(pieChartValues: exerciseValues)
+        dietAttachmentChart.setChartData(deficient: 10, bad: 20, acceptable: 10, excelent: 40)
         
     }
     
@@ -119,59 +129,17 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
     }
     
     
-    // Hardcodeado para pruebas gráficas....
-    let pulses: [ChartDataEntry] = [
-        ChartDataEntry(x: 1, y: 60),
-        ChartDataEntry(x: 2, y: 78),
-        ChartDataEntry(x: 3, y: 55),
-        ChartDataEntry(x: 4, y: 66),
-        ChartDataEntry(x: 5, y: 78),
-        ChartDataEntry(x: 6, y: 80),
-        ChartDataEntry(x: 7, y: 60)
-    ]
-    let sistolicP: [ChartDataEntry] = [
-        ChartDataEntry(x: 1, y: 122),
-        ChartDataEntry(x: 2, y: 139),
-        ChartDataEntry(x: 3, y: 129),
-        ChartDataEntry(x: 4, y: 119),
-        ChartDataEntry(x: 5, y: 110),
-        ChartDataEntry(x: 6, y: 130),
-        ChartDataEntry(x: 7, y: 126)
-    ]
-    let distolicP: [ChartDataEntry] = [
-        ChartDataEntry(x: 1, y: 80),
-        ChartDataEntry(x: 2, y: 82),
-        ChartDataEntry(x: 3, y: 80),
-        ChartDataEntry(x: 4, y: 78),
-        ChartDataEntry(x: 5, y: 87),
-        ChartDataEntry(x: 6, y: 85),
-        ChartDataEntry(x: 7, y: 89)
-    ]
-    
-    let weight: [ChartDataEntry] = [
-        ChartDataEntry(x: 1, y: 70),
-        ChartDataEntry(x: 2, y: 73),
-        ChartDataEntry(x: 3, y: 72),
-        ChartDataEntry(x: 4, y: 70),
-        ChartDataEntry(x: 5, y: 69),
-        ChartDataEntry(x: 6, y: 72),
-        ChartDataEntry(x: 7, y: 73)
-    ]
-    let abdominalLength: [ChartDataEntry] = [
-        ChartDataEntry(x: 1, y: 76.2),
-        ChartDataEntry(x: 2, y: 78),
-        ChartDataEntry(x: 3, y: 77.5),
-        ChartDataEntry(x: 4, y: 74.1),
-        ChartDataEntry(x: 5, y: 74),
-        ChartDataEntry(x: 6, y: 75),
-        ChartDataEntry(x: 7, y: 75.3)
-    ]
-    
-    let exerciseValues: [PieChartDataEntry] = [
-        PieChartDataEntry(value: 10, label: "Deficiente"),
-        PieChartDataEntry(value: 12, label: "Malo"),
-        PieChartDataEntry(value: 20, label: "Aceptable"),
-        PieChartDataEntry(value: 40, label: "Excelente")
-    ]
+    // BloodPressure - add data to array
+    func addBloodReadingsToGraphs() {
+        for (index, bloodReading) in bloodReadings.enumerated() {
+            print(index)
+            let pulse = ChartDataEntry(x: Double(index), y:  Double(bloodReading.getPulse()))
+            let sistolicPressure = ChartDataEntry(x: Double(index), y:  Double(bloodReading.getSystolicReading()))
+            let diastolicPressure = ChartDataEntry(x: Double(index), y:  Double(bloodReading.getDiastolicReading()))
+            pulses.append(pulse)
+            sistolicP.append(sistolicPressure)
+            distolicP.append(diastolicPressure)
+        }
+    }
     
 }

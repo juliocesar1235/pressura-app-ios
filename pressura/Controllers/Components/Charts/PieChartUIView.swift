@@ -63,7 +63,7 @@ final class PieChartUIView: UIView {
         pieChartView.reloadInputViews()
     }
     
-    func setChartData(pieChartValues: [PieChartDataEntry]){
+    func addDataToChart(pieChartValues: [PieChartDataEntry]){
         let dataSet = PieChartDataSet(entries: pieChartValues, label: nil)
         dataSet.colors = [#colorLiteral(red: 1, green: 0.2078431373, blue: 0.2352941176, alpha: 1), #colorLiteral(red: 0.9803921569, green: 0.568627451, blue: 0.2117647059, alpha: 1), #colorLiteral(red: 0.2117647059, green: 0.2745098039, blue: 0.9803921569, alpha: 1), #colorLiteral(red: 0.1568627451, green: 0.6509803922, blue: 0.137254902, alpha: 1)]
         dataSet.valueColors = [.white]
@@ -74,5 +74,15 @@ final class PieChartUIView: UIView {
         
         pieChartView.data = data
         pieChartView.notifyDataSetChanged()
+    }
+    
+    func setChartData(deficient: Double, bad: Double, acceptable: Double, excelent: Double) {
+        var piechartData: [PieChartDataEntry] = []
+        piechartData.append(PieChartDataEntry(value: deficient, label: "Deficiente"))
+        piechartData.append(PieChartDataEntry(value: bad, label: "Malo"))
+        piechartData.append(PieChartDataEntry(value: acceptable, label: "Aceptable"))
+        piechartData.append(PieChartDataEntry(value: excelent, label: "Excelente"))
+        
+        self.addDataToChart(pieChartValues: piechartData)
     }
 }

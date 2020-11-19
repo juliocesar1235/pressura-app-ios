@@ -23,7 +23,6 @@ class NewHealthTrackingViewController: UIViewController {
         configureComponents()
         navigationItem.title = "Monitoreo"
         navigationController?.navigationBar.prefersLargeTitles = true
-        // Do any additional setup after loading the view.
     }
     
     func configureComponents(){
