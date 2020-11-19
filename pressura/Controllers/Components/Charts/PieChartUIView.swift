@@ -10,22 +10,21 @@ import Charts
 
 final class PieChartUIView: UIView {
     
+    @IBOutlet weak var chartTitle: UILabel!
     @IBOutlet private weak var viewComponent: UIView!
     let pieChartView: PieChartView  = {
         let chartView = PieChartView()
-        chartView.backgroundColor = .white
-        // chartView.animate(xAxisDuration: 0.5)
         chartView.chartDescription?.textColor = #colorLiteral(red: 0.3058823529, green: 0.3098039216, blue: 0.3058823529, alpha: 1)
         chartView.holeRadiusPercent = 0.3
         chartView.transparentCircleRadiusPercent = 0
         chartView.drawEntryLabelsEnabled = false
+        chartView.usePercentValuesEnabled = false
         
         let chartLegent = chartView.legend
         chartLegent.textColor = #colorLiteral(red: 0.3058823529, green: 0.3098039216, blue: 0.3058823529, alpha: 1)
         chartLegent.orientation = .vertical
         chartLegent.verticalAlignment = .center
         
-
         return chartView
     }()
     override init(frame: CGRect) {
@@ -41,25 +40,26 @@ final class PieChartUIView: UIView {
     private func configureView(){
         guard let view = self.loadViewFromNib(nibName: "PieChartComponent")
             else { return }
+        view.frame = bounds
+        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(view)
         self.configureChart()
     }
     
     private func configureChart(){
         viewComponent.addSubview(pieChartView)
-        pieChartView.translatesAutoresizingMaskIntoConstraints = true
-        
+    
+        pieChartView.frame.size.width = viewComponent.frame.width
         pieChartView.frame.size.height = viewComponent.frame.height
-        NSLayoutConstraint.activate([
-            pieChartView.centerYAnchor.constraint(equalTo: viewComponent.centerYAnchor),
-            pieChartView.centerXAnchor.constraint(equalTo: viewComponent.centerXAnchor)
-        ])
+        pieChartView.topAnchor.constraint(equalTo: viewComponent.topAnchor).isActive = true
+        pieChartView.leadingAnchor.constraint(equalTo: viewComponent.leadingAnchor).isActive = true
+        pieChartView.trailingAnchor.constraint(equalTo: viewComponent.trailingAnchor).isActive = true
+        pieChartView.bottomAnchor.constraint(equalTo: viewComponent.bottomAnchor).isActive = true
+        pieChartView.translatesAutoresizingMaskIntoConstraints = true
     }
     
-    func setInitValues(width: CGFloat, chartTitle: String){
-        viewComponent.frame.size.width = width
-        pieChartView.frame.size.width = viewComponent.frame.width
-        pieChartView.chartDescription?.text = chartTitle
+    func setInitValues(title: String){
+        chartTitle.text = title
         pieChartView.reloadInputViews()
     }
     

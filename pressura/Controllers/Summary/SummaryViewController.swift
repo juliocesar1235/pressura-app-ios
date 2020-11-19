@@ -13,7 +13,10 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
     @IBOutlet weak var viewCollectionCards: UIView!
     @IBOutlet weak var pressureChart: LineChartUIView!
     @IBOutlet weak var weightAbdominalChart: LineChartUIView!
+    @IBOutlet weak var drugsAttachmentChart: PieChartUIView!
+    @IBOutlet weak var dietAttachmentChart: PieChartUIView!
     @IBOutlet weak var exerciseChart: PieChartUIView!
+    
     
     var collectionPressureCards: UICollectionView?
     var bloodReadings: [BloodPressureReading] = []
@@ -41,15 +44,23 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
         
         // Views From Components
         self.configureCollectionView()
+        self.configureCharts()
+        
+        self.view.layoutIfNeeded()
+    }
+    func configureCharts(){
         // Line Charts
         pressureChart.setDataSetsPressures(systolicDataSet: sistolicP, diastolicDataSet: distolicP, pulseDataSet: pulses)
         weightAbdominalChart.setDataSetsMessures(weightDataSet: weight, abdominalLengthDataSet: abdominalLength)
         
         // Pie Charts
-        exerciseChart.setInitValues(width: exerciseChart.frame.width, chartTitle: "Apego a rutina de ejercicio")
+        drugsAttachmentChart.setInitValues(title: "Apego al medicamento")
+        drugsAttachmentChart.setChartData(pieChartValues: exerciseValues)
+        exerciseChart.setInitValues(title: "Apego a rutina de ejercicio")
         exerciseChart.setChartData(pieChartValues: exerciseValues)
+        dietAttachmentChart.setInitValues(title: "Apego a la dieta")
+        dietAttachmentChart.setChartData(pieChartValues: exerciseValues)
         
-        self.view.layoutIfNeeded()
     }
     
     // Collection View - Pressure Cards config of collection view
