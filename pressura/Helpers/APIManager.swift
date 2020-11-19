@@ -52,11 +52,11 @@ class APIManager {
             (response) in
             if let data = response.data {
                 do{
-                    
                     let token = try JSONDecoder().decode(Token.self, from: data)
-                    print("Success", token.getToken())
                     self.userDefaults.setValue("Token \(token.getToken())", forKey: "token")
-                    (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(MainTabBarController())
+                    APIManager.shared.getUser() { (_, txt) in
+                        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(MainTabBarController())
+                    }
                     
                 }catch{
                     print("CATCH: ", data)
@@ -65,6 +65,34 @@ class APIManager {
                 print("Error")
             }
 
+        }
+    }
+    
+    func getUser(completion: @escaping(User?, String?)->Void) {
+        let defaults = UserDefaults.standard
+        let token = defaults.string(forKey: "token")
+        let headers : HTTPHeaders = [
+            .authorization(token!),
+            .accept("application/json")
+        ]
+
+        AF.request(self.baseURL.appendingPathComponent("/user/"), method: .get, parameters: nil, encoding: URLEncoding.httpBody, headers: headers).responseJSON {
+            (response) in
+            if let data = response.data {
+                do{
+                    let user = try JSONDecoder().decode(User.self, from: data)
+                    do {
+                        try self.userDefaults.setObject(user, forKey: "user")
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                    completion(user, nil)
+                }catch{
+                    completion(nil, "Decoding error")
+                }
+            }else{
+                completion(nil, "Connection error")
+            }
         }
     }
 

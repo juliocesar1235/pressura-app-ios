@@ -10,6 +10,8 @@
 		21017C934795ACDCF9D68FF6 /* Pods_pressuraTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C914813C624532DC1B16329 /* Pods_pressuraTests.framework */; };
 		6007A8709DF98F27F168EE8C /* Pods_pressura.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC909AAA7726C97BB2A6B6F2 /* Pods_pressura.framework */; };
 		8150D337A8C38F04DF2ABDC6 /* Pods_pressura_pressuraUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD39F10EE74EA35B9D8C5BEB /* Pods_pressura_pressuraUITests.framework */; };
+		A51B04542566EEC60080A2F9 /* ObjectSavable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51B04532566EEC60080A2F9 /* ObjectSavable.swift */; };
+		A51B045D2566EF4C0080A2F9 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51B045C2566EF4C0080A2F9 /* UserDefaultsExtension.swift */; };
 		A51B58F2253C8D2700B8608B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51B58F0253C8D2700B8608B /* ProfileViewController.swift */; };
 		A51B58F3253C8D2700B8608B /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A51B58F1253C8D2700B8608B /* ProfileViewController.xib */; };
 		A54C15A5256359A100CF7CCC /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54C15A3256359A100CF7CCC /* SignupViewController.swift */; };
@@ -72,6 +74,8 @@
 		0EDB4ADBC19985FD968EEF14 /* Pods-pressuraTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pressuraTests.debug.xcconfig"; path = "Target Support Files/Pods-pressuraTests/Pods-pressuraTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7C914813C624532DC1B16329 /* Pods_pressuraTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pressuraTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A26830D66A2B8682577DAEF0 /* Pods-pressura.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pressura.release.xcconfig"; path = "Target Support Files/Pods-pressura/Pods-pressura.release.xcconfig"; sourceTree = "<group>"; };
+		A51B04532566EEC60080A2F9 /* ObjectSavable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectSavable.swift; sourceTree = "<group>"; };
+		A51B045C2566EF4C0080A2F9 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		A51B58F0253C8D2700B8608B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A51B58F1253C8D2700B8608B /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		A54C15A3256359A100CF7CCC /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +178,43 @@
 				7C914813C624532DC1B16329 /* Pods_pressuraTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A51B044F2566EE5D0080A2F9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A51B04532566EEC60080A2F9 /* ObjectSavable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A51B04502566EE6A0080A2F9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F9E9965D25465E81009A06A5 /* UIViewExtension.swift */,
+				F91B08E825660AC100C8283C /* UIViewControllerExtension.swift */,
+				A51B045C2566EF4C0080A2F9 /* UserDefaultsExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A51B04512566EE8A0080A2F9 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				F9D2B95D25609DA800326541 /* LineChartUIView.swift */,
+				F94BA1FC25621FE500420806 /* PieChartUIView.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		A51B04522566EE930080A2F9 /* Inputs */ = {
+			isa = PBXGroup;
+			children = (
+				F99691DE254F827D00CB587D /* LTHRadioButton.swift */,
+				F94833E92547B39B0016BFB4 /* InputTextFieldUIView.swift */,
+				F99691D9254F7F7300CB587D /* InputLickerScaleUIView.swift */,
+			);
+			path = Inputs;
 			sourceTree = "<group>";
 		};
 		A51B58EF253C8D1600B8608B /* Profile */ = {
@@ -348,6 +389,8 @@
 		F276AB1A2537EA8200731CBE /* pressura */ = {
 			isa = PBXGroup;
 			children = (
+				A51B04502566EE6A0080A2F9 /* Extensions */,
+				A51B044F2566EE5D0080A2F9 /* Protocols */,
 				F9AD77982557766800113D36 /* Helpers */,
 				F276AB1B2537EA8200731CBE /* AppDelegate.swift */,
 				F276AB1D2537EA8200731CBE /* SceneDelegate.swift */,
@@ -401,7 +444,8 @@
 		F9E9965225465176009A06A5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				F99691DE254F827D00CB587D /* LTHRadioButton.swift */,
+				A51B04522566EE930080A2F9 /* Inputs */,
+				A51B04512566EE8A0080A2F9 /* Charts */,
 				F9E99653254651BA009A06A5 /* PressureCardUIView.swift */,
 				F9E9965D25465E81009A06A5 /* UIViewExtension.swift */,
 				F94833E92547B39B0016BFB4 /* InputTextFieldUIView.swift */,
@@ -665,6 +709,7 @@
 				F9E9965E25465E81009A06A5 /* UIViewExtension.swift in Sources */,
 				F9AD779A2557768200113D36 /* APIManager.swift in Sources */,
 				A54C15A5256359A100CF7CCC /* SignupViewController.swift in Sources */,
+				A51B04542566EEC60080A2F9 /* ObjectSavable.swift in Sources */,
 				F276AB1C2537EA8200731CBE /* AppDelegate.swift in Sources */,
 				F94833EA2547B39B0016BFB4 /* InputTextFieldUIView.swift in Sources */,
 				F2CD2348253806C1009106FB /* AuthViewController.swift in Sources */,
@@ -676,6 +721,7 @@
 				F276AB1E2537EA8200731CBE /* SceneDelegate.swift in Sources */,
 				F9AD778A2557764100113D36 /* BloodPressureReading.swift in Sources */,
 				F9AD778F2557765000113D36 /* GeneralHealthReading.swift in Sources */,
+				A51B045D2566EF4C0080A2F9 /* UserDefaultsExtension.swift in Sources */,
 				F9D2B95E25609DA800326541 /* LineChartUIView.swift in Sources */,
 				F9AD77A22557813E00113D36 /* Token.swift in Sources */,
 				F99691DA254F7F7300CB587D /* InputLickerScaleUIView.swift in Sources */,
