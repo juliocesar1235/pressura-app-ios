@@ -12,6 +12,8 @@
 		8150D337A8C38F04DF2ABDC6 /* Pods_pressura_pressuraUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD39F10EE74EA35B9D8C5BEB /* Pods_pressura_pressuraUITests.framework */; };
 		A51B58F2253C8D2700B8608B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51B58F0253C8D2700B8608B /* ProfileViewController.swift */; };
 		A51B58F3253C8D2700B8608B /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A51B58F1253C8D2700B8608B /* ProfileViewController.xib */; };
+		A54C15A5256359A100CF7CCC /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54C15A3256359A100CF7CCC /* SignupViewController.swift */; };
+		A54C15A6256359A100CF7CCC /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54C15A4256359A100CF7CCC /* SignupViewController.xib */; };
 		A576FEF1253BFC3800171C63 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A576FEF0253BFC3800171C63 /* AuthViewController.xib */; };
 		A57BBD6B253C1C99008A0B00 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57BBD6A253C1C99008A0B00 /* MainTabBarController.swift */; };
 		A57BBD72253C1D0D008A0B00 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57BBD70253C1D0D008A0B00 /* SummaryViewController.swift */; };
@@ -71,6 +73,8 @@
 		A26830D66A2B8682577DAEF0 /* Pods-pressura.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pressura.release.xcconfig"; path = "Target Support Files/Pods-pressura/Pods-pressura.release.xcconfig"; sourceTree = "<group>"; };
 		A51B58F0253C8D2700B8608B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A51B58F1253C8D2700B8608B /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		A54C15A3256359A100CF7CCC /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		A54C15A4256359A100CF7CCC /* SignupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
 		A576FEF0253BFC3800171C63 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		A57BBD6A253C1C99008A0B00 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		A57BBD70253C1D0D008A0B00 /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
@@ -186,9 +190,26 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		A54C15912563595E00CF7CCC /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				A54C15A3256359A100CF7CCC /* SignupViewController.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		A54C159C2563598300CF7CCC /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				A54C15A4256359A100CF7CCC /* SignupViewController.xib */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
 		A576FEED253BFBD200171C63 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A54C159C2563598300CF7CCC /* Signup */,
 				F9E99651254650FF009A06A5 /* Components */,
 				A51B58EF253C8D1600B8608B /* Profile */,
 				A57BBD7E253C251E008A0B00 /* NewReading */,
@@ -202,6 +223,7 @@
 		A576FEEE253BFBD900171C63 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A54C15912563595E00CF7CCC /* Signup */,
 				F9E9965225465176009A06A5 /* Components */,
 				A51B58F7253C8D2A00B8608B /* Profile */,
 				A57BBD89253C254C008A0B00 /* NewReading */,
@@ -508,6 +530,7 @@
 				F9E99659254652BF009A06A5 /* PressureCardComponent.xib in Resources */,
 				A57BBD73253C1D0D008A0B00 /* SummaryViewController.xib in Resources */,
 				A576FEF1253BFC3800171C63 /* AuthViewController.xib in Resources */,
+				A54C15A6256359A100CF7CCC /* SignupViewController.xib in Resources */,
 				F939B1A0253CE745009692D7 /* NewBloodPressureReading.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -638,6 +661,7 @@
 			files = (
 				F9E9965E25465E81009A06A5 /* UIViewExtension.swift in Sources */,
 				F9AD779A2557768200113D36 /* APIManager.swift in Sources */,
+				A54C15A5256359A100CF7CCC /* SignupViewController.swift in Sources */,
 				F276AB1C2537EA8200731CBE /* AppDelegate.swift in Sources */,
 				F94833EA2547B39B0016BFB4 /* InputTextFieldUIView.swift in Sources */,
 				F2CD2348253806C1009106FB /* AuthViewController.swift in Sources */,

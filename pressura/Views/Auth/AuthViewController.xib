@@ -11,8 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthViewController" customModule="pressura" customModuleProvider="target">
             <connections>
-                <outlet property="inputEmail" destination="Fr3-UA-htL" id="5jP-zP-MZM"/>
                 <outlet property="inputPasword" destination="fLZ-Wz-din" id="XWD-HC-EX0"/>
+                <outlet property="inputUsername" destination="Fr3-UA-htL" id="BVg-jo-Taz"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ftu-mn-akT"/>
             </connections>
         </placeholder>
@@ -78,13 +78,23 @@
                         <constraint firstItem="ekB-eG-yWa" firstAttribute="centerX" secondItem="1r9-8n-rsY" secondAttribute="centerX" id="vWm-5J-Dx7"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UU-gR-dJh">
+                    <rect key="frame" x="16" y="848" width="382" height="30"/>
+                    <state key="normal" title="Crear cuenta nueva"/>
+                    <connections>
+                        <action selector="btnSingup:" destination="-1" eventType="touchUpInside" id="UuP-nn-FKS"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="1r9-8n-rsY" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="84C-wG-Xbi"/>
                 <constraint firstItem="1r9-8n-rsY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Xfm-Rs-gBt"/>
+                <constraint firstItem="7UU-gR-dJh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="YIa-Rl-P9K"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7UU-gR-dJh" secondAttribute="trailing" constant="16" id="bTy-Tm-hLW"/>
                 <constraint firstItem="1r9-8n-rsY" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="140" id="exH-Z1-vlM"/>
+                <constraint firstItem="7UU-gR-dJh" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="16" id="qzP-Kx-deK"/>
                 <constraint firstItem="1r9-8n-rsY" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="uDi-dQ-zee"/>
                 <constraint firstAttribute="trailing" secondItem="1r9-8n-rsY" secondAttribute="trailing" id="yAa-pg-lSL"/>
             </constraints>

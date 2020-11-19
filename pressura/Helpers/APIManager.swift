@@ -17,14 +17,16 @@ class APIManager {
         self.baseURL = baseURL
     }
 
-    func signUp(name: String, email: String, password: String, completion: @escaping(User?, String?) -> Void) {
+    func signUp(username: String, firstName: String, lastName: String, email: String, password: String, completion: @escaping(User?, String?) -> Void) {
         let params = [
-            "name": name,
+            "username": username,
             "email": email,
+            "first_name": firstName,
+            "last_name": lastName,
             "password": password
         ] as Parameters
 
-        AF.request(self.baseURL.appendingPathComponent("/signup"), method: .post, parameters: params, encoding: URLEncoding.httpBody).responseJSON {
+        AF.request(self.baseURL.appendingPathComponent("/sign-up/"), method: .post, parameters: params, encoding: URLEncoding.httpBody).responseJSON {
             (response) in
             if let data = response.data {
                 do{
@@ -39,11 +41,11 @@ class APIManager {
         }
     }
 
-    func login(email: String, password: String, completion: @escaping(String?) -> Void){
+    func login(username: String, password: String, completion: @escaping(String?) -> Void){
         let headers : HTTPHeaders = [
             .accept("application/json")
         ]
-        let parameters : Parameters = [ "username": email, "password": password]
+        let parameters : Parameters = [ "username": username, "password": password]
         
 
         AF.request(self.baseURL.appendingPathComponent("/login/"), method: .post, parameters: parameters, encoding: URLEncoding.httpBody, headers: headers).responseJSON {

@@ -9,7 +9,7 @@ import UIKit
 
 class AuthViewController: UIViewController {
     
-    @IBOutlet weak var inputEmail: InputTextFieldUIView!
+    @IBOutlet weak var inputUsername: InputTextFieldUIView!
     @IBOutlet weak var inputPasword: InputTextFieldUIView!
     
     override func viewDidLoad() {
@@ -18,20 +18,25 @@ class AuthViewController: UIViewController {
     }
     
     func configComponents(){
-        inputEmail.setInitValues(instruction: "Usuario", placehoder: "Nombre", width: inputEmail.frame.width)
+        inputUsername.setInitValues(instruction: "Usuario", placehoder: "Nombre", width: inputUsername.frame.width)
         inputPasword.setInitValues(instruction: "Contraseña", placehoder: "Contraseña", width: inputPasword.frame.width)
         inputPasword.textFieldInput.isSecureTextEntry = true
     }
     
     @IBAction func btnLogin(_ sender: UIButton) {
-        let email = inputEmail.getInputText()!
+        let username = inputUsername.getInputText()!
         let pws = inputPasword.getInputText()!
-        APIManager.shared.login(email: email, password: pws) { (txt) in
+        APIManager.shared.login(username: username, password: pws) { (txt) in
             print(txt!)
         }
-        
     }
-
- 
+    
+    
+    @IBAction func btnSingup(_ sender: UIButton) {
+        let vc = SignupViewController()
+        vc.modalPresentationStyle = .popover
+        present(vc, animated: true, completion: nil)
+    }
+    
     
 }
