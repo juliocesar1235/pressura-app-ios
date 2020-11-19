@@ -24,38 +24,50 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
     var weight: [ChartDataEntry] = []
     var abdominalLength: [ChartDataEntry] = []
     
+    var drugsAttachment: [Double] = Array(repeating: 0, count: 4)
+    var dietAttachment: [Double] = Array(repeating: 0, count: 4)
+    var excerciseAttachment: [Double] = Array(repeating: 0, count: 4)
+    
 //    var drugsAttachemnt: [PieChartDataEntry] = []
     
     var collectionPressureCards: UICollectionView?
     var bloodReadings: [BloodPressureReading] = []
+    var generalHealthReadings: [GeneralHealthReading] = []
     
     override func viewWillAppear(_ animated: Bool) {
+        // Collection Pressure cards and Pressure Line Graph
         if bloodReadings.count == 0 {
             APIManager.shared.getBloodReadings{ (bloodReadings,message) in
                 if let bReadings = bloodReadings {
                     self.bloodReadings = bReadings
                     self.addBloodReadingsToGraphs()
-                    self.configureCharts()
                     self.collectionView.reloadData()
                 }
             }
         }
-        print()
-        
+        // Line graph for weight and circumference and pie charts graphs
+        if generalHealthReadings.count == 0 {
+            APIManager.shared.getGeneralHealthReadings{ (generalHealthReadings, message) in
+                if let hReadings = generalHealthReadings {
+                    
+                    self.generalHealthReadings = hReadings
+                    print("HELATH: ", self.generalHealthReadings.count)
+                    self.addGeneralHealthReadingsToGraphs()
+                }
+            }
+        }
+        self.configureCharts()
         self.collectionView.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-        print("frame width: ", self.view.frame.width)
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "¡Hola!"
 //        addBloodReadingsToGraphs()
         // Views From Components
         self.configureCollectionView()
-        self.configureCharts()
-        
         self.view.layoutIfNeeded()
     }
     func configureCharts(){
@@ -65,12 +77,20 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
         
         // Pie Charts
         drugsAttachmentChart.setInitValues(title: "Apego al medicamento")
-        drugsAttachmentChart.setChartData(deficient: 10, bad: 20, acceptable: 40, excelent: 30)
+        drugsAttachmentChart.setChartData(deficient: drugsAttachment[0],
+                                          bad: drugsAttachment[1],
+                                          acceptable: drugsAttachment[2],
+                                          excelent: drugsAttachment[3])
         exerciseChart.setInitValues(title: "Apego a rutina de ejercicio")
-        exerciseChart.setChartData(deficient: 1, bad: 22, acceptable: 30, excelent: 30)
+        exerciseChart.setChartData(deficient: excerciseAttachment[0],
+                                   bad: excerciseAttachment[1],
+                                   acceptable: excerciseAttachment[2],
+                                   excelent: excerciseAttachment[3])
         dietAttachmentChart.setInitValues(title: "Apego a la dieta")
-        dietAttachmentChart.setChartData(deficient: 10, bad: 20, acceptable: 10, excelent: 40)
-        
+        dietAttachmentChart.setChartData(deficient: dietAttachment[0],
+                                         bad: dietAttachment[1],
+                                         acceptable: dietAttachment[2],
+                                         excelent: dietAttachment[3])
     }
     
     // Collection View - Pressure Cards config of collection view
@@ -129,10 +149,9 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
     }
     
     
-    // BloodPressure - add data to array
+    // BloodPressure - add data to arrays
     func addBloodReadingsToGraphs() {
         for (index, bloodReading) in bloodReadings.enumerated() {
-            print(index)
             let pulse = ChartDataEntry(x: Double(index), y:  Double(bloodReading.getPulse()))
             let sistolicPressure = ChartDataEntry(x: Double(index), y:  Double(bloodReading.getSystolicReading()))
             let diastolicPressure = ChartDataEntry(x: Double(index), y:  Double(bloodReading.getDiastolicReading()))
@@ -141,5 +160,20 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
             distolicP.append(diastolicPressure)
         }
     }
-    
+    // Health readings - add data to arrays
+    func addGeneralHealthReadingsToGraphs() {
+        for (index, generalHealthReading) in generalHealthReadings.enumerated() {
+            if let weightDouble = Double(generalHealthReading.getWeight()),
+               let abdominalDouble = Double(generalHealthReading.getAbdominalCircumference()){
+                let weightMessure = ChartDataEntry(x: Double(index), y: weightDouble)
+                let abdominalMessure = ChartDataEntry(x: Double(index), y: abdominalDouble)
+                weight.append(weightMessure)
+                abdominalLength.append(abdominalMessure)
+            }
+            
+            drugsAttachment[generalHealthReading.getTreatmentComplience()] += 1
+            dietAttachment[generalHealthReading.getDietComplience()] += 1
+            excerciseAttachment[generalHealthReading.getExerciseCompliance()] += 1
+        }
+    }
 }

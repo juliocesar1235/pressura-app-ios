@@ -22,6 +22,7 @@ class NewHealthTrackingViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()
         configureComponents()
         navigationItem.title = "Monitoreo"
+        navigationItem.backButtonTitle = "Medición Nueva"
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
@@ -32,7 +33,34 @@ class NewHealthTrackingViewController: UIViewController {
         inputDietAttachment.setInitValues(instruction: "Apego a la dieta", width: inputDietAttachment.frame.width)
         inputExerciseAttachment.setInitValues(instruction: "Apego a rutina de ejercicio", width: inputExerciseAttachment.frame.width)
         inputAdditionalComment.setInitValues(instruction: "¿Cómo me he sentido?",placehoder: "Comentario Breve", width: inputAdditionalComment.frame.width)
+        
+        inputWeight.textFieldInput.keyboardType = .decimalPad
+        inputAbdominalGirth.textFieldInput.keyboardType = .decimalPad
     }
     
-
+    @IBAction func addNewHealthReading(_ sender: Any) {
+        let newHealthReading = GeneralHealthReading(
+            weight:  Double(inputWeight.getInputText()!)!,
+            abdominal_circumference: Double(inputAbdominalGirth.getInputText()!)!,
+            treatment_compliance: inputDrugsAttachment.getScaleValue(),
+            diet_compliance: inputDietAttachment.getScaleValue(),
+            exercise_compliance: inputExerciseAttachment.getScaleValue(),
+            comment: inputAdditionalComment.getInputText()!
+        )
+        
+        APIManager.shared.postGeneralHealthReadings(newHealthReading: newHealthReading) { (reading, message) in
+            if let msg = message {
+                // TODO: hacer un alert que hubo error al hacer el post
+                print("Alert")
+            }else {
+                if let tabBarController = self.view.window!.rootViewController as? MainTabBarController {
+                    let tabBar = self.tabBarController
+                    let vc = tabBar!.viewControllers![0] as? SummaryViewController
+                    vc?.generalHealthReadings.append(reading!)
+                    
+                    tabBarController.selectedIndex = 0
+                }
+            }
+        }
+    }
 }

@@ -63,10 +63,10 @@ final class PieChartUIView: UIView {
         pieChartView.reloadInputViews()
     }
     
-    func addDataToChart(pieChartValues: [PieChartDataEntry]){
+    func addDataToChart(pieChartValues: [PieChartDataEntry], colors: [UIColor]){
         let dataSet = PieChartDataSet(entries: pieChartValues, label: nil)
-        dataSet.colors = [#colorLiteral(red: 1, green: 0.2078431373, blue: 0.2352941176, alpha: 1), #colorLiteral(red: 0.9803921569, green: 0.568627451, blue: 0.2117647059, alpha: 1), #colorLiteral(red: 0.2117647059, green: 0.2745098039, blue: 0.9803921569, alpha: 1), #colorLiteral(red: 0.1568627451, green: 0.6509803922, blue: 0.137254902, alpha: 1)]
-        dataSet.valueColors = [.white]
+        dataSet.colors = colors
+        dataSet.valueColors = [.black]
         dataSet.selectionShift = 0
         dataSet.drawValuesEnabled = true
         dataSet.drawIconsEnabled = false
@@ -77,12 +77,26 @@ final class PieChartUIView: UIView {
     }
     
     func setChartData(deficient: Double, bad: Double, acceptable: Double, excelent: Double) {
+        var colorsArr: [UIColor] = []
         var piechartData: [PieChartDataEntry] = []
-        piechartData.append(PieChartDataEntry(value: deficient, label: "Deficiente"))
-        piechartData.append(PieChartDataEntry(value: bad, label: "Malo"))
-        piechartData.append(PieChartDataEntry(value: acceptable, label: "Aceptable"))
-        piechartData.append(PieChartDataEntry(value: excelent, label: "Excelente"))
         
-        self.addDataToChart(pieChartValues: piechartData)
+        if deficient > 0 {
+            piechartData.append(PieChartDataEntry(value: deficient, label: "Deficiente"))
+            colorsArr.append(#colorLiteral(red: 0.9725490196, green: 0.3215686275, blue: 0.3254901961, alpha: 1))
+        }
+        if bad > 0 {
+            piechartData.append(PieChartDataEntry(value: bad, label: "Malo"))
+            colorsArr.append(#colorLiteral(red: 0.9960784314, green: 0.8980392157, blue: 0.5137254902, alpha: 1))
+        }
+        if acceptable > 0 {
+            piechartData.append(PieChartDataEntry(value: acceptable, label: "Aceptable"))
+            colorsArr.append(#colorLiteral(red: 0.3254901961, green: 0.5490196078, blue: 0.9411764706, alpha: 1))
+        }
+        if excelent > 0 {
+            piechartData.append(PieChartDataEntry(value: excelent, label: "Excelente"))
+            colorsArr.append(#colorLiteral(red: 0.3450980392, green: 0.768627451, blue: 0.4431372549, alpha: 1))
+        }
+    
+        self.addDataToChart(pieChartValues: piechartData, colors: colorsArr)
     }
 }

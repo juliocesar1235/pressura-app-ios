@@ -18,13 +18,19 @@ class NewBloodPressureReading: UIViewController {
         self.hideKeyboardWhenTappedAround()
         configureComponents()
         navigationItem.title = "Presión Arterial"
+        navigationItem.backButtonTitle = "Medición Nueva"
         navigationController?.navigationBar.prefersLargeTitles = true
+        
     }
     
     func configureComponents(){
         inputSystolePressure.setInitValues(instruction: "Presión sistólica", placehoder: "100", width: inputSystolePressure.frame.width)
         inputDiastolePressure.setInitValues(instruction: "Presión diastólica", placehoder: "90", width: inputDiastolePressure.frame.width)
         inputPulse.setInitValues(instruction: "Pulso", placehoder: "70", width: inputPulse.frame.width)
+        
+        inputSystolePressure.textFieldInput.keyboardType = .numberPad
+        inputDiastolePressure.textFieldInput.keyboardType = .numberPad
+        inputPulse.textFieldInput.keyboardType = .numberPad
     }
 
     @IBAction func addNewBloodPressure(_ sender: UIButton) {

@@ -139,7 +139,6 @@ class APIManager {
             (response) in
             if let data = response.data {
                 do{
-                    print(data)
                     let bloodPressureReading = try JSONDecoder().decode(BloodPressureReading.self, from: data)
                     completion(bloodPressureReading,nil)
                 }catch{
@@ -155,18 +154,19 @@ class APIManager {
     // Get readings for general health
     func getGeneralHealthReadings(completion: @escaping([GeneralHealthReading]?, String?) -> Void){
         let defaults = UserDefaults.standard
-        let token = defaults.string(forKey: "authToken")
+        let token = defaults.string(forKey: "token")
         let headers : HTTPHeaders = [
             .authorization(token!),
             .accept("application/json")
         ]
-        AF.request(self.baseURL.appendingPathComponent("/general-health-readings"), method: .get, parameters: nil, encoding: URLEncoding.httpBody, headers: headers).responseJSON {
+        AF.request(self.baseURL.appendingPathComponent("/general-health-readings/"), method: .get, parameters: nil, encoding: URLEncoding.httpBody, headers: headers).responseJSON {
             (response) in
             if let data = response.data {
                 do{
                     let generalHealthReadings = try JSONDecoder().decode([GeneralHealthReading].self, from: data)
                     completion(generalHealthReadings,nil)
                 }catch{
+                    print("Decoding error")
                     completion(nil, "Decoding error")
                 }
             }else{
@@ -194,11 +194,11 @@ class APIManager {
         ] as Parameters
 
         
-        AF.request(self.baseURL.appendingPathComponent("/general-health-readings"), method: .post, parameters: parameters, encoding: URLEncoding.httpBody, headers: headers).responseJSON {
+        AF.request(self.baseURL.appendingPathComponent("/general-health-readings/"), method: .post, parameters: parameters, encoding: URLEncoding.httpBody, headers: headers).responseJSON {
             (response) in
             if let data = response.data {
                 do{
-                    print(data)
+                    print("Respondes post: ", data)
                     let healthReding = try JSONDecoder().decode(GeneralHealthReading.self, from: data)
                     completion(healthReding,nil)
                 }catch{
