@@ -28,8 +28,9 @@ class ProfileViewController: UIViewController {
             inputNameComponent.textFieldInput.text = "\(user.first_name!) \(user.last_name!)"
             inputMailComponent.textFieldInput.text = user.email
         } catch {
+            
         }
-
+        
         inputNameComponent.setInitValues(
             instruction: "Nombre",
             placehoder: "Mi nombre",
