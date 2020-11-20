@@ -65,6 +65,7 @@ final class LineChartUIView: UIView, ChartViewDelegate {
         lineChartView.delegate = self
         view.frame = bounds
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.tag = 100
         self.addSubview(view)
         self.configureChart()
     }
@@ -79,8 +80,7 @@ final class LineChartUIView: UIView, ChartViewDelegate {
         lineChartView.bottomAnchor.constraint(equalTo: viewComponent.bottomAnchor).isActive = true
         lineChartView.translatesAutoresizingMaskIntoConstraints = true
         
-        self.reloadInputViews()
-        self.viewComponent.layoutIfNeeded()
+//        self.viewComponent.layoutIfNeeded()
     }
     
     func setDataSetsPressures(systolicDataSet: [ChartDataEntry], diastolicDataSet: [ChartDataEntry], pulseDataSet: [ChartDataEntry]) {
@@ -124,6 +124,7 @@ final class LineChartUIView: UIView, ChartViewDelegate {
             set.setColor(colors[index])
             set.drawHorizontalHighlightIndicatorEnabled = false
             set.highlightColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
+            
         }
         lineChartView.data = data
         lineChartView.notifyDataSetChanged()
@@ -138,5 +139,14 @@ final class LineChartUIView: UIView, ChartViewDelegate {
         marker.minimumSize = CGSize(width: 45.0, height: 35.0)
         chartView.marker = marker
     }
+    // function to remove subview and the add it again
+    func clearChart(){
+        if let viewToRemove = self.viewComponent.viewWithTag(100) {
+            viewToRemove.removeFromSuperview()
+            lineChartView.data = nil
+            configureView()
+        }
+    }
+
 }
 

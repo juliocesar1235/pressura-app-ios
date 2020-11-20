@@ -72,29 +72,33 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
     }
     
     func configureBloodReadingsChart() {
-        // Line Charts
-        pressureChart.setDataSetsPressures(systolicDataSet: sistolicP, diastolicDataSet: distolicP, pulseDataSet: pulses)
+        pressureChart.setDataSetsPressures(
+            systolicDataSet: sistolicP,
+            diastolicDataSet: distolicP,
+            pulseDataSet: pulses)
     }
     func configureHealthReadingsChart(){
-       
-        weightAbdominalChart.setDataSetsMessures(weightDataSet: weight, abdominalLengthDataSet: abdominalLength)
-        
-        // Pie Charts
+        weightAbdominalChart.setDataSetsMessures(
+            weightDataSet: weight,
+            abdominalLengthDataSet: abdominalLength)
         drugsAttachmentChart.setInitValues(title: "Apego al medicamento")
-        drugsAttachmentChart.setChartData(deficient: drugsAttachment[0],
-                                          bad: drugsAttachment[1],
-                                          acceptable: drugsAttachment[2],
-                                          excelent: drugsAttachment[3])
+        drugsAttachmentChart.setChartData(
+            deficient: drugsAttachment[0],
+            bad: drugsAttachment[1],
+            acceptable: drugsAttachment[2],
+            excelent: drugsAttachment[3])
         exerciseChart.setInitValues(title: "Apego a rutina de ejercicio")
-        exerciseChart.setChartData(deficient: excerciseAttachment[0],
-                                   bad: excerciseAttachment[1],
-                                   acceptable: excerciseAttachment[2],
-                                   excelent: excerciseAttachment[3])
+        exerciseChart.setChartData(
+            deficient: excerciseAttachment[0],
+            bad: excerciseAttachment[1],
+            acceptable: excerciseAttachment[2],
+            excelent: excerciseAttachment[3])
         dietAttachmentChart.setInitValues(title: "Apego a la dieta")
-        dietAttachmentChart.setChartData(deficient: dietAttachment[0],
-                                         bad: dietAttachment[1],
-                                         acceptable: dietAttachment[2],
-                                         excelent: dietAttachment[3])
+        dietAttachmentChart.setChartData(
+            deficient: dietAttachment[0],
+            bad: dietAttachment[1],
+            acceptable: dietAttachment[2],
+            excelent: dietAttachment[3])
     }
     
     // Collection View - Pressure Cards config of collection view
@@ -179,5 +183,28 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
             dietAttachment[generalHealthReading.getDietComplience()] += 1
             excerciseAttachment[generalHealthReading.getExerciseCompliance()] += 1
         }
+    }
+    
+    func reloadDataOfBloodPressure() {
+        let reversedBloodReadings: [BloodPressureReading] = Array(self.bloodReadings.reversed())
+        let sliceBloodReadings = reversedBloodReadings.prefix(5)
+        self.bloodReadingsCollectionView = Array(sliceBloodReadings)
+        self.collectionView.reloadData()
+        pulses = []
+        sistolicP = []
+        distolicP = []
+        self.addBloodReadingsToGraphs()
+        self.configureBloodReadingsChart()
+        self.reloadInputViews()
+    }
+    func reloadDataOfHealthReadings() {
+        weight = []
+        abdominalLength = []
+        drugsAttachment = Array(repeating: 0, count: 4)
+        dietAttachment = Array(repeating: 0, count: 4)
+        excerciseAttachment = Array(repeating: 0, count: 4)
+        self.addGeneralHealthReadingsToGraphs()
+        self.configureHealthReadingsChart()
+        self.reloadInputViews()
     }
 }
