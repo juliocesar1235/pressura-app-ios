@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "ri_health-book-line.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "btn_google_light_normal_ios@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
