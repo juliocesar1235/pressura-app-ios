@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,28 +11,162 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SummaryViewController" customModule="pressura" customModuleProvider="target">
             <connections>
+                <outlet property="dietAttachmentChart" destination="S1L-F2-gem" id="Q5v-ym-PeF"/>
+                <outlet property="drugsAttachmentChart" destination="SLg-6d-QnT" id="oV0-3Q-Rti"/>
+                <outlet property="exerciseChart" destination="vbd-0o-sHb" id="FP2-hu-DH6"/>
+                <outlet property="pressureChart" destination="dBv-ks-swD" id="06e-VV-oZk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewCollectionCards" destination="ttI-k9-BGb" id="DrQ-f6-WD1"/>
+                <outlet property="weightAbdominalChart" destination="wA4-SM-deL" id="6PA-Cq-jHN"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <userGuides>
-                <userLayoutGuide location="134" affinity="minY"/>
-            </userGuides>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kpu-9r-myR">
-                    <rect key="frame" x="20" y="134" width="96" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wPV-Pd-O3s">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xaR-vr-uTn">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1470"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mis últimas mediciones" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gok-zs-CrB">
+                                    <rect key="frame" x="16" y="24" width="306" height="21"/>
+                                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="18"/>
+                                    <color key="textColor" red="0.30588235294117649" green="0.30980392156862746" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9j-Ah-ylZ">
+                                    <rect key="frame" x="332" y="24" width="66" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="66" id="0W6-uJ-Dm7"/>
+                                        <constraint firstAttribute="height" constant="21" id="4yl-rO-0of"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <state key="normal" title="Ver más"/>
+                                    <connections>
+                                        <action selector="moreReadings:" destination="-1" eventType="touchUpInside" id="ijt-k9-Naq"/>
+                                    </connections>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ttI-k9-BGb">
+                                    <rect key="frame" x="16" y="63" width="398" height="180"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="180" id="cVB-1C-Ud7"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mi historial de presión" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSD-eT-gRg">
+                                    <rect key="frame" x="16" y="267" width="382" height="21"/>
+                                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="18"/>
+                                    <color key="textColor" red="0.30588235294117649" green="0.30980392156862746" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBv-ks-swD" customClass="LineChartUIView" customModule="pressura" customModuleProvider="target">
+                                    <rect key="frame" x="35.5" y="306" width="343" height="190"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="190" id="TKC-IQ-qeK"/>
+                                        <constraint firstAttribute="width" secondItem="dBv-ks-swD" secondAttribute="height" multiplier="343:190" id="Zge-G4-b5Y"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wA4-SM-deL" customClass="LineChartUIView" customModule="pressura" customModuleProvider="target">
+                                    <rect key="frame" x="35.5" y="559" width="343" height="190"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="190" id="MnH-Zd-zbT"/>
+                                        <constraint firstAttribute="width" secondItem="wA4-SM-deL" secondAttribute="height" multiplier="343:190" id="jzz-Q7-LPO"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peso y circumferencia abdominal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyN-Zb-gLQ">
+                                    <rect key="frame" x="16" y="520" width="382" height="21"/>
+                                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="18"/>
+                                    <color key="textColor" red="0.30588235289999999" green="0.30980392159999998" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resumen de monitoreo de salud" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZkS-gp-l4u">
+                                    <rect key="frame" x="16" y="773" width="382" height="21"/>
+                                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="18"/>
+                                    <color key="textColor" red="0.30588235289999999" green="0.30980392159999998" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SLg-6d-QnT" customClass="PieChartUIView" customModule="pressura" customModuleProvider="target">
+                                    <rect key="frame" x="35.5" y="814" width="343" height="190"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="190" id="Kft-JS-uaf"/>
+                                        <constraint firstAttribute="width" secondItem="SLg-6d-QnT" secondAttribute="height" multiplier="343:190" id="zsd-vM-Gyx"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S1L-F2-gem" customClass="PieChartUIView" customModule="pressura" customModuleProvider="target">
+                                    <rect key="frame" x="35.5" y="1024" width="343" height="190"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="S1L-F2-gem" secondAttribute="height" multiplier="343:190" id="JM6-wS-seo"/>
+                                        <constraint firstAttribute="height" constant="190" id="YeW-yO-Mnj"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbd-0o-sHb" customClass="PieChartUIView" customModule="pressura" customModuleProvider="target">
+                                    <rect key="frame" x="35.5" y="1234" width="343" height="190"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="vbd-0o-sHb" secondAttribute="height" multiplier="343:190" id="hVg-LD-G8L"/>
+                                        <constraint firstAttribute="height" constant="190" id="vg3-KP-11W"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="Gok-zs-CrB" firstAttribute="leading" secondItem="xaR-vr-uTn" secondAttribute="leading" constant="16" id="2Rh-VP-Nhe"/>
+                                <constraint firstAttribute="trailing" secondItem="vyN-Zb-gLQ" secondAttribute="trailing" constant="16" id="3Gd-uQ-bOd"/>
+                                <constraint firstItem="wA4-SM-deL" firstAttribute="top" secondItem="vyN-Zb-gLQ" secondAttribute="bottom" constant="18" id="5cp-DA-zXF"/>
+                                <constraint firstItem="Gok-zs-CrB" firstAttribute="top" secondItem="xaR-vr-uTn" secondAttribute="top" constant="24" id="8me-qS-Ua3"/>
+                                <constraint firstItem="dBv-ks-swD" firstAttribute="centerX" secondItem="xaR-vr-uTn" secondAttribute="centerX" id="97j-qY-MRQ"/>
+                                <constraint firstAttribute="trailing" secondItem="ZkS-gp-l4u" secondAttribute="trailing" constant="16" id="9Cr-SV-HJk"/>
+                                <constraint firstItem="vbd-0o-sHb" firstAttribute="top" secondItem="S1L-F2-gem" secondAttribute="bottom" constant="20" id="9qc-1X-1fu"/>
+                                <constraint firstItem="ZkS-gp-l4u" firstAttribute="leading" secondItem="xaR-vr-uTn" secondAttribute="leading" constant="16" id="CLP-BT-bta"/>
+                                <constraint firstItem="wA4-SM-deL" firstAttribute="centerX" secondItem="xaR-vr-uTn" secondAttribute="centerX" id="Chi-fQ-T4T"/>
+                                <constraint firstAttribute="height" constant="1470" id="IdT-7O-86X"/>
+                                <constraint firstAttribute="trailing" secondItem="b9j-Ah-ylZ" secondAttribute="trailing" constant="16" id="K58-CM-ybd"/>
+                                <constraint firstItem="dBv-ks-swD" firstAttribute="top" secondItem="wSD-eT-gRg" secondAttribute="bottom" constant="18" id="P8j-YL-beT"/>
+                                <constraint firstItem="vyN-Zb-gLQ" firstAttribute="leading" secondItem="xaR-vr-uTn" secondAttribute="leading" constant="16" id="Pgs-vT-VAr"/>
+                                <constraint firstItem="ZkS-gp-l4u" firstAttribute="top" secondItem="wA4-SM-deL" secondAttribute="bottom" constant="24" id="YHi-YK-c0T"/>
+                                <constraint firstItem="wSD-eT-gRg" firstAttribute="top" secondItem="ttI-k9-BGb" secondAttribute="bottom" constant="24" id="ZWS-Dp-GT0"/>
+                                <constraint firstItem="ttI-k9-BGb" firstAttribute="leading" secondItem="xaR-vr-uTn" secondAttribute="leading" constant="16" id="brp-9M-hWI"/>
+                                <constraint firstItem="b9j-Ah-ylZ" firstAttribute="leading" secondItem="Gok-zs-CrB" secondAttribute="trailing" constant="10" id="fHW-bQ-Yl7"/>
+                                <constraint firstItem="SLg-6d-QnT" firstAttribute="centerX" secondItem="xaR-vr-uTn" secondAttribute="centerX" id="gpp-aw-RCf"/>
+                                <constraint firstItem="vbd-0o-sHb" firstAttribute="centerX" secondItem="xaR-vr-uTn" secondAttribute="centerX" id="jk7-et-zvL"/>
+                                <constraint firstItem="vyN-Zb-gLQ" firstAttribute="top" secondItem="dBv-ks-swD" secondAttribute="bottom" constant="24" id="knI-OR-Ula"/>
+                                <constraint firstAttribute="trailing" secondItem="ttI-k9-BGb" secondAttribute="trailing" id="qT0-KN-kTa"/>
+                                <constraint firstAttribute="trailing" secondItem="wSD-eT-gRg" secondAttribute="trailing" constant="16" id="r5c-O8-NOK"/>
+                                <constraint firstItem="S1L-F2-gem" firstAttribute="centerX" secondItem="xaR-vr-uTn" secondAttribute="centerX" id="rPd-LJ-6pR"/>
+                                <constraint firstItem="S1L-F2-gem" firstAttribute="top" secondItem="SLg-6d-QnT" secondAttribute="bottom" constant="20" id="sle-0j-U8t"/>
+                                <constraint firstItem="ttI-k9-BGb" firstAttribute="top" secondItem="Gok-zs-CrB" secondAttribute="bottom" constant="18" id="vN9-Ue-6TU"/>
+                                <constraint firstItem="b9j-Ah-ylZ" firstAttribute="top" secondItem="xaR-vr-uTn" secondAttribute="top" constant="24" id="x1v-wJ-xSk"/>
+                                <constraint firstItem="wSD-eT-gRg" firstAttribute="leading" secondItem="xaR-vr-uTn" secondAttribute="leading" constant="16" id="xKV-Rc-4va"/>
+                                <constraint firstItem="SLg-6d-QnT" firstAttribute="top" secondItem="ZkS-gp-l4u" secondAttribute="bottom" constant="20" id="zA4-GE-z1i"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="xuA-oG-hhN"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="xaR-vr-uTn" secondAttribute="trailing" id="4YG-gZ-CxL"/>
+                        <constraint firstItem="xaR-vr-uTn" firstAttribute="top" secondItem="wPV-Pd-O3s" secondAttribute="top" id="C59-f7-KFJ"/>
+                        <constraint firstItem="xaR-vr-uTn" firstAttribute="leading" secondItem="wPV-Pd-O3s" secondAttribute="leading" id="L2w-Bn-Aeq"/>
+                        <constraint firstAttribute="bottom" secondItem="xaR-vr-uTn" secondAttribute="bottom" id="U2h-J5-lhA"/>
+                    </constraints>
+                </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="141" y="110"/>
+            <constraints>
+                <constraint firstItem="wPV-Pd-O3s" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0VH-B4-ZTX"/>
+                <constraint firstAttribute="bottom" secondItem="wPV-Pd-O3s" secondAttribute="bottom" id="DAJ-Z1-dwO"/>
+                <constraint firstItem="wPV-Pd-O3s" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="NXn-hE-L9c"/>
+                <constraint firstItem="xaR-vr-uTn" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="V8U-RJ-0zg"/>
+                <constraint firstItem="wPV-Pd-O3s" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ZMj-V7-KLM"/>
+            </constraints>
+            <point key="canvasLocation" x="140.57971014492756" y="109.82142857142857"/>
         </view>
     </objects>
     <resources>

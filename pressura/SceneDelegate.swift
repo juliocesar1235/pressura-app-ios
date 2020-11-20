@@ -10,7 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    let userDefaults = UserDefaults.standard
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -22,10 +22,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private func setupView(windowScene: UIWindowScene) {
         let window = UIWindow(windowScene: windowScene)
-//        window.rootViewController = MainTabBarController() // Your initial view controller.
-        window.rootViewController = AuthViewController() // Your initial view controller.
-        window.makeKeyAndVisible()
-        self.window = window
+        if let _ = userDefaults.string(forKey: "token") {
+            window.rootViewController = MainTabBarController()
+            window.makeKeyAndVisible()
+            self.window = window
+        }else {
+            window.rootViewController = AuthViewController()
+            window.makeKeyAndVisible()
+            self.window = window
+        }
     }
     
     func changeRootViewController(_ vc: UIViewController, animated: Bool = true) {
@@ -38,6 +43,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                           animations: nil,
                           completion: nil)
     }
-
-
 }

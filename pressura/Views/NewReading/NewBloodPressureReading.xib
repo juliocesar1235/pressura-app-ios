@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewBloodPreassureReading" customModule="pressura" customModuleProvider="target">
+            <connections>
+                <outlet property="inputDiastolePressure" destination="O4B-Tk-Qhc" id="O8I-d0-QJG"/>
+                <outlet property="inputPulse" destination="1Jp-rf-Eib" id="vjU-EQ-AQI"/>
+                <outlet property="inputSystolePressure" destination="M5X-Ry-UDO" id="whH-GH-dNe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="gVs-aA-kow">
+                    <rect key="frame" x="16" y="66" width="382" height="249"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5X-Ry-UDO" customClass="InputTextFieldUIView" customModule="pressura" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="67"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="67" id="n41-an-X1v"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4B-Tk-Qhc" customClass="InputTextFieldUIView" customModule="pressura" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="91" width="382" height="67"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="67" id="qw0-pX-s9n"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Jp-rf-Eib" customClass="InputTextFieldUIView" customModule="pressura" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="182" width="382" height="67"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="67" id="oDY-Am-x8j"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="1Jp-rf-Eib" firstAttribute="leading" secondItem="gVs-aA-kow" secondAttribute="leading" id="GEj-vW-kqn"/>
+                        <constraint firstAttribute="trailing" secondItem="1Jp-rf-Eib" secondAttribute="trailing" id="KT8-Kh-1sb"/>
+                        <constraint firstAttribute="trailing" secondItem="M5X-Ry-UDO" secondAttribute="trailing" id="fhz-mM-qXK"/>
+                        <constraint firstAttribute="trailing" secondItem="O4B-Tk-Qhc" secondAttribute="trailing" id="mXL-e3-PB9"/>
+                        <constraint firstItem="O4B-Tk-Qhc" firstAttribute="leading" secondItem="gVs-aA-kow" secondAttribute="leading" id="rUY-QE-c3N"/>
+                        <constraint firstItem="M5X-Ry-UDO" firstAttribute="leading" secondItem="gVs-aA-kow" secondAttribute="leading" id="toR-QE-BwR"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qbd-vZ-gxW">
+                    <rect key="frame" x="268" y="339" width="130" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="Añadir medición"/>
+                    <connections>
+                        <action selector="addNewBloodPressure:" destination="-1" eventType="touchUpInside" id="K2z-ev-R76"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gVs-aA-kow" secondAttribute="trailing" constant="16" id="77H-wY-IYv"/>
+                <constraint firstItem="Qbd-vZ-gxW" firstAttribute="top" secondItem="gVs-aA-kow" secondAttribute="bottom" constant="24" id="DnV-cM-AJj"/>
+                <constraint firstItem="gVs-aA-kow" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Icf-aZ-nrY"/>
+                <constraint firstItem="gVs-aA-kow" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="22" id="gTj-sh-ihp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Qbd-vZ-gxW" secondAttribute="trailing" constant="16" id="ppL-LD-JUU"/>
+            </constraints>
+            <point key="canvasLocation" x="-43.478260869565219" y="79.6875"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

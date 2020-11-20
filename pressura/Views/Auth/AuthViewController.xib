@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthViewController" customModule="pressura" customModuleProvider="target">
             <connections>
+                <outlet property="inputPasword" destination="fLZ-Wz-din" id="XWD-HC-EX0"/>
+                <outlet property="inputUsername" destination="Fr3-UA-htL" id="BVg-jo-Taz"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ftu-mn-akT"/>
             </connections>
         </placeholder>
@@ -19,61 +21,90 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="ekB-eG-yWa">
-                    <rect key="frame" x="147" y="244" width="120" height="120"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="120" id="MqH-Dx-RuN"/>
-                        <constraint firstAttribute="height" constant="120" id="TU0-19-e1F"/>
-                    </constraints>
-                </imageView>
-                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1g3-Fe-2b2">
-                    <rect key="frame" x="71.5" y="428" width="271" height="32"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1r9-8n-rsY">
+                    <rect key="frame" x="0.0" y="184" width="414" height="528"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="google" translatesAutoresizingMaskIntoConstraints="NO" id="Jf0-OF-qau">
-                            <rect key="frame" x="8" y="4" width="24" height="24"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="ekB-eG-yWa">
+                            <rect key="frame" x="147" y="20" width="120" height="120"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="24" id="0jM-pa-AhQ"/>
-                                <constraint firstAttribute="width" constant="24" id="vWx-fF-Z68"/>
+                                <constraint firstAttribute="width" constant="120" id="MqH-Dx-RuN"/>
+                                <constraint firstAttribute="height" constant="120" id="TU0-19-e1F"/>
                             </constraints>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3H-cR-isw">
-                            <rect key="frame" x="40" y="4" width="223" height="24"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                            <state key="normal" title="Continue with Google">
-                                <color key="titleColor" systemColor="systemGrayColor"/>
-                            </state>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="zGZ-0H-ObD">
+                            <rect key="frame" x="16" y="150" width="382" height="154"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fr3-UA-htL" customClass="InputTextFieldUIView" customModule="pressura" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="382" height="67"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="67" id="boS-Z3-T8V"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fLZ-Wz-din" customClass="InputTextFieldUIView" customModule="pressura" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="87" width="382" height="67"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="67" id="J3B-ZN-QrL"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="67" id="oce-MD-qiK"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="fLZ-Wz-din" firstAttribute="leading" secondItem="zGZ-0H-ObD" secondAttribute="leading" id="2bO-D6-fZd"/>
+                                <constraint firstAttribute="trailing" secondItem="fLZ-Wz-din" secondAttribute="trailing" id="486-ys-pyO"/>
+                                <constraint firstItem="Fr3-UA-htL" firstAttribute="top" secondItem="zGZ-0H-ObD" secondAttribute="top" id="MvW-Yx-gLq"/>
+                                <constraint firstItem="Fr3-UA-htL" firstAttribute="leading" secondItem="zGZ-0H-ObD" secondAttribute="leading" id="OVD-gL-F52"/>
+                                <constraint firstAttribute="trailing" secondItem="Fr3-UA-htL" secondAttribute="trailing" id="Qen-1Z-jAT"/>
+                            </constraints>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEC-Lh-0YQ">
+                            <rect key="frame" x="16" y="324" width="382" height="30"/>
+                            <state key="normal" title="Iniciar sesión"/>
                             <connections>
-                                <action selector="signIn:" destination="-1" eventType="touchUpInside" id="psL-dP-S3h"/>
+                                <action selector="btnLogin:" destination="-1" eventType="touchUpInside" id="tih-0R-S1V"/>
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="Jf0-OF-qau" firstAttribute="centerY" secondItem="1g3-Fe-2b2" secondAttribute="centerY" id="dYs-ST-7lW"/>
-                        <constraint firstItem="S3H-cR-isw" firstAttribute="centerY" secondItem="1g3-Fe-2b2" secondAttribute="centerY" id="s2n-gn-3cS"/>
+                        <constraint firstItem="fEC-Lh-0YQ" firstAttribute="leading" secondItem="1r9-8n-rsY" secondAttribute="leading" constant="16" id="7Zw-mf-Y1G"/>
+                        <constraint firstAttribute="trailing" secondItem="fEC-Lh-0YQ" secondAttribute="trailing" constant="16" id="IbV-nb-AAC"/>
+                        <constraint firstItem="zGZ-0H-ObD" firstAttribute="leading" secondItem="1r9-8n-rsY" secondAttribute="leading" constant="16" id="PQ5-af-6jr"/>
+                        <constraint firstAttribute="trailing" secondItem="zGZ-0H-ObD" secondAttribute="trailing" constant="16" id="XgQ-UQ-QvB"/>
+                        <constraint firstItem="zGZ-0H-ObD" firstAttribute="top" secondItem="ekB-eG-yWa" secondAttribute="bottom" constant="10" id="c5y-m3-Wie"/>
+                        <constraint firstItem="fEC-Lh-0YQ" firstAttribute="top" secondItem="zGZ-0H-ObD" secondAttribute="bottom" constant="20" id="c7V-Pd-l7p"/>
+                        <constraint firstItem="ekB-eG-yWa" firstAttribute="top" secondItem="1r9-8n-rsY" secondAttribute="top" constant="20" id="hb2-M8-5iW"/>
+                        <constraint firstItem="ekB-eG-yWa" firstAttribute="centerX" secondItem="1r9-8n-rsY" secondAttribute="centerX" id="vWm-5J-Dx7"/>
                     </constraints>
-                    <directionalEdgeInsets key="directionalLayoutMargins" top="4" leading="8" bottom="4" trailing="8"/>
-                </stackView>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UU-gR-dJh">
+                    <rect key="frame" x="16" y="816" width="382" height="30"/>
+                    <state key="normal" title="Crear cuenta nueva"/>
+                    <connections>
+                        <action selector="btnSingup:" destination="-1" eventType="touchUpInside" id="UuP-nn-FKS"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="ekB-eG-yWa" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="200" id="Rwu-Ub-34k"/>
-                <constraint firstItem="1g3-Fe-2b2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="T6u-3O-CWV"/>
-                <constraint firstItem="1g3-Fe-2b2" firstAttribute="top" secondItem="ekB-eG-yWa" secondAttribute="bottom" constant="64" id="aeP-Uw-ULi"/>
-                <constraint firstItem="ekB-eG-yWa" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="oVp-Mr-rJ9"/>
+                <constraint firstItem="1r9-8n-rsY" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="84C-wG-Xbi"/>
+                <constraint firstItem="1r9-8n-rsY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Xfm-Rs-gBt"/>
+                <constraint firstItem="7UU-gR-dJh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="YIa-Rl-P9K"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7UU-gR-dJh" secondAttribute="trailing" constant="16" id="bTy-Tm-hLW"/>
+                <constraint firstItem="1r9-8n-rsY" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="140" id="exH-Z1-vlM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="7UU-gR-dJh" secondAttribute="bottom" constant="16" id="hwV-5i-BcL"/>
+                <constraint firstItem="1r9-8n-rsY" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="uDi-dQ-zee"/>
+                <constraint firstAttribute="trailing" secondItem="1r9-8n-rsY" secondAttribute="trailing" id="yAa-pg-lSL"/>
             </constraints>
             <point key="canvasLocation" x="140.57971014492756" y="109.82142857142857"/>
         </view>
     </objects>
     <resources>
         <image name="Logo" width="69" height="82"/>
-        <image name="google" width="400" height="400"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -10,28 +10,53 @@
 		21017C934795ACDCF9D68FF6 /* Pods_pressuraTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C914813C624532DC1B16329 /* Pods_pressuraTests.framework */; };
 		6007A8709DF98F27F168EE8C /* Pods_pressura.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC909AAA7726C97BB2A6B6F2 /* Pods_pressura.framework */; };
 		8150D337A8C38F04DF2ABDC6 /* Pods_pressura_pressuraUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD39F10EE74EA35B9D8C5BEB /* Pods_pressura_pressuraUITests.framework */; };
+		A51B04542566EEC60080A2F9 /* ObjectSavable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51B04532566EEC60080A2F9 /* ObjectSavable.swift */; };
+		A51B045D2566EF4C0080A2F9 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51B045C2566EF4C0080A2F9 /* UserDefaultsExtension.swift */; };
 		A51B58F2253C8D2700B8608B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51B58F0253C8D2700B8608B /* ProfileViewController.swift */; };
 		A51B58F3253C8D2700B8608B /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A51B58F1253C8D2700B8608B /* ProfileViewController.xib */; };
-		A576FEE3253BFB6800171C63 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A576FEE2253BFB6800171C63 /* GoogleService-Info.plist */; };
+		A54C15A5256359A100CF7CCC /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54C15A3256359A100CF7CCC /* SignupViewController.swift */; };
+		A54C15A6256359A100CF7CCC /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54C15A4256359A100CF7CCC /* SignupViewController.xib */; };
+		A552B0DF2566FF5900779291 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A552B0DD2566FF5900779291 /* UIViewControllerExtension.swift */; };
+		A552B0E02566FF5900779291 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A552B0DE2566FF5900779291 /* UIViewExtension.swift */; };
+		A552B0E62566FF6E00779291 /* PieChartUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A552B0E42566FF6E00779291 /* PieChartUIView.swift */; };
+		A552B0E72566FF6E00779291 /* LineChartUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A552B0E52566FF6E00779291 /* LineChartUIView.swift */; };
+		A552B0F12566FF7800779291 /* InputLickerScaleUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A552B0EE2566FF7800779291 /* InputLickerScaleUIView.swift */; };
+		A552B0F22566FF7800779291 /* InputTextFieldUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A552B0EF2566FF7800779291 /* InputTextFieldUIView.swift */; };
+		A552B0FB2566FF9400779291 /* LTHRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A552B0FA2566FF9400779291 /* LTHRadioButton.swift */; };
 		A576FEF1253BFC3800171C63 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A576FEF0253BFC3800171C63 /* AuthViewController.xib */; };
 		A57BBD6B253C1C99008A0B00 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57BBD6A253C1C99008A0B00 /* MainTabBarController.swift */; };
 		A57BBD72253C1D0D008A0B00 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57BBD70253C1D0D008A0B00 /* SummaryViewController.swift */; };
 		A57BBD73253C1D0D008A0B00 /* SummaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A57BBD71253C1D0D008A0B00 /* SummaryViewController.xib */; };
 		A57BBD81253C2543008A0B00 /* NewReadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57BBD7F253C2543008A0B00 /* NewReadingViewController.swift */; };
 		A57BBD82253C2543008A0B00 /* NewReadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A57BBD80253C2543008A0B00 /* NewReadingViewController.xib */; };
+		F250300C256706800058BEA8 /* AllRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F250300B256706800058BEA8 /* AllRecordsViewController.swift */; };
 		F276AB1C2537EA8200731CBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276AB1B2537EA8200731CBE /* AppDelegate.swift */; };
 		F276AB1E2537EA8200731CBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276AB1D2537EA8200731CBE /* SceneDelegate.swift */; };
 		F276AB252537EA8700731CBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F276AB242537EA8700731CBE /* Assets.xcassets */; };
 		F276AB282537EA8700731CBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F276AB262537EA8700731CBE /* LaunchScreen.storyboard */; };
 		F276AB332537EA8800731CBE /* pressuraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276AB322537EA8800731CBE /* pressuraTests.swift */; };
 		F276AB3E2537EA8800731CBE /* pressuraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F276AB3D2537EA8800731CBE /* pressuraUITests.swift */; };
+		F279904825675EBA00FBE919 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279904625675EBA00FBE919 /* TableViewCell.swift */; };
+		F279904925675EBA00FBE919 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F279904725675EBA00FBE919 /* TableViewCell.xib */; };
 		F2CD2348253806C1009106FB /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CD2347253806C1009106FB /* AuthViewController.swift */; };
-		F2CD235025380AB6009106FB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CD234F25380AB6009106FB /* HomeViewController.swift */; };
-		F2CD236725381305009106FB /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2CD236625381304009106FB /* HomeViewController.xib */; };
+		F2DCD95A25665666009F4B65 /* AllRecordsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2DCD95925665666009F4B65 /* AllRecordsViewController.xib */; };
+		F91B08E925660AC100C8283C /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91B08E825660AC100C8283C /* UIViewControllerExtension.swift */; };
 		F939B19F253CE745009692D7 /* NewBloodPreassureReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F939B19D253CE745009692D7 /* NewBloodPreassureReading.swift */; };
-		F939B1A0253CE745009692D7 /* NewBloodPreassureReading.xib in Resources */ = {isa = PBXBuildFile; fileRef = F939B19E253CE745009692D7 /* NewBloodPreassureReading.xib */; };
+		F939B1A0253CE745009692D7 /* NewBloodPressureReading.xib in Resources */ = {isa = PBXBuildFile; fileRef = F939B19E253CE745009692D7 /* NewBloodPressureReading.xib */; };
+		F945335025676667005CFE10 /* BallonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F945334F25676667005CFE10 /* BallonMarker.swift */; };
+		F94833EF2547B3BC0016BFB4 /* InputTextFieldComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = F94833EE2547B3BC0016BFB4 /* InputTextFieldComponent.xib */; };
+		F94BA202256220FC00420806 /* PieChartComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = F94BA201256220FC00420806 /* PieChartComponent.xib */; };
+		F99691D5254F7F2F00CB587D /* InputLickerScaleComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = F99691D4254F7F2F00CB587D /* InputLickerScaleComponent.xib */; };
+		F9AD778A2557764100113D36 /* BloodPressureReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AD77892557764100113D36 /* BloodPressureReading.swift */; };
+		F9AD778F2557765000113D36 /* GeneralHealthReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AD778E2557765000113D36 /* GeneralHealthReading.swift */; };
+		F9AD77942557765D00113D36 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AD77932557765D00113D36 /* User.swift */; };
+		F9AD779A2557768200113D36 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AD77992557768200113D36 /* APIManager.swift */; };
+		F9AD77A22557813E00113D36 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AD77A12557813E00113D36 /* Token.swift */; };
+		F9D2B95925609D8500326541 /* lineChartComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9D2B95825609D8500326541 /* lineChartComponent.xib */; };
 		F9E68104253CEAEA00619F10 /* NewHealthTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E68102253CEAEA00619F10 /* NewHealthTrackingViewController.swift */; };
 		F9E68105253CEAEA00619F10 /* NewHealthTrackingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E68103253CEAEA00619F10 /* NewHealthTrackingViewController.xib */; };
+		F9E99654254651BA009A06A5 /* PressureCardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E99653254651BA009A06A5 /* PressureCardUIView.swift */; };
+		F9E99659254652BF009A06A5 /* PressureCardComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E99658254652BF009A06A5 /* PressureCardComponent.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,9 +80,19 @@
 		0EDB4ADBC19985FD968EEF14 /* Pods-pressuraTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pressuraTests.debug.xcconfig"; path = "Target Support Files/Pods-pressuraTests/Pods-pressuraTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7C914813C624532DC1B16329 /* Pods_pressuraTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pressuraTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A26830D66A2B8682577DAEF0 /* Pods-pressura.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pressura.release.xcconfig"; path = "Target Support Files/Pods-pressura/Pods-pressura.release.xcconfig"; sourceTree = "<group>"; };
+		A51B04532566EEC60080A2F9 /* ObjectSavable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectSavable.swift; sourceTree = "<group>"; };
+		A51B045C2566EF4C0080A2F9 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		A51B58F0253C8D2700B8608B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A51B58F1253C8D2700B8608B /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
-		A576FEE2253BFB6800171C63 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "pressura/Supporting Files/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		A54C15A3256359A100CF7CCC /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		A54C15A4256359A100CF7CCC /* SignupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
+		A552B0DD2566FF5900779291 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		A552B0DE2566FF5900779291 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		A552B0E42566FF6E00779291 /* PieChartUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartUIView.swift; sourceTree = "<group>"; };
+		A552B0E52566FF6E00779291 /* LineChartUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartUIView.swift; sourceTree = "<group>"; };
+		A552B0EE2566FF7800779291 /* InputLickerScaleUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputLickerScaleUIView.swift; sourceTree = "<group>"; };
+		A552B0EF2566FF7800779291 /* InputTextFieldUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTextFieldUIView.swift; sourceTree = "<group>"; };
+		A552B0FA2566FF9400779291 /* LTHRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTHRadioButton.swift; sourceTree = "<group>"; };
 		A576FEF0253BFC3800171C63 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		A57BBD6A253C1C99008A0B00 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		A57BBD70253C1D0D008A0B00 /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +105,7 @@
 		DAAF189C5C9542C0F0891A61 /* Pods-pressura-pressuraUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pressura-pressuraUITests.release.xcconfig"; path = "Target Support Files/Pods-pressura-pressuraUITests/Pods-pressura-pressuraUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DD39F10EE74EA35B9D8C5BEB /* Pods_pressura_pressuraUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pressura_pressuraUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB36306FA73948464760C41B /* Pods-pressuraTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pressuraTests.release.xcconfig"; path = "Target Support Files/Pods-pressuraTests/Pods-pressuraTests.release.xcconfig"; sourceTree = "<group>"; };
+		F250300B256706800058BEA8 /* AllRecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRecordsViewController.swift; sourceTree = "<group>"; };
 		F276AB182537EA8200731CBE /* pressura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pressura.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F276AB1B2537EA8200731CBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F276AB1D2537EA8200731CBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,13 +118,27 @@
 		F276AB392537EA8800731CBE /* pressuraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pressuraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F276AB3D2537EA8800731CBE /* pressuraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pressuraUITests.swift; sourceTree = "<group>"; };
 		F276AB3F2537EA8800731CBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F279904625675EBA00FBE919 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		F279904725675EBA00FBE919 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		F2CD2347253806C1009106FB /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
-		F2CD234F25380AB6009106FB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		F2CD236625381304009106FB /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		F2DCD95925665666009F4B65 /* AllRecordsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllRecordsViewController.xib; sourceTree = "<group>"; };
+		F91B08E825660AC100C8283C /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		F939B19D253CE745009692D7 /* NewBloodPreassureReading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBloodPreassureReading.swift; sourceTree = "<group>"; };
-		F939B19E253CE745009692D7 /* NewBloodPreassureReading.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewBloodPreassureReading.xib; sourceTree = "<group>"; };
+		F939B19E253CE745009692D7 /* NewBloodPressureReading.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewBloodPressureReading.xib; sourceTree = "<group>"; };
+		F945334F25676667005CFE10 /* BallonMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallonMarker.swift; sourceTree = "<group>"; };
+		F94833EE2547B3BC0016BFB4 /* InputTextFieldComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputTextFieldComponent.xib; sourceTree = "<group>"; };
+		F94BA201256220FC00420806 /* PieChartComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PieChartComponent.xib; sourceTree = "<group>"; };
+		F99691D4254F7F2F00CB587D /* InputLickerScaleComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputLickerScaleComponent.xib; sourceTree = "<group>"; };
+		F9AD77892557764100113D36 /* BloodPressureReading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BloodPressureReading.swift; path = pressura/Controllers/Components/BloodPressureReading.swift; sourceTree = SOURCE_ROOT; };
+		F9AD778E2557765000113D36 /* GeneralHealthReading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GeneralHealthReading.swift; path = pressura/Controllers/Components/GeneralHealthReading.swift; sourceTree = SOURCE_ROOT; };
+		F9AD77932557765D00113D36 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = pressura/Controllers/Components/User.swift; sourceTree = SOURCE_ROOT; };
+		F9AD77992557768200113D36 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		F9AD77A12557813E00113D36 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Token.swift; path = pressura/Helpers/Token.swift; sourceTree = SOURCE_ROOT; };
+		F9D2B95825609D8500326541 /* lineChartComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = lineChartComponent.xib; sourceTree = "<group>"; };
 		F9E68102253CEAEA00619F10 /* NewHealthTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHealthTrackingViewController.swift; sourceTree = "<group>"; };
 		F9E68103253CEAEA00619F10 /* NewHealthTrackingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewHealthTrackingViewController.xib; sourceTree = "<group>"; };
+		F9E99653254651BA009A06A5 /* PressureCardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressureCardUIView.swift; sourceTree = "<group>"; };
+		F9E99658254652BF009A06A5 /* PressureCardComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PressureCardComponent.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +192,44 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A51B044F2566EE5D0080A2F9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A51B04532566EEC60080A2F9 /* ObjectSavable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A51B04502566EE6A0080A2F9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A552B0DD2566FF5900779291 /* UIViewControllerExtension.swift */,
+				A552B0DE2566FF5900779291 /* UIViewExtension.swift */,
+				A51B045C2566EF4C0080A2F9 /* UserDefaultsExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A51B04512566EE8A0080A2F9 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				A552B0E52566FF6E00779291 /* LineChartUIView.swift */,
+				A552B0E42566FF6E00779291 /* PieChartUIView.swift */,
+				F945334F25676667005CFE10 /* BallonMarker.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		A51B04522566EE930080A2F9 /* Inputs */ = {
+			isa = PBXGroup;
+			children = (
+				A552B0FA2566FF9400779291 /* LTHRadioButton.swift */,
+				A552B0EE2566FF7800779291 /* InputLickerScaleUIView.swift */,
+				A552B0EF2566FF7800779291 /* InputTextFieldUIView.swift */,
+			);
+			path = Inputs;
+			sourceTree = "<group>";
+		};
 		A51B58EF253C8D1600B8608B /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,15 +246,32 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		A54C15912563595E00CF7CCC /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				A54C15A3256359A100CF7CCC /* SignupViewController.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		A54C159C2563598300CF7CCC /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				A54C15A4256359A100CF7CCC /* SignupViewController.xib */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
 		A576FEED253BFBD200171C63 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A54C159C2563598300CF7CCC /* Signup */,
+				F9E99651254650FF009A06A5 /* Components */,
 				A51B58EF253C8D1600B8608B /* Profile */,
 				A57BBD7E253C251E008A0B00 /* NewReading */,
 				A57BBD7A253C1D13008A0B00 /* Summary */,
 				A57BBD50253C10F8008A0B00 /* Launch */,
 				A57BBD4A253C1072008A0B00 /* Auth */,
-				A57BBD43253C104E008A0B00 /* Home */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,12 +279,13 @@
 		A576FEEE253BFBD900171C63 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A54C15912563595E00CF7CCC /* Signup */,
+				F9E9965225465176009A06A5 /* Components */,
 				A51B58F7253C8D2A00B8608B /* Profile */,
 				A57BBD89253C254C008A0B00 /* NewReading */,
 				A57BBD6F253C1CF3008A0B00 /* Summary */,
 				A57BBD63253C1870008A0B00 /* MainTabBar */,
 				A57BBD4C253C1082008A0B00 /* Auth */,
-				A57BBD4B253C107B008A0B00 /* Home */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -187,6 +293,10 @@
 		A576FEEF253BFBDE00171C63 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F9AD77892557764100113D36 /* BloodPressureReading.swift */,
+				F9AD778E2557765000113D36 /* GeneralHealthReading.swift */,
+				F9AD77932557765D00113D36 /* User.swift */,
+				F9AD77A12557813E00113D36 /* Token.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -194,18 +304,9 @@
 		A57BBD3C253C0E59008A0B00 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A576FEE2253BFB6800171C63 /* GoogleService-Info.plist */,
 				F276AB292537EA8700731CBE /* Info.plist */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A57BBD43253C104E008A0B00 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				F2CD236625381304009106FB /* HomeViewController.xib */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		A57BBD4A253C1072008A0B00 /* Auth */ = {
@@ -214,14 +315,6 @@
 				A576FEF0253BFC3800171C63 /* AuthViewController.xib */,
 			);
 			path = Auth;
-			sourceTree = "<group>";
-		};
-		A57BBD4B253C107B008A0B00 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				F2CD234F25380AB6009106FB /* HomeViewController.swift */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		A57BBD4C253C1082008A0B00 /* Auth */ = {
@@ -252,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				A57BBD70253C1D0D008A0B00 /* SummaryViewController.swift */,
+				F250300B256706800058BEA8 /* AllRecordsViewController.swift */,
 			);
 			path = Summary;
 			sourceTree = "<group>";
@@ -260,6 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				A57BBD71253C1D0D008A0B00 /* SummaryViewController.xib */,
+				F2DCD95925665666009F4B65 /* AllRecordsViewController.xib */,
 			);
 			path = Summary;
 			sourceTree = "<group>";
@@ -269,7 +364,7 @@
 			children = (
 				A57BBD80253C2543008A0B00 /* NewReadingViewController.xib */,
 				F9E68103253CEAEA00619F10 /* NewHealthTrackingViewController.xib */,
-				F939B19E253CE745009692D7 /* NewBloodPreassureReading.xib */,
+				F939B19E253CE745009692D7 /* NewBloodPressureReading.xib */,
 			);
 			path = NewReading;
 			sourceTree = "<group>";
@@ -309,6 +404,9 @@
 		F276AB1A2537EA8200731CBE /* pressura */ = {
 			isa = PBXGroup;
 			children = (
+				F9AD77982557766800113D36 /* Helpers */,
+				A51B04502566EE6A0080A2F9 /* Extensions */,
+				A51B044F2566EE5D0080A2F9 /* Protocols */,
 				F276AB1B2537EA8200731CBE /* AppDelegate.swift */,
 				F276AB1D2537EA8200731CBE /* SceneDelegate.swift */,
 				A576FEEF253BFBDE00171C63 /* Models */,
@@ -338,6 +436,44 @@
 			path = pressuraUITests;
 			sourceTree = "<group>";
 		};
+		F9AD77982557766800113D36 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F9AD77992557768200113D36 /* APIManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F9E99651254650FF009A06A5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F9E99658254652BF009A06A5 /* PressureCardComponent.xib */,
+				F94833EE2547B3BC0016BFB4 /* InputTextFieldComponent.xib */,
+				F99691D4254F7F2F00CB587D /* InputLickerScaleComponent.xib */,
+				F9D2B95825609D8500326541 /* lineChartComponent.xib */,
+				F94BA201256220FC00420806 /* PieChartComponent.xib */,
+				F279904725675EBA00FBE919 /* TableViewCell.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F9E9965225465176009A06A5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A51B04522566EE930080A2F9 /* Inputs */,
+				A51B04512566EE8A0080A2F9 /* Charts */,
+				F9E99653254651BA009A06A5 /* PressureCardUIView.swift */,
+				F9E9965D25465E81009A06A5 /* UIViewExtension.swift */,
+				F94833E92547B39B0016BFB4 /* InputTextFieldUIView.swift */,
+				F99691D9254F7F7300CB587D /* InputLickerScaleUIView.swift */,
+				F9D2B95D25609DA800326541 /* LineChartUIView.swift */,
+				F94BA1FC25621FE500420806 /* PieChartUIView.swift */,
+				F91B08E825660AC100C8283C /* UIViewControllerExtension.swift */,
+				F279904625675EBA00FBE919 /* TableViewCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -350,7 +486,6 @@
 				F276AB152537EA8200731CBE /* Frameworks */,
 				F276AB162537EA8200731CBE /* Resources */,
 				38C9D54004A2AFA4110FC186 /* [CP] Embed Pods Frameworks */,
-				9D9D8CA9FF4E03F2FA94EC56 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -389,7 +524,6 @@
 				F276AB362537EA8800731CBE /* Frameworks */,
 				F276AB372537EA8800731CBE /* Resources */,
 				4D066684E4066EB579629E50 /* [CP] Embed Pods Frameworks */,
-				C2F98B9AAE1AFA82EF6FE022 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -449,15 +583,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				F276AB282537EA8700731CBE /* LaunchScreen.storyboard in Resources */,
-				F2CD236725381305009106FB /* HomeViewController.xib in Resources */,
 				A51B58F3253C8D2700B8608B /* ProfileViewController.xib in Resources */,
+				F99691D5254F7F2F00CB587D /* InputLickerScaleComponent.xib in Resources */,
 				A57BBD82253C2543008A0B00 /* NewReadingViewController.xib in Resources */,
+				F2DCD95A25665666009F4B65 /* AllRecordsViewController.xib in Resources */,
+				F279904925675EBA00FBE919 /* TableViewCell.xib in Resources */,
+				F9D2B95925609D8500326541 /* lineChartComponent.xib in Resources */,
+				F94833EF2547B3BC0016BFB4 /* InputTextFieldComponent.xib in Resources */,
 				F9E68105253CEAEA00619F10 /* NewHealthTrackingViewController.xib in Resources */,
+				F94BA202256220FC00420806 /* PieChartComponent.xib in Resources */,
 				F276AB252537EA8700731CBE /* Assets.xcassets in Resources */,
+				F9E99659254652BF009A06A5 /* PressureCardComponent.xib in Resources */,
 				A57BBD73253C1D0D008A0B00 /* SummaryViewController.xib in Resources */,
 				A576FEF1253BFC3800171C63 /* AuthViewController.xib in Resources */,
-				F939B1A0253CE745009692D7 /* NewBloodPreassureReading.xib in Resources */,
-				A576FEE3253BFB6800171C63 /* GoogleService-Info.plist in Resources */,
+				A54C15A6256359A100CF7CCC /* SignupViewController.xib in Resources */,
+				F939B1A0253CE745009692D7 /* NewBloodPressureReading.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,40 +674,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9D9D8CA9FF4E03F2FA94EC56 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-pressura/Pods-pressura-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-pressura/Pods-pressura-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pressura/Pods-pressura-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C2F98B9AAE1AFA82EF6FE022 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-pressura-pressuraUITests/Pods-pressura-pressuraUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-pressura-pressuraUITests/Pods-pressura-pressuraUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pressura-pressuraUITests/Pods-pressura-pressuraUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DBB6D2819F004DA23FB25C4A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -619,16 +725,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9AD779A2557768200113D36 /* APIManager.swift in Sources */,
+				A54C15A5256359A100CF7CCC /* SignupViewController.swift in Sources */,
+				F250300C256706800058BEA8 /* AllRecordsViewController.swift in Sources */,
+				A51B04542566EEC60080A2F9 /* ObjectSavable.swift in Sources */,
 				F276AB1C2537EA8200731CBE /* AppDelegate.swift in Sources */,
 				F2CD2348253806C1009106FB /* AuthViewController.swift in Sources */,
+				F9E99654254651BA009A06A5 /* PressureCardUIView.swift in Sources */,
+				A552B0F22566FF7800779291 /* InputTextFieldUIView.swift in Sources */,
 				A57BBD6B253C1C99008A0B00 /* MainTabBarController.swift in Sources */,
 				A57BBD81253C2543008A0B00 /* NewReadingViewController.swift in Sources */,
 				F276AB1E2537EA8200731CBE /* SceneDelegate.swift in Sources */,
-				F2CD235025380AB6009106FB /* HomeViewController.swift in Sources */,
+				F9AD778A2557764100113D36 /* BloodPressureReading.swift in Sources */,
+				F9AD778F2557765000113D36 /* GeneralHealthReading.swift in Sources */,
+				A552B0E02566FF5900779291 /* UIViewExtension.swift in Sources */,
+				A552B0E72566FF6E00779291 /* LineChartUIView.swift in Sources */,
+				A51B045D2566EF4C0080A2F9 /* UserDefaultsExtension.swift in Sources */,
+				F9AD77A22557813E00113D36 /* Token.swift in Sources */,
+				A552B0E62566FF6E00779291 /* PieChartUIView.swift in Sources */,
 				A51B58F2253C8D2700B8608B /* ProfileViewController.swift in Sources */,
 				A57BBD72253C1D0D008A0B00 /* SummaryViewController.swift in Sources */,
+				F279904825675EBA00FBE919 /* TableViewCell.swift in Sources */,
+				F945335025676667005CFE10 /* BallonMarker.swift in Sources */,
+				F9AD77942557765D00113D36 /* User.swift in Sources */,
+				A552B0DF2566FF5900779291 /* UIViewControllerExtension.swift in Sources */,
 				F9E68104253CEAEA00619F10 /* NewHealthTrackingViewController.swift in Sources */,
 				F939B19F253CE745009692D7 /* NewBloodPreassureReading.swift in Sources */,
+				A552B0FB2566FF9400779291 /* LTHRadioButton.swift in Sources */,
+				A552B0F12566FF7800779291 /* InputLickerScaleUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
