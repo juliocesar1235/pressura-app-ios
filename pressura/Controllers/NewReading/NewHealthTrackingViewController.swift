@@ -55,8 +55,11 @@ class NewHealthTrackingViewController: UIViewController {
             }else {
                 if let tabBarController = self.view.window!.rootViewController as? MainTabBarController {
                     let tabBar = self.tabBarController
-                    let vc = tabBar!.viewControllers![0] as? SummaryViewController
-                    vc?.generalHealthReadings.append(reading!)
+                    let nvc = tabBar!.viewControllers![0] as? UINavigationController
+                    let vc: SummaryViewController = nvc?.viewControllers[0] as! SummaryViewController
+                    
+                    vc.generalHealthReadings.append(reading!)
+                    vc.reloadDataOfHealthReadings()
                     
                     tabBarController.selectedIndex = 0
                 }
