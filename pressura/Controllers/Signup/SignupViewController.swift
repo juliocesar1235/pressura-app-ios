@@ -51,16 +51,37 @@ class SignupViewController: UIViewController {
     }
 
     @IBAction func signUp(_ sender: UIButton) {
-        APIManager.shared.signUp(
-            username: inputUsername.getInputText()!,
-            firstName: inputFirstName.getInputText()!,
-            lastName: inputLastName.getInputText()!,
-            email: inputEmail.getInputText()!,
-            password: inputPasword.getInputText()!
-        ) { (_, _) in
-            APIManager.shared.login(username: self.inputUsername.getInputText()!, password: self.inputPasword.getInputText()!) { (txt) in
-                print(txt!)
+        if let username = inputUsername.getInputText(), !username.isEmpty,
+           let firstName = inputFirstName.getInputText(), !firstName.isEmpty,
+           let lastName = inputLastName.getInputText(), !lastName.isEmpty,
+           let email = inputEmail.getInputText(), !email.isEmpty,
+           let password = inputPasword.getInputText(), !password.isEmpty {
+            
+            APIManager.shared.signUp(username: username, firstName: firstName, lastName: lastName, email: email, password: password) { (token, error) in
+                if let error = error {
+                    let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Entendido", style: .default, handler: nil))
+                    self.present(alert, animated: true)
+                } else {
+                    APIManager.shared.login(username: username, password: password) {
+                        (token, error) in
+                        if let _ = token {
+                            APIManager.shared.getUser() { (user, _) in
+                                (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(MainTabBarController())
+                            }
+                        }
+                    }
+                }
             }
+        } else {
+            let alert = UIAlertController(
+                title: "Error",
+                message: "Por favor llena todos los campos correctamente.",
+                preferredStyle: .alert
+            )
+            alert.addAction(UIAlertAction(title: "Entendido", style: .default, handler: nil))
+            self.present(alert, animated: true)
         }
+        
     }
 }

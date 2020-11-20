@@ -27,8 +27,16 @@ class AuthViewController: UIViewController {
     @IBAction func btnLogin(_ sender: UIButton) {
         let username = inputUsername.getInputText()!
         let pws = inputPasword.getInputText()!
-        APIManager.shared.login(username: username, password: pws) { (txt) in
-            print(txt!)
+        APIManager.shared.login(username: username, password: pws) { (success, error) in
+            if let error = error {
+                let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Entendido", style: .default, handler: nil))
+                self.present(alert, animated: true)
+            } else {
+                APIManager.shared.getUser() { (_, _) in
+                    (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(MainTabBarController())
+                }
+            }
         }
     }
     

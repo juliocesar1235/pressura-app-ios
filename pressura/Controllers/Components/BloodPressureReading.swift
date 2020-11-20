@@ -9,7 +9,6 @@ class BloodPressureReading : Codable {
     @objc private var systolic : Int
     @objc private var diastolic : Int
     @objc private var pulse : Int
-//    @objc private var pacient : Int
     @objc private var id: Int
     @objc private var created_at: String
 

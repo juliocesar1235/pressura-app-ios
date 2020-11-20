@@ -39,8 +39,11 @@
 		F279904825675EBA00FBE919 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279904625675EBA00FBE919 /* TableViewCell.swift */; };
 		F279904925675EBA00FBE919 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F279904725675EBA00FBE919 /* TableViewCell.xib */; };
 		F2CD2348253806C1009106FB /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CD2347253806C1009106FB /* AuthViewController.swift */; };
+<<<<<<< HEAD
 		F2DCD95A25665666009F4B65 /* AllRecordsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2DCD95925665666009F4B65 /* AllRecordsViewController.xib */; };
 		F91B08E925660AC100C8283C /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91B08E825660AC100C8283C /* UIViewControllerExtension.swift */; };
+=======
+>>>>>>> b8af0615b27851ce47d4f6a5296090eb4121ecce
 		F939B19F253CE745009692D7 /* NewBloodPreassureReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F939B19D253CE745009692D7 /* NewBloodPreassureReading.swift */; };
 		F939B1A0253CE745009692D7 /* NewBloodPressureReading.xib in Resources */ = {isa = PBXBuildFile; fileRef = F939B19E253CE745009692D7 /* NewBloodPressureReading.xib */; };
 		F945335025676667005CFE10 /* BallonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F945334F25676667005CFE10 /* BallonMarker.swift */; };
@@ -121,8 +124,11 @@
 		F279904625675EBA00FBE919 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		F279904725675EBA00FBE919 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		F2CD2347253806C1009106FB /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		F2DCD95925665666009F4B65 /* AllRecordsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllRecordsViewController.xib; sourceTree = "<group>"; };
 		F91B08E825660AC100C8283C /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+=======
+>>>>>>> b8af0615b27851ce47d4f6a5296090eb4121ecce
 		F939B19D253CE745009692D7 /* NewBloodPreassureReading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBloodPreassureReading.swift; sourceTree = "<group>"; };
 		F939B19E253CE745009692D7 /* NewBloodPressureReading.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewBloodPressureReading.xib; sourceTree = "<group>"; };
 		F945334F25676667005CFE10 /* BallonMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallonMarker.swift; sourceTree = "<group>"; };
@@ -463,6 +469,7 @@
 				A51B04522566EE930080A2F9 /* Inputs */,
 				A51B04512566EE8A0080A2F9 /* Charts */,
 				F9E99653254651BA009A06A5 /* PressureCardUIView.swift */,
+<<<<<<< HEAD
 				F9E9965D25465E81009A06A5 /* UIViewExtension.swift */,
 				F94833E92547B39B0016BFB4 /* InputTextFieldUIView.swift */,
 				F99691D9254F7F7300CB587D /* InputLickerScaleUIView.swift */,
@@ -470,6 +477,8 @@
 				F94BA1FC25621FE500420806 /* PieChartUIView.swift */,
 				F91B08E825660AC100C8283C /* UIViewControllerExtension.swift */,
 				F279904625675EBA00FBE919 /* TableViewCell.swift */,
+=======
+>>>>>>> b8af0615b27851ce47d4f6a5296090eb4121ecce
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -727,8 +736,11 @@
 			files = (
 				F9AD779A2557768200113D36 /* APIManager.swift in Sources */,
 				A54C15A5256359A100CF7CCC /* SignupViewController.swift in Sources */,
+<<<<<<< HEAD
 				F250300C256706800058BEA8 /* AllRecordsViewController.swift in Sources */,
+=======
 				A51B04542566EEC60080A2F9 /* ObjectSavable.swift in Sources */,
+>>>>>>> b8af0615b27851ce47d4f6a5296090eb4121ecce
 				F276AB1C2537EA8200731CBE /* AppDelegate.swift in Sources */,
 				F2CD2348253806C1009106FB /* AuthViewController.swift in Sources */,
 				F9E99654254651BA009A06A5 /* PressureCardUIView.swift in Sources */,
@@ -745,8 +757,11 @@
 				A552B0E62566FF6E00779291 /* PieChartUIView.swift in Sources */,
 				A51B58F2253C8D2700B8608B /* ProfileViewController.swift in Sources */,
 				A57BBD72253C1D0D008A0B00 /* SummaryViewController.swift in Sources */,
+<<<<<<< HEAD
 				F279904825675EBA00FBE919 /* TableViewCell.swift in Sources */,
+=======
 				F945335025676667005CFE10 /* BallonMarker.swift in Sources */,
+>>>>>>> b8af0615b27851ce47d4f6a5296090eb4121ecce
 				F9AD77942557765D00113D36 /* User.swift in Sources */,
 				A552B0DF2566FF5900779291 /* UIViewControllerExtension.swift in Sources */,
 				F9E68104253CEAEA00619F10 /* NewHealthTrackingViewController.swift in Sources */,
