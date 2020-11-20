@@ -8,7 +8,7 @@ import Foundation
 import Alamofire
 
 class APIManager {
-    static let shared = APIManager(baseURL: URL(string: "http://localhost:8000")!)
+    static let shared = APIManager(baseURL: URL(string: "https://serene-spire-76195.herokuapp.com")!)
 
     let baseURL : URL
     let userDefaults : UserDefaults = UserDefaults.standard

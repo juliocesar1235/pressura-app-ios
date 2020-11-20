@@ -37,7 +37,7 @@ class NewBloodPressureReading: UIViewController {
         APIManager.shared.postBloodReadings(newPressure: newPressure) { (reading, message) in
             if let msg = message {
                 // TODO: hacer un alert
-                print("Alert")
+                print(msg)
             }else {
                 if let tabBarController = self.view.window!.rootViewController as? MainTabBarController {
                     let tabBar = self.tabBarController
