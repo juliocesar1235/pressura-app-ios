@@ -100,7 +100,7 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="5or-9t-GnC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="2eQ-ud-BQY"/>
                     <constraint firstItem="5or-9t-GnC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="KD1-O7-ZH3"/>
