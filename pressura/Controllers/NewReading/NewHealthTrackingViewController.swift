@@ -100,5 +100,6 @@ class NewHealthTrackingViewController: UIViewController {
         inputWeight.textFieldInput.text = ""
         inputAbdominalGirth.textFieldInput.text = ""
         inputAdditionalComment.textFieldInput.text = ""
+        self.navigationController?.popViewController(animated: true)
     }
 }

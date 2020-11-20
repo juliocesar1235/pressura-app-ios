@@ -71,6 +71,6 @@ class NewBloodPressureReading: UIViewController {
         inputPulse.textFieldInput.text = ""
         inputSystolePressure.textFieldInput.text = ""
         inputDiastolePressure.textFieldInput.text = ""
-
+        self.navigationController?.popViewController(animated: true)
     }
 }
