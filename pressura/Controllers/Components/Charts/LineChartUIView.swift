@@ -10,7 +10,9 @@ import Charts
 
 final class LineChartUIView: UIView, ChartViewDelegate {
     @IBOutlet private weak var viewComponent: UIView!
+    @IBOutlet weak var marker: UILabel!
     
+    let markerView = MarkerView()
     let colors: [UIColor] = [
         #colorLiteral(red: 0, green: 0, blue: 0.8392156863, alpha: 1),
         #colorLiteral(red: 0, green: 0.831372549, blue: 0.831372549, alpha: 1),
@@ -19,13 +21,14 @@ final class LineChartUIView: UIView, ChartViewDelegate {
     
     lazy var lineChartView: LineChartView = {
         let chartView = LineChartView()
-        chartView.backgroundColor = .white
-        // chartView.animate(xAxisDuration: 0.5)
+//        chartView.backgroundColor = .white
+        chartView.animate(xAxisDuration: 0.5)
         chartView.rightAxis.enabled = false
+        chartView.drawMarkers = true
         
-        let chartLegent = chartView.legend
-        chartLegent.horizontalAlignment = .center
-        chartLegent.textColor = #colorLiteral(red: 0.3058823529, green: 0.3098039216, blue: 0.3058823529, alpha: 1)
+        let chartLegend = chartView.legend
+        chartLegend.horizontalAlignment = .center
+        chartLegend.textColor = #colorLiteral(red: 0.3058823529, green: 0.3098039216, blue: 0.3058823529, alpha: 1)
         
         let yAxis = chartView.leftAxis
         yAxis.labelFont = .boldSystemFont(ofSize: 10)
@@ -57,8 +60,9 @@ final class LineChartUIView: UIView, ChartViewDelegate {
     
     private func configureView(){
         guard let view = self.loadViewFromNib(nibName: "lineChartComponent")
-        
             else { return }
+        marker.isHidden = true
+        lineChartView.delegate = self
         view.frame = bounds
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(view)
@@ -89,10 +93,15 @@ final class LineChartUIView: UIView, ChartViewDelegate {
         data.setDrawValues(false)
         
         for (index, set) in dataSets.enumerated() {
-            set.drawCirclesEnabled = false
+            set.drawCirclesEnabled = true
+            set.circleRadius = CGFloat(2.1)
+            set.circleColors = [colors[index]]
             set.mode = .cubicBezier
             set.lineWidth = 2
             set.setColor(colors[index])
+            set.drawHorizontalHighlightIndicatorEnabled = false
+            set.highlightColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
+            
         }        
         
         lineChartView.data = data
@@ -107,16 +116,27 @@ final class LineChartUIView: UIView, ChartViewDelegate {
         data.setDrawValues(false)
         
         for (index, set) in dataSets.enumerated() {
-            set.drawCirclesEnabled = false
+            set.drawCirclesEnabled = true
+            set.circleRadius = CGFloat(2.1)
+            set.circleColors = [colors[index]]
             set.mode = .cubicBezier
             set.lineWidth = 2
             set.setColor(colors[index])
+            set.drawHorizontalHighlightIndicatorEnabled = false
+            set.highlightColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
         }
         lineChartView.data = data
         lineChartView.notifyDataSetChanged()
     }
     
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
-        print(entry)
+    let marker: BalloonMarker =
+        BalloonMarker(color: #colorLiteral(red: 0.9333333333, green: 0.937254902, blue: 0.9607843137, alpha: 1),
+                      font: UIFont(name: "Helvetica", size: 12)!,
+                      textColor: .black,
+                      insets: UIEdgeInsets(top: 7.0, left: 7.0, bottom: 7.0, right: 7.0))
+        marker.minimumSize = CGSize(width: 45.0, height: 35.0)
+        chartView.marker = marker
     }
 }
+
