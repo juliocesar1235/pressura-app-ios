@@ -50,8 +50,11 @@ class NewBloodPressureReading: UIViewController {
                     if let tabBarController = self.view.window!.rootViewController as? MainTabBarController {
                         self.resetInputFields()
                         let tabBar = self.tabBarController
-                        let vc = tabBar!.viewControllers![0] as? SummaryViewController
-                        vc?.bloodReadings.append(reading!)
+                        
+                        let nvc = tabBar!.viewControllers![0] as? UINavigationController
+                        let vc: SummaryViewController = nvc?.viewControllers[0] as! SummaryViewController
+                        vc.bloodReadings.append(reading!)
+                        vc.reloadDataOfBloodPressure()
                         tabBarController.selectedIndex = 0
                     }
                 }
