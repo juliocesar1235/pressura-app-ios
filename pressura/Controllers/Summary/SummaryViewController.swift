@@ -133,6 +133,12 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
         APIManager.shared.getBloodReadings{ (bloodReadings,message) in
             if let bReadings = bloodReadings {
                 self.bloodReadings = bReadings
+                let vc = AllRecordsViewController()
+                vc.modalPresentationStyle = .fullScreen
+                vc.navigationItem.hidesBackButton = false
+                vc.AllBloodReadings = bReadings.reversed()
+                self.navigationController?.pushViewController(vc, animated: true)
+                
             }
         }
         collectionView.reloadData()
