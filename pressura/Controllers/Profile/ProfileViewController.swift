@@ -25,8 +25,8 @@ class ProfileViewController: UIViewController {
     func configureComponents(){
         do {
             let user = try userDefaults.getObject(forKey: "user", castTo: User.self)
-            inputNameComponent.textFieldInput.text = "\(user.first_name!) \(user.last_name!)"
-            inputMailComponent.textFieldInput.text = user.email
+            inputNameComponent.textFieldInput.text = "\(user.first_name ?? "") \(user.last_name ?? "")"
+            inputMailComponent.textFieldInput.text = user.email ?? ""
         } catch {
             
         }

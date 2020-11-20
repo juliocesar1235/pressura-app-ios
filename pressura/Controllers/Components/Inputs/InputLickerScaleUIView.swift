@@ -84,8 +84,8 @@ final class InputLickerScaleUIView: UIView  {
         lblInstruction.text = instruction
         InputLickerComponentView.frame.size.width = width
     }
-    func getScaleValue() -> Int{
-        return selectedButton
+    func getScaleValue() -> Int?{
+        return selectedButton as? Int
     }
    
     

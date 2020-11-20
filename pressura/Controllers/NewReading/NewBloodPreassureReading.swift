@@ -34,25 +34,43 @@ class NewBloodPressureReading: UIViewController {
     }
 
     @IBAction func addNewBloodPressure(_ sender: UIButton) {
-        let newPressure = BloodPressureReading(
-            pulse: Int(inputPulse.getInputText()!)!,
-            systolic: Int(inputSystolePressure.getInputText()!)!,
-            diastolic: Int(inputDiastolePressure.getInputText()!)!
-        )
         
-        APIManager.shared.postBloodReadings(newPressure: newPressure) { (reading, message) in
-            if let msg = message {
-                // TODO: hacer un alert
-                print("Alert")
-            }else {
-                if let tabBarController = self.view.window!.rootViewController as? MainTabBarController {
-                    let tabBar = self.tabBarController
-                    let vc = tabBar!.viewControllers![0] as? SummaryViewController
-                    vc?.bloodReadings.append(reading!)
-                    
-                    tabBarController.selectedIndex = 0
+        if let p = inputPulse.getInputText(), let pulse = Int(p),
+           let s = inputSystolePressure.getInputText(), let systolic = Int(s),
+           let d = inputDiastolePressure.getInputText(), let diastolic = Int(d) {
+            
+            let newPressure = BloodPressureReading(pulse: pulse, systolic: systolic, diastolic: diastolic)
+            
+            APIManager.shared.postBloodReadings(newPressure: newPressure) { (reading, error) in
+                if let error = error {
+                    let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Entendido", style: .default, handler: nil))
+                    self.present(alert, animated: true)
+                }else {
+                    if let tabBarController = self.view.window!.rootViewController as? MainTabBarController {
+                        self.resetInputFields()
+                        let tabBar = self.tabBarController
+                        let vc = tabBar!.viewControllers![0] as? SummaryViewController
+                        vc?.bloodReadings.append(reading!)
+                        tabBarController.selectedIndex = 0
+                    }
                 }
             }
+        } else {
+            let alert = UIAlertController(
+                title: "Error",
+                message: "Por favor llena todos los campos correctamente.",
+                preferredStyle: .alert
+            )
+            alert.addAction(UIAlertAction(title: "Entendido", style: .default, handler: nil))
+            self.present(alert, animated: true)
         }
+    }
+
+    func resetInputFields() {
+        inputPulse.textFieldInput.text = ""
+        inputSystolePressure.textFieldInput.text = ""
+        inputDiastolePressure.textFieldInput.text = ""
+
     }
 }
