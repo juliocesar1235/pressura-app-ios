@@ -28,10 +28,9 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
     var dietAttachment: [Double] = Array(repeating: 0, count: 4)
     var excerciseAttachment: [Double] = Array(repeating: 0, count: 4)
     
-//    var drugsAttachemnt: [PieChartDataEntry] = []
-    
     var collectionPressureCards: UICollectionView?
     var bloodReadings: [BloodPressureReading] = []
+    var bloodReadingsCollectionView: [BloodPressureReading] = []
     var generalHealthReadings: [GeneralHealthReading] = []
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +39,9 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
             APIManager.shared.getBloodReadings{ (bloodReadings,message) in
                 if let bReadings = bloodReadings {
                     self.bloodReadings = bReadings
+                    let reversedBloodReadings: [BloodPressureReading] = Array(self.bloodReadings.reversed())
+                    let sliceBloodReadings = reversedBloodReadings.prefix(5)
+                    self.bloodReadingsCollectionView = Array(sliceBloodReadings)
                     self.collectionView.reloadData()
                     self.addBloodReadingsToGraphs()
                     self.configureBloodReadingsChart()
@@ -138,15 +140,15 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
     }
     // Collection View - Config amount of cells (Pressure cards)
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return bloodReadings.count
+        return bloodReadingsCollectionView.count
     }
     // Collection View - Add data to each cell (Pressure card)
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PressureCardUIView
         cell.configureCard(
-            pSistolica: String(bloodReadings[indexPath.row].getSystolicReading()),
-            pDiastolica: String(bloodReadings[indexPath.row].getDiastolicReading()),
-            pulso: String(bloodReadings[indexPath.row].getPulse()))
+            pSistolica: String(bloodReadingsCollectionView[indexPath.row].getSystolicReading()),
+            pDiastolica: String(bloodReadingsCollectionView[indexPath.row].getDiastolicReading()),
+            pulso: String(bloodReadingsCollectionView[indexPath.row].getPulse()))
         return cell
     }
     

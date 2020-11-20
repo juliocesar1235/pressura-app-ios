@@ -38,6 +38,7 @@
 		F2CD2348253806C1009106FB /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CD2347253806C1009106FB /* AuthViewController.swift */; };
 		F939B19F253CE745009692D7 /* NewBloodPreassureReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F939B19D253CE745009692D7 /* NewBloodPreassureReading.swift */; };
 		F939B1A0253CE745009692D7 /* NewBloodPressureReading.xib in Resources */ = {isa = PBXBuildFile; fileRef = F939B19E253CE745009692D7 /* NewBloodPressureReading.xib */; };
+		F945335025676667005CFE10 /* BallonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F945334F25676667005CFE10 /* BallonMarker.swift */; };
 		F94833EF2547B3BC0016BFB4 /* InputTextFieldComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = F94833EE2547B3BC0016BFB4 /* InputTextFieldComponent.xib */; };
 		F94BA202256220FC00420806 /* PieChartComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = F94BA201256220FC00420806 /* PieChartComponent.xib */; };
 		F99691D5254F7F2F00CB587D /* InputLickerScaleComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = F99691D4254F7F2F00CB587D /* InputLickerScaleComponent.xib */; };
@@ -114,6 +115,7 @@
 		F2CD2347253806C1009106FB /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		F939B19D253CE745009692D7 /* NewBloodPreassureReading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBloodPreassureReading.swift; sourceTree = "<group>"; };
 		F939B19E253CE745009692D7 /* NewBloodPressureReading.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewBloodPressureReading.xib; sourceTree = "<group>"; };
+		F945334F25676667005CFE10 /* BallonMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallonMarker.swift; sourceTree = "<group>"; };
 		F94833EE2547B3BC0016BFB4 /* InputTextFieldComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputTextFieldComponent.xib; sourceTree = "<group>"; };
 		F94BA201256220FC00420806 /* PieChartComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PieChartComponent.xib; sourceTree = "<group>"; };
 		F99691D4254F7F2F00CB587D /* InputLickerScaleComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputLickerScaleComponent.xib; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			children = (
 				A552B0E52566FF6E00779291 /* LineChartUIView.swift */,
 				A552B0E42566FF6E00779291 /* PieChartUIView.swift */,
+				F945334F25676667005CFE10 /* BallonMarker.swift */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
@@ -719,6 +722,7 @@
 				A552B0E62566FF6E00779291 /* PieChartUIView.swift in Sources */,
 				A51B58F2253C8D2700B8608B /* ProfileViewController.swift in Sources */,
 				A57BBD72253C1D0D008A0B00 /* SummaryViewController.swift in Sources */,
+				F945335025676667005CFE10 /* BallonMarker.swift in Sources */,
 				F9AD77942557765D00113D36 /* User.swift in Sources */,
 				A552B0DF2566FF5900779291 /* UIViewControllerExtension.swift in Sources */,
 				F9E68104253CEAEA00619F10 /* NewHealthTrackingViewController.swift in Sources */,
