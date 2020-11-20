@@ -19,6 +19,7 @@ final class PieChartUIView: UIView {
         chartView.transparentCircleRadiusPercent = 0
         chartView.drawEntryLabelsEnabled = false
         chartView.usePercentValuesEnabled = false
+        chartView.animate(xAxisDuration: 1)
         
         let chartLegent = chartView.legend
         chartLegent.textColor = #colorLiteral(red: 0.3058823529, green: 0.3098039216, blue: 0.3058823529, alpha: 1)

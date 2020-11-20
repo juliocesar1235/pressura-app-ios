@@ -28,10 +28,9 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
     var dietAttachment: [Double] = Array(repeating: 0, count: 4)
     var excerciseAttachment: [Double] = Array(repeating: 0, count: 4)
     
-//    var drugsAttachemnt: [PieChartDataEntry] = []
-    
     var collectionPressureCards: UICollectionView?
     var bloodReadings: [BloodPressureReading] = []
+    var bloodReadingsCollectionView: [BloodPressureReading] = []
     var generalHealthReadings: [GeneralHealthReading] = []
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +39,9 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
             APIManager.shared.getBloodReadings{ (bloodReadings,message) in
                 if let bReadings = bloodReadings {
                     self.bloodReadings = bReadings
+                    let reversedBloodReadings: [BloodPressureReading] = Array(self.bloodReadings.reversed())
+                    let sliceBloodReadings = reversedBloodReadings.prefix(5)
+                    self.bloodReadingsCollectionView = Array(sliceBloodReadings)
                     self.collectionView.reloadData()
                     self.addBloodReadingsToGraphs()
                     self.configureBloodReadingsChart()
@@ -70,29 +72,33 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
     }
     
     func configureBloodReadingsChart() {
-        // Line Charts
-        pressureChart.setDataSetsPressures(systolicDataSet: sistolicP, diastolicDataSet: distolicP, pulseDataSet: pulses)
+        pressureChart.setDataSetsPressures(
+            systolicDataSet: sistolicP,
+            diastolicDataSet: distolicP,
+            pulseDataSet: pulses)
     }
     func configureHealthReadingsChart(){
-       
-        weightAbdominalChart.setDataSetsMessures(weightDataSet: weight, abdominalLengthDataSet: abdominalLength)
-        
-        // Pie Charts
+        weightAbdominalChart.setDataSetsMessures(
+            weightDataSet: weight,
+            abdominalLengthDataSet: abdominalLength)
         drugsAttachmentChart.setInitValues(title: "Apego al medicamento")
-        drugsAttachmentChart.setChartData(deficient: drugsAttachment[0],
-                                          bad: drugsAttachment[1],
-                                          acceptable: drugsAttachment[2],
-                                          excelent: drugsAttachment[3])
+        drugsAttachmentChart.setChartData(
+            deficient: drugsAttachment[0],
+            bad: drugsAttachment[1],
+            acceptable: drugsAttachment[2],
+            excelent: drugsAttachment[3])
         exerciseChart.setInitValues(title: "Apego a rutina de ejercicio")
-        exerciseChart.setChartData(deficient: excerciseAttachment[0],
-                                   bad: excerciseAttachment[1],
-                                   acceptable: excerciseAttachment[2],
-                                   excelent: excerciseAttachment[3])
+        exerciseChart.setChartData(
+            deficient: excerciseAttachment[0],
+            bad: excerciseAttachment[1],
+            acceptable: excerciseAttachment[2],
+            excelent: excerciseAttachment[3])
         dietAttachmentChart.setInitValues(title: "Apego a la dieta")
-        dietAttachmentChart.setChartData(deficient: dietAttachment[0],
-                                         bad: dietAttachment[1],
-                                         acceptable: dietAttachment[2],
-                                         excelent: dietAttachment[3])
+        dietAttachmentChart.setChartData(
+            deficient: dietAttachment[0],
+            bad: dietAttachment[1],
+            acceptable: dietAttachment[2],
+            excelent: dietAttachment[3])
     }
     
     // Collection View - Pressure Cards config of collection view
@@ -138,15 +144,15 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
     }
     // Collection View - Config amount of cells (Pressure cards)
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return bloodReadings.count
+        return bloodReadingsCollectionView.count
     }
     // Collection View - Add data to each cell (Pressure card)
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PressureCardUIView
         cell.configureCard(
-            pSistolica: String(bloodReadings[indexPath.row].getSystolicReading()),
-            pDiastolica: String(bloodReadings[indexPath.row].getDiastolicReading()),
-            pulso: String(bloodReadings[indexPath.row].getPulse()))
+            pSistolica: String(bloodReadingsCollectionView[indexPath.row].getSystolicReading()),
+            pDiastolica: String(bloodReadingsCollectionView[indexPath.row].getDiastolicReading()),
+            pulso: String(bloodReadingsCollectionView[indexPath.row].getPulse()))
         return cell
     }
     
@@ -177,5 +183,28 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
             dietAttachment[generalHealthReading.getDietComplience()] += 1
             excerciseAttachment[generalHealthReading.getExerciseCompliance()] += 1
         }
+    }
+    
+    func reloadDataOfBloodPressure() {
+        let reversedBloodReadings: [BloodPressureReading] = Array(self.bloodReadings.reversed())
+        let sliceBloodReadings = reversedBloodReadings.prefix(5)
+        self.bloodReadingsCollectionView = Array(sliceBloodReadings)
+        self.collectionView.reloadData()
+        pulses = []
+        sistolicP = []
+        distolicP = []
+        self.addBloodReadingsToGraphs()
+        self.configureBloodReadingsChart()
+        self.reloadInputViews()
+    }
+    func reloadDataOfHealthReadings() {
+        weight = []
+        abdominalLength = []
+        drugsAttachment = Array(repeating: 0, count: 4)
+        dietAttachment = Array(repeating: 0, count: 4)
+        excerciseAttachment = Array(repeating: 0, count: 4)
+        self.addGeneralHealthReadingsToGraphs()
+        self.configureHealthReadingsChart()
+        self.reloadInputViews()
     }
 }
