@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -46,28 +46,28 @@
                                     <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="25" id="fNK-Yz-i8b"/>
+                                        <constraint firstAttribute="width" secondItem="Yja-mM-ugk" secondAttribute="height" multiplier="1:1" id="0Tm-gE-bfR"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTF-9g-nr8">
                                     <rect key="frame" x="88" y="0.0" width="25" height="25"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="25" id="WBA-35-PRn"/>
+                                        <constraint firstAttribute="width" secondItem="aTF-9g-nr8" secondAttribute="height" multiplier="1:1" id="DWR-My-Fmm"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lx4-2F-yqP">
                                     <rect key="frame" x="176" y="0.0" width="25" height="25"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="25" id="O7K-qh-xht"/>
+                                        <constraint firstAttribute="width" secondItem="Lx4-2F-yqP" secondAttribute="height" multiplier="1:1" id="NO7-Rj-Y2s"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="huJ-49-xvj">
                                     <rect key="frame" x="264" y="0.0" width="25" height="25"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="25" id="YtZ-H5-gn4"/>
+                                        <constraint firstAttribute="width" secondItem="huJ-49-xvj" secondAttribute="height" multiplier="1:1" id="2yz-ot-yDh"/>
                                     </constraints>
                                 </view>
                             </subviews>

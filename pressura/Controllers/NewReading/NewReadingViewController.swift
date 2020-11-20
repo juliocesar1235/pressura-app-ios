@@ -15,7 +15,6 @@ class NewReadingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         navigationItem.title = "Medición Nueva"
         navigationController?.navigationBar.prefersLargeTitles = true
         btnBloodPressure.layer.cornerRadius = 15

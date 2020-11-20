@@ -13,43 +13,86 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
     @IBOutlet weak var viewCollectionCards: UIView!
     @IBOutlet weak var pressureChart: LineChartUIView!
     @IBOutlet weak var weightAbdominalChart: LineChartUIView!
+    @IBOutlet weak var drugsAttachmentChart: PieChartUIView!
+    @IBOutlet weak var dietAttachmentChart: PieChartUIView!
     @IBOutlet weak var exerciseChart: PieChartUIView!
+    
+    var pulses: [ChartDataEntry] = []
+    var sistolicP: [ChartDataEntry] = []
+    var distolicP: [ChartDataEntry] = []
+    
+    var weight: [ChartDataEntry] = []
+    var abdominalLength: [ChartDataEntry] = []
+    
+    var drugsAttachment: [Double] = Array(repeating: 0, count: 4)
+    var dietAttachment: [Double] = Array(repeating: 0, count: 4)
+    var excerciseAttachment: [Double] = Array(repeating: 0, count: 4)
+    
+//    var drugsAttachemnt: [PieChartDataEntry] = []
     
     var collectionPressureCards: UICollectionView?
     var bloodReadings: [BloodPressureReading] = []
+    var generalHealthReadings: [GeneralHealthReading] = []
     
     override func viewWillAppear(_ animated: Bool) {
+        // Collection Pressure cards and Pressure Line Graph
         if bloodReadings.count == 0 {
             APIManager.shared.getBloodReadings{ (bloodReadings,message) in
                 if let bReadings = bloodReadings {
                     self.bloodReadings = bReadings
                     self.collectionView.reloadData()
+                    self.addBloodReadingsToGraphs()
+                    self.configureBloodReadingsChart()
                 }
             }
         }
-        print()
+        // Line graph for weight and circumference and pie charts graphs
+        if generalHealthReadings.count == 0 {
+            APIManager.shared.getGeneralHealthReadings{ (generalHealthReadings, message) in
+                if let hReadings = generalHealthReadings {
+                    self.generalHealthReadings = hReadings
+                    self.addGeneralHealthReadingsToGraphs()
+                    self.configureHealthReadingsChart()
+                }
+            }
+        }
         self.collectionView.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-        print("frame width: ", self.view.frame.width)
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "¡Hola!"
-        pressureChart.backgroundColor = .red
-        
+        navigationItem.title = "¡Bienvenido!"
         // Views From Components
         self.configureCollectionView()
+        self.view.layoutIfNeeded()
+    }
+    
+    func configureBloodReadingsChart() {
         // Line Charts
         pressureChart.setDataSetsPressures(systolicDataSet: sistolicP, diastolicDataSet: distolicP, pulseDataSet: pulses)
+    }
+    func configureHealthReadingsChart(){
+       
         weightAbdominalChart.setDataSetsMessures(weightDataSet: weight, abdominalLengthDataSet: abdominalLength)
         
         // Pie Charts
-        exerciseChart.setInitValues(width: exerciseChart.frame.width, chartTitle: "Apego a rutina de ejercicio")
-        exerciseChart.setChartData(pieChartValues: exerciseValues)
-        
-        self.view.layoutIfNeeded()
+        drugsAttachmentChart.setInitValues(title: "Apego al medicamento")
+        drugsAttachmentChart.setChartData(deficient: drugsAttachment[0],
+                                          bad: drugsAttachment[1],
+                                          acceptable: drugsAttachment[2],
+                                          excelent: drugsAttachment[3])
+        exerciseChart.setInitValues(title: "Apego a rutina de ejercicio")
+        exerciseChart.setChartData(deficient: excerciseAttachment[0],
+                                   bad: excerciseAttachment[1],
+                                   acceptable: excerciseAttachment[2],
+                                   excelent: excerciseAttachment[3])
+        dietAttachmentChart.setInitValues(title: "Apego a la dieta")
+        dietAttachmentChart.setChartData(deficient: dietAttachment[0],
+                                         bad: dietAttachment[1],
+                                         acceptable: dietAttachment[2],
+                                         excelent: dietAttachment[3])
     }
     
     // Collection View - Pressure Cards config of collection view
@@ -108,59 +151,31 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
     }
     
     
-    // Hardcodeado para pruebas gráficas....
-    let pulses: [ChartDataEntry] = [
-        ChartDataEntry(x: 1, y: 60),
-        ChartDataEntry(x: 2, y: 78),
-        ChartDataEntry(x: 3, y: 55),
-        ChartDataEntry(x: 4, y: 66),
-        ChartDataEntry(x: 5, y: 78),
-        ChartDataEntry(x: 6, y: 80),
-        ChartDataEntry(x: 7, y: 60)
-    ]
-    let sistolicP: [ChartDataEntry] = [
-        ChartDataEntry(x: 1, y: 122),
-        ChartDataEntry(x: 2, y: 139),
-        ChartDataEntry(x: 3, y: 129),
-        ChartDataEntry(x: 4, y: 119),
-        ChartDataEntry(x: 5, y: 110),
-        ChartDataEntry(x: 6, y: 130),
-        ChartDataEntry(x: 7, y: 126)
-    ]
-    let distolicP: [ChartDataEntry] = [
-        ChartDataEntry(x: 1, y: 80),
-        ChartDataEntry(x: 2, y: 82),
-        ChartDataEntry(x: 3, y: 80),
-        ChartDataEntry(x: 4, y: 78),
-        ChartDataEntry(x: 5, y: 87),
-        ChartDataEntry(x: 6, y: 85),
-        ChartDataEntry(x: 7, y: 89)
-    ]
-    
-    let weight: [ChartDataEntry] = [
-        ChartDataEntry(x: 1, y: 70),
-        ChartDataEntry(x: 2, y: 73),
-        ChartDataEntry(x: 3, y: 72),
-        ChartDataEntry(x: 4, y: 70),
-        ChartDataEntry(x: 5, y: 69),
-        ChartDataEntry(x: 6, y: 72),
-        ChartDataEntry(x: 7, y: 73)
-    ]
-    let abdominalLength: [ChartDataEntry] = [
-        ChartDataEntry(x: 1, y: 76.2),
-        ChartDataEntry(x: 2, y: 78),
-        ChartDataEntry(x: 3, y: 77.5),
-        ChartDataEntry(x: 4, y: 74.1),
-        ChartDataEntry(x: 5, y: 74),
-        ChartDataEntry(x: 6, y: 75),
-        ChartDataEntry(x: 7, y: 75.3)
-    ]
-    
-    let exerciseValues: [PieChartDataEntry] = [
-        PieChartDataEntry(value: 10, label: "Deficiente"),
-        PieChartDataEntry(value: 12, label: "Malo"),
-        PieChartDataEntry(value: 20, label: "Aceptable"),
-        PieChartDataEntry(value: 40, label: "Excelente")
-    ]
-    
+    // BloodPressure - add data to arrays
+    func addBloodReadingsToGraphs() {
+        for (index, bloodReading) in bloodReadings.enumerated() {
+            let pulse = ChartDataEntry(x: Double(index), y:  Double(bloodReading.getPulse()))
+            let sistolicPressure = ChartDataEntry(x: Double(index), y:  Double(bloodReading.getSystolicReading()))
+            let diastolicPressure = ChartDataEntry(x: Double(index), y:  Double(bloodReading.getDiastolicReading()))
+            pulses.append(pulse)
+            sistolicP.append(sistolicPressure)
+            distolicP.append(diastolicPressure)
+        }
+    }
+    // Health readings - add data to arrays
+    func addGeneralHealthReadingsToGraphs() {
+        for (index, generalHealthReading) in generalHealthReadings.enumerated() {
+            if let weightDouble = Double(generalHealthReading.getWeight()),
+               let abdominalDouble = Double(generalHealthReading.getAbdominalCircumference()){
+                let weightMessure = ChartDataEntry(x: Double(index), y: weightDouble)
+                let abdominalMessure = ChartDataEntry(x: Double(index), y: abdominalDouble)
+                weight.append(weightMessure)
+                abdominalLength.append(abdominalMessure)
+            }
+            
+            drugsAttachment[generalHealthReading.getTreatmentComplience()] += 1
+            dietAttachment[generalHealthReading.getDietComplience()] += 1
+            excerciseAttachment[generalHealthReading.getExerciseCompliance()] += 1
+        }
+    }
 }

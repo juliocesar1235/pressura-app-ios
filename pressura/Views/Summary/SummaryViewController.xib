@@ -11,7 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SummaryViewController" customModule="pressura" customModuleProvider="target">
             <connections>
-                <outlet property="exerciseChart" destination="SLg-6d-QnT" id="Fjg-zD-izi"/>
+                <outlet property="dietAttachmentChart" destination="S1L-F2-gem" id="Q5v-ym-PeF"/>
+                <outlet property="drugsAttachmentChart" destination="SLg-6d-QnT" id="oV0-3Q-Rti"/>
+                <outlet property="exerciseChart" destination="vbd-0o-sHb" id="FP2-hu-DH6"/>
                 <outlet property="pressureChart" destination="dBv-ks-swD" id="06e-VV-oZk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewCollectionCards" destination="ttI-k9-BGb" id="DrQ-f6-WD1"/>
@@ -27,7 +29,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xaR-vr-uTn">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1470"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mis últimas mediciones" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gok-zs-CrB">
                                     <rect key="frame" x="16" y="24" width="306" height="21"/>
@@ -89,11 +91,27 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SLg-6d-QnT" customClass="PieChartUIView" customModule="pressura" customModuleProvider="target">
-                                    <rect key="frame" x="35.5" y="812" width="343" height="190"/>
+                                    <rect key="frame" x="35.5" y="814" width="343" height="190"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="190" id="Kft-JS-uaf"/>
                                         <constraint firstAttribute="width" secondItem="SLg-6d-QnT" secondAttribute="height" multiplier="343:190" id="zsd-vM-Gyx"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S1L-F2-gem" customClass="PieChartUIView" customModule="pressura" customModuleProvider="target">
+                                    <rect key="frame" x="35.5" y="1024" width="343" height="190"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="S1L-F2-gem" secondAttribute="height" multiplier="343:190" id="JM6-wS-seo"/>
+                                        <constraint firstAttribute="height" constant="190" id="YeW-yO-Mnj"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbd-0o-sHb" customClass="PieChartUIView" customModule="pressura" customModuleProvider="target">
+                                    <rect key="frame" x="35.5" y="1234" width="343" height="190"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="vbd-0o-sHb" secondAttribute="height" multiplier="343:190" id="hVg-LD-G8L"/>
+                                        <constraint firstAttribute="height" constant="190" id="vg3-KP-11W"/>
                                     </constraints>
                                 </view>
                             </subviews>
@@ -105,8 +123,10 @@
                                 <constraint firstItem="Gok-zs-CrB" firstAttribute="top" secondItem="xaR-vr-uTn" secondAttribute="top" constant="24" id="8me-qS-Ua3"/>
                                 <constraint firstItem="dBv-ks-swD" firstAttribute="centerX" secondItem="xaR-vr-uTn" secondAttribute="centerX" id="97j-qY-MRQ"/>
                                 <constraint firstAttribute="trailing" secondItem="ZkS-gp-l4u" secondAttribute="trailing" constant="16" id="9Cr-SV-HJk"/>
+                                <constraint firstItem="vbd-0o-sHb" firstAttribute="top" secondItem="S1L-F2-gem" secondAttribute="bottom" constant="20" id="9qc-1X-1fu"/>
                                 <constraint firstItem="ZkS-gp-l4u" firstAttribute="leading" secondItem="xaR-vr-uTn" secondAttribute="leading" constant="16" id="CLP-BT-bta"/>
                                 <constraint firstItem="wA4-SM-deL" firstAttribute="centerX" secondItem="xaR-vr-uTn" secondAttribute="centerX" id="Chi-fQ-T4T"/>
+                                <constraint firstAttribute="height" constant="1470" id="IdT-7O-86X"/>
                                 <constraint firstAttribute="trailing" secondItem="b9j-Ah-ylZ" secondAttribute="trailing" constant="16" id="K58-CM-ybd"/>
                                 <constraint firstItem="dBv-ks-swD" firstAttribute="top" secondItem="wSD-eT-gRg" secondAttribute="bottom" constant="18" id="P8j-YL-beT"/>
                                 <constraint firstItem="vyN-Zb-gLQ" firstAttribute="leading" secondItem="xaR-vr-uTn" secondAttribute="leading" constant="16" id="Pgs-vT-VAr"/>
@@ -115,13 +135,16 @@
                                 <constraint firstItem="ttI-k9-BGb" firstAttribute="leading" secondItem="xaR-vr-uTn" secondAttribute="leading" constant="16" id="brp-9M-hWI"/>
                                 <constraint firstItem="b9j-Ah-ylZ" firstAttribute="leading" secondItem="Gok-zs-CrB" secondAttribute="trailing" constant="10" id="fHW-bQ-Yl7"/>
                                 <constraint firstItem="SLg-6d-QnT" firstAttribute="centerX" secondItem="xaR-vr-uTn" secondAttribute="centerX" id="gpp-aw-RCf"/>
+                                <constraint firstItem="vbd-0o-sHb" firstAttribute="centerX" secondItem="xaR-vr-uTn" secondAttribute="centerX" id="jk7-et-zvL"/>
                                 <constraint firstItem="vyN-Zb-gLQ" firstAttribute="top" secondItem="dBv-ks-swD" secondAttribute="bottom" constant="24" id="knI-OR-Ula"/>
                                 <constraint firstAttribute="trailing" secondItem="ttI-k9-BGb" secondAttribute="trailing" id="qT0-KN-kTa"/>
                                 <constraint firstAttribute="trailing" secondItem="wSD-eT-gRg" secondAttribute="trailing" constant="16" id="r5c-O8-NOK"/>
+                                <constraint firstItem="S1L-F2-gem" firstAttribute="centerX" secondItem="xaR-vr-uTn" secondAttribute="centerX" id="rPd-LJ-6pR"/>
+                                <constraint firstItem="S1L-F2-gem" firstAttribute="top" secondItem="SLg-6d-QnT" secondAttribute="bottom" constant="20" id="sle-0j-U8t"/>
                                 <constraint firstItem="ttI-k9-BGb" firstAttribute="top" secondItem="Gok-zs-CrB" secondAttribute="bottom" constant="18" id="vN9-Ue-6TU"/>
                                 <constraint firstItem="b9j-Ah-ylZ" firstAttribute="top" secondItem="xaR-vr-uTn" secondAttribute="top" constant="24" id="x1v-wJ-xSk"/>
                                 <constraint firstItem="wSD-eT-gRg" firstAttribute="leading" secondItem="xaR-vr-uTn" secondAttribute="leading" constant="16" id="xKV-Rc-4va"/>
-                                <constraint firstItem="SLg-6d-QnT" firstAttribute="top" secondItem="ZkS-gp-l4u" secondAttribute="bottom" constant="18" id="zA4-GE-z1i"/>
+                                <constraint firstItem="SLg-6d-QnT" firstAttribute="top" secondItem="ZkS-gp-l4u" secondAttribute="bottom" constant="20" id="zA4-GE-z1i"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -142,7 +165,6 @@
                 <constraint firstItem="wPV-Pd-O3s" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="NXn-hE-L9c"/>
                 <constraint firstItem="xaR-vr-uTn" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="V8U-RJ-0zg"/>
                 <constraint firstItem="wPV-Pd-O3s" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ZMj-V7-KLM"/>
-                <constraint firstItem="xaR-vr-uTn" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="2.23214" priority="250" id="dbY-6m-0gd"/>
             </constraints>
             <point key="canvasLocation" x="140.57971014492756" y="109.82142857142857"/>
         </view>
