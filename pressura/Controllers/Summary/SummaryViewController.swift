@@ -84,11 +84,10 @@ class SummaryViewController: UIViewController, UICollectionViewDelegateFlowLayou
         APIManager.shared.getBloodReadings{ (bloodReadings,message) in
             if let bReadings = bloodReadings {
                 self.bloodReadings = bReadings
-                print("test1")
                 let vc = AllRecordsViewController()
                 vc.modalPresentationStyle = .fullScreen
                 vc.navigationItem.hidesBackButton = false
-                vc.AllBloodReadings = bReadings
+                vc.AllBloodReadings = bReadings.reversed()
                 self.navigationController?.pushViewController(vc, animated: true)
                 
             }

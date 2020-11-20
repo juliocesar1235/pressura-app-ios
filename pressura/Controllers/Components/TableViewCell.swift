@@ -23,7 +23,8 @@ class TableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.reading.clipsToBounds = true
-        self.reading.layer.cornerRadius = 15
+        self.reading.frame = self.contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 15, right: 0))
+        creationDate.font = UIFont.boldSystemFont(ofSize: 16)
         
         // Initialization code
     }
