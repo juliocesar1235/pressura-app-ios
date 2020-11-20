@@ -9,31 +9,37 @@ import UIKit
 
 class NewReadingViewController: UIViewController {
     
-    @IBOutlet weak var btnBloodPressure: UIButton!
-    @IBOutlet weak var btnHealthM: UIButton!
+    @IBOutlet weak var bloodPressure: UIView!
+    @IBOutlet weak var healthReadings: UIView!
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        bloodPressure.backgroundColor = .white
+        healthReadings.backgroundColor = .white
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Medición Nueva"
         navigationController?.navigationBar.prefersLargeTitles = true
-        btnBloodPressure.layer.cornerRadius = 15
-        btnHealthM.layer.cornerRadius = 15
+        let gestureBloodP = UITapGestureRecognizer(target: self, action: #selector(newBloodPreassure))
+        let gestureHealthR = UITapGestureRecognizer(target: self, action: #selector(newHealdthM))
+        self.bloodPressure.addGestureRecognizer(gestureBloodP)
+        self.healthReadings.addGestureRecognizer(gestureHealthR)
     }
 
-    @IBAction func newBloodPreassure(_ sender: UIButton) {
+    @objc func newBloodPreassure(_ sender: UIButton) {
+        bloodPressure.backgroundColor = #colorLiteral(red: 0.902751565, green: 0.8979362249, blue: 0.9064626694, alpha: 1)
         let vc = NewBloodPressureReading()
         vc.modalPresentationStyle = .fullScreen
         vc.navigationItem.hidesBackButton = false
         self.navigationController?.pushViewController(vc, animated: true)
-        
     }
-    @IBAction func newHealdthM(_ sender: UIButton) {
+    @objc func newHealdthM(_ sender: UIButton) {
+        healthReadings.backgroundColor = #colorLiteral(red: 0.9019607843, green: 0.8980392157, blue: 0.9058823529, alpha: 1)
         let vc = NewHealthTrackingViewController()
         vc.modalPresentationStyle = .fullScreen
         vc.navigationItem.hidesBackButton = false
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
-    
 }
