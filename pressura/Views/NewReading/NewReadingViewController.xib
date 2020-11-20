@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,8 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewReadingViewController" customModule="pressura" customModuleProvider="target">
             <connections>
-                <outlet property="btnBloodPressure" destination="Xgm-vg-8m4" id="fex-Mv-PTa"/>
-                <outlet property="btnHealthM" destination="6y5-uc-esu" id="YYq-XF-pMJ"/>
+                <outlet property="bloodPressure" destination="Zk9-Kz-cmi" id="glo-0E-Krk"/>
+                <outlet property="healthReadings" destination="xO3-0e-hHK" id="oYS-tf-Dgf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,55 +24,98 @@
                 <userLayoutGuide location="831" affinity="maxY"/>
             </userGuides>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="67g-BF-toK">
-                    <rect key="frame" x="16" y="74" width="382" height="758"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kTX-Km-3hr">
+                    <rect key="frame" x="16" y="69" width="382" height="768"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgm-vg-8m4">
-                            <rect key="frame" x="20" y="0.0" width="342" height="369"/>
-                            <color key="backgroundColor" red="0.33333333333333331" green="0.59999999999999998" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                            <state key="normal" title="Presión arterial">
-                                <color key="titleColor" systemColor="labelColor"/>
-                            </state>
-                            <connections>
-                                <action selector="newBloodPreassure:" destination="-1" eventType="touchUpInside" id="G5z-fL-UPv"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6y5-uc-esu">
-                            <rect key="frame" x="20" y="389" width="342" height="369"/>
-                            <color key="backgroundColor" red="0.33333333333333331" green="0.59999999999999998" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                            <state key="normal" title="Monitoreo de salud">
-                                <color key="titleColor" systemColor="labelColor"/>
-                            </state>
-                            <connections>
-                                <action selector="newHealdthM:" destination="-1" eventType="touchUpInside" id="deq-wF-FqM"/>
-                            </connections>
-                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zk9-Kz-cmi">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="354"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stopwatch" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="x5q-ZC-xv2">
+                                    <rect key="frame" x="99.5" y="48.5" width="183" height="184"/>
+                                    <color key="tintColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="x5q-ZC-xv2" secondAttribute="height" multiplier="1:1" id="6gc-13-4c6"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Presión arterial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1W-t6-3VQ">
+                                    <rect key="frame" x="91" y="248" width="200" height="35"/>
+                                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="30"/>
+                                    <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="K1W-t6-3VQ" firstAttribute="top" secondItem="x5q-ZC-xv2" secondAttribute="bottom" constant="15" id="25Z-aX-gU3"/>
+                                <constraint firstItem="K1W-t6-3VQ" firstAttribute="centerX" secondItem="Zk9-Kz-cmi" secondAttribute="centerX" id="IhG-Sr-5cA"/>
+                                <constraint firstItem="x5q-ZC-xv2" firstAttribute="top" secondItem="Zk9-Kz-cmi" secondAttribute="top" constant="50" id="eb2-sQ-GwE"/>
+                                <constraint firstItem="x5q-ZC-xv2" firstAttribute="centerY" secondItem="Zk9-Kz-cmi" secondAttribute="centerY" multiplier="0.8" id="gq5-jJ-e7n"/>
+                                <constraint firstItem="x5q-ZC-xv2" firstAttribute="centerX" secondItem="Zk9-Kz-cmi" secondAttribute="centerX" id="sps-dj-06u"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m1Q-Df-iRX">
+                            <rect key="frame" x="0.0" y="359" width="382" height="1.5"/>
+                            <color key="backgroundColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1.5" id="xUo-Gv-lpY"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xO3-0e-hHK">
+                            <rect key="frame" x="0.0" y="365.5" width="382" height="402.5"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SuG-YO-f2d">
+                                    <rect key="frame" x="90" y="50.5" width="202" height="201"/>
+                                    <color key="tintColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="SuG-YO-f2d" secondAttribute="height" multiplier="1:1" id="mpt-ly-rXS"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monitoreo de Salud" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqe-3k-gjI">
+                                    <rect key="frame" x="59.5" y="267" width="263.5" height="35"/>
+                                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="30"/>
+                                    <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="iqe-3k-gjI" firstAttribute="top" secondItem="SuG-YO-f2d" secondAttribute="bottom" constant="15" id="8bg-Eo-S1f"/>
+                                <constraint firstItem="SuG-YO-f2d" firstAttribute="top" secondItem="xO3-0e-hHK" secondAttribute="top" constant="50" id="X87-qx-Ih6"/>
+                                <constraint firstItem="iqe-3k-gjI" firstAttribute="centerX" secondItem="xO3-0e-hHK" secondAttribute="centerX" id="ZBm-MD-lF9"/>
+                                <constraint firstItem="SuG-YO-f2d" firstAttribute="centerY" secondItem="xO3-0e-hHK" secondAttribute="centerY" multiplier="0.75" id="wIp-IR-wwy"/>
+                                <constraint firstItem="SuG-YO-f2d" firstAttribute="centerX" secondItem="xO3-0e-hHK" secondAttribute="centerX" id="yuD-PT-uDP"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="6y5-uc-esu" firstAttribute="leading" secondItem="67g-BF-toK" secondAttribute="leading" constant="20" id="QTl-d3-x7T"/>
-                        <constraint firstAttribute="trailing" secondItem="Xgm-vg-8m4" secondAttribute="trailing" constant="20" id="V5F-Ll-lOJ"/>
-                        <constraint firstItem="Xgm-vg-8m4" firstAttribute="leading" secondItem="67g-BF-toK" secondAttribute="leading" constant="20" id="Z0P-Kd-N7C"/>
-                        <constraint firstAttribute="trailing" secondItem="6y5-uc-esu" secondAttribute="trailing" constant="20" id="sc4-Ga-NG6"/>
+                        <constraint firstItem="Zk9-Kz-cmi" firstAttribute="top" secondItem="kTX-Km-3hr" secondAttribute="top" id="1fi-4N-IfR"/>
+                        <constraint firstItem="m1Q-Df-iRX" firstAttribute="leading" secondItem="kTX-Km-3hr" secondAttribute="leading" id="6sF-Lo-clE"/>
+                        <constraint firstAttribute="bottom" secondItem="xO3-0e-hHK" secondAttribute="bottom" id="Huf-Dp-FB4"/>
+                        <constraint firstAttribute="trailing" secondItem="m1Q-Df-iRX" secondAttribute="trailing" id="Jau-Nz-aRh"/>
+                        <constraint firstItem="xO3-0e-hHK" firstAttribute="width" secondItem="Zk9-Kz-cmi" secondAttribute="width" id="MvU-8m-AGv"/>
+                        <constraint firstItem="Zk9-Kz-cmi" firstAttribute="leading" secondItem="kTX-Km-3hr" secondAttribute="leading" id="OFk-cC-a5g"/>
+                        <constraint firstItem="xO3-0e-hHK" firstAttribute="top" secondItem="m1Q-Df-iRX" secondAttribute="bottom" constant="5" id="Tgt-Ae-qSg"/>
+                        <constraint firstItem="xO3-0e-hHK" firstAttribute="height" secondItem="Zk9-Kz-cmi" secondAttribute="height" multiplier="1.13808" id="Ujz-25-ncR"/>
+                        <constraint firstAttribute="trailing" secondItem="Zk9-Kz-cmi" secondAttribute="trailing" id="fcW-Ht-oFw"/>
+                        <constraint firstAttribute="trailing" secondItem="xO3-0e-hHK" secondAttribute="trailing" id="uZF-7k-Pq1"/>
+                        <constraint firstItem="m1Q-Df-iRX" firstAttribute="top" secondItem="Zk9-Kz-cmi" secondAttribute="bottom" constant="5" id="v8I-xh-9nJ"/>
+                        <constraint firstItem="xO3-0e-hHK" firstAttribute="leading" secondItem="kTX-Km-3hr" secondAttribute="leading" id="xT7-5A-O1m"/>
                     </constraints>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="67g-BF-toK" secondAttribute="bottom" constant="30" id="1kr-Gk-Yhg"/>
-                <constraint firstItem="67g-BF-toK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="Otf-2a-UM0"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="67g-BF-toK" secondAttribute="trailing" constant="16" id="fut-R9-2TI"/>
-                <constraint firstItem="67g-BF-toK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="xFj-9I-kxQ"/>
+                <constraint firstItem="kTX-Km-3hr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="CVY-1F-JSn"/>
+                <constraint firstItem="kTX-Km-3hr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="qWa-wo-gKQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kTX-Km-3hr" secondAttribute="trailing" constant="16" id="tys-ar-pRz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="kTX-Km-3hr" secondAttribute="bottom" constant="25" id="u3a-Ze-HgK"/>
             </constraints>
             <point key="canvasLocation" x="140.57971014492756" y="101.78571428571428"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="heart.circle" catalog="system" width="128" height="121"/>
+        <image name="stopwatch" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
